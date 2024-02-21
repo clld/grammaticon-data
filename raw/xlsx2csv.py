@@ -40,7 +40,7 @@ def xlsx2csv(path):
 
 
 def main():
-    for p in Path('.').glob('*.xlsx'):
+    for p in Path(__file__).parent.glob('*.xlsx'):
         xlsx2csv(p)
 
 
