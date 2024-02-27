@@ -1,0 +1,259 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "tables": [
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#definition",
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Quotation"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Comment"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_Counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_Comment"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_Counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_Comments"
+                    }
+                ]
+            },
+            "url": "concepts.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Feature_Area"
+                    }
+                ]
+            },
+            "url": "metafeatures.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Authors"
+                    },
+                    {
+                        "datatype": "integer",
+                        "name": "Number_of_Features"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Year"
+                    }
+                ]
+            },
+            "url": "feature-lists.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#definition",
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Metafeature_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Feature_List_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Feature_List_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Feautre_List_Numbers"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Metafeature_ID"
+                        ],
+                        "reference": {
+                            "resource": "metafeatures.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Feature_List_ID"
+                        ],
+                        "reference": {
+                            "resource": "feature-lists.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "url": "features.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "name": "Concept_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Metafeature_ID"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Concept_ID"
+                        ],
+                        "reference": {
+                            "resource": "concepts.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Metafeature_ID"
+                        ],
+                        "reference": {
+                            "resource": "metafeatures.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "url": "concepts-metafeatures.csv"
+        },
+        {
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "name": "Child_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Parent_ID"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Child_ID"
+                        ],
+                        "reference": {
+                            "resource": "concepts.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Parent_ID"
+                        ],
+                        "reference": {
+                            "resource": "concepts.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "url": "concept-hierarchy.csv"
+        }
+    ]
+}
