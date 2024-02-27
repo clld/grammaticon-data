@@ -1,139 +1,457 @@
 id,label,definition,quotation,comments,GOLD counterpart,GOLD URL,GOLD comment,ISOCAT counterpart,ISOCAT URL,ISOCAT comments
 1,grammatical marker,A grammatical marker (or simply marker) is a bound form occurring on a single host root class or in second clause position that expresses some grammatical meaning related to its host or to the clause.,,,,,,,,
-2,bound form,A bound form is a form that cannot occur on its own as a complete utterance.,noun,,,,,,,
-3,host,A host is an expression with respect to which a bound form (a clitic or an affix) is positioned.,noun,,,,,,,
+2,bound form,A bound form is a form that cannot occur on its own as a complete utterance.,noun,"# maybe better: ""...that is not self-standing, i.e. cannot occur on its own in an uninterrupted utterance""",Bound Morpheme,http://linguistics-ontology.org/gold/2010/BoundMorpheme,"A bound morpheme (or bound form) is one which cannot occur on its own as a separate word, e.g. various affixes de-, -tion, -ize. [Crystal 2003: 56]",,,
 4,second (clause) position,"The second position of a clause is the position after the initial nominal, adverbial or verb form.",adjective,,,,,,,
 8,grammatical meaning,A grammatical meaning is a meaning that need not be expressed overtly in some languages but can be left for inference.,noun,,,,,,,
-9,simplex item,,verb,,,,,,,
-10,noun,"A noun is a simplex item that denotes a thing or a person, and by extension a simplex item that denotes something else but behaves like a noun in the strict sense with respect to grammatical coding and syntactic patterns. Complex items that behave like nouns can also be considered nouns.",noun,,Noun,http://linguistics-ontology.org/gold/2010/Noun,,,,
+9,simplex item,,verb,######,,,,,,
+10,noun,"A noun is a simplex item that denotes a thing or a person, and by extension a simplex item that denotes something else but behaves like a noun in the strict sense with respect to grammatical coding and syntactic patterns. Complex items that behave like nouns can also be considered nouns.",noun,two GOLD counterparts!,Noun; Substantive,http://linguistics-ontology.org/gold/2010/Noun; http://linguistics-ontology.org/gold/2010/Substantive,"""A term used in the grammatical classification of words, traditionally defines as the ""name of a person, place or thing,"" but the vagueness associated with the notions of ""name"" and ""thing"" (e.g. is 'beauty' a thing?) has led linguistic descriptions to analyze this class in terms of the formal and functional criteria of syntax and morphology. In linguistic terms, nouns are items which display certain types of inflection (e.g. of case or number), have a specific distribution (e.g. they may follow prepositions but not, say, modals), and perform a specific syntactic function (e.g. as subject or object of a sentence). Nouns are generally subclassified into common and proper types, and analyzed in terms of number, gender, case and countability. [Crystal 2008: 320]""
+
+""A substantive is a member of the syntactic class in which the names of physical, concrete, relatively unchanging experiences are most typically found whose members may act as subjects and objects, and most of whose members have inherently determined grammatical gender (in languages which inflect for gender) [Crystal 1997: 264; Givon 1984: 51-52; Payne 1997: 33].""",,,
 11,numeral classifier system,A numeral classifier system is a system of nomifiers which occurs on numerals and possibly on other adnominal modifiers but not on predicates.,"Gil (2005): ""in many ... languages, nouns in construction with numerals may occur with an additional grammatical element even when such nouns are of high countability... Such elements are typically referred to as sortal numeral classifiers. This term makes reference to one of the most salient functions of such forms, which is to divide the inventory of count nouns into semantic classes, each of which is associated with a different classifier.""",,,,,,,
 12,possessive classifier system,A possessive classifier system is a system of genifiers which occur on adpossessive modifiers but not anywhere else.,,,,,,,,
-14,adpossessive modifier,,,,,,,,,
-15,numeral,,,,,,,,,
+14,adpossessive modifier,,,###,,,,,,
+15,numeral,,,###,,,,,,
 16,gender system,A gender system (= a system of gender markers) is a system of nomifiers which includes no more than 20 nomifiers and whose nomifiers are not restricted to occurring on numeral modifiers.,verb,,,,,,,
 17,TAM marker,"marker of tense, aspect or mood",,,,,,,,
 18,TAM,"tense, aspect and/or mood",,,,,,,,
-19,nominal,,,,,,,,,
-20,adverbial,,,,,,,,,
+19,nominal,,,###,noun phrase,http://linguistics-ontology.org/gold/2010/NounPhrase,,,,
+20,adverbial,An adverbial is a free expression that is not an argument of the verb and that provides circumstantial information about an event or state.,,,Adverbial,http://linguistics-ontology.org/gold/2010/Adverbial,"""An adverbial, or 'adverb', narrowly defined, is a part of speech whose members modify verbs for such categories as time, manner, place, or direction. An adverbal, broadly defined, is a part of speech whose members modify any constituent class of words other than nouns, such as verbs, adjectives, adverbs, phrases, clauses, or sentences. Under this definition, the possible type of modification depends on the class of the constituent being modified [Crystal 1997: 11; Payne 1997: 69].""",,,
 21,nomifier system,"A nomifier system is a paradigm of grammatical markers which occur on adnominal modifiers, person indexes or anaphoric pronouns, and each of which expresses (i.e. normally reflects, but sometimes contributes) a broad property other than person and number of the controlling noun (i.e. for adnominal modifiers: the modificatum, for person indexes: an argument, for anaphoric pronouns: the antecedent).",,,,,,,,
-22,adjective,,,,,,,,,
-23,concord,,,,,,,,,
-24,adnominal,,,,,,,,,
+22,adjective,,,###,,,,,,
+23,concord,,,###,,,,,,
+24,adnominal,,,###,,,,,,
 25,predicate,"[The predicate of a simple clause may be a verb form, a nominal, an adjective, or a locational expression.]",,,,,,,,
-26,copula,,,,,,,,,
-27,negator,"A negator is a form that expresses negation and does not simultaneously express a root meaning (event, thing, property)",,"A fully equivalent term is ""negative marker"", but ""negator"" is preferred here, because a negator is not a grammatical marker in the sense that is has grammatical meaning as defined here",,,,,,
+26,copula,,,###,Copula,http://linguistics-ontology.org/gold/2010/Copula,"""Indicates a relationship of equivalency between the subject and predicate or complement of a clause. Verbal copulas have essentially the same morphosyntactic properties as verbs: English 'be', Spanish 'ser', and Russian 'byt’' are illustrations of this class. Nonverbal copular items include the the pro-copula - a demonstrative or personal pronoun which serves as the linker between subject and predicate nominal, and which is obligatory in nominal predication - and particle copulas, which have their origin in a variety of markers of discourse-oriented phenomena such as topicalization, backgrounding, or contrastive focus for subjects or predicates. Zero copula refers to a construction in which the relation between a subject and a nominal predicate is not marked by an overt item. Zero copula is mandatory in some languages, such as Sinhalese, whereas it is conditional or restricted in other languages, such as Russian. [Stassen 2008]""",,,
+27,negator,"A negator is a form that expresses negation and does not simultaneously express a root meaning (event, thing, property)",,"A fully equivalent term is ""negative marker"", but ""negator"" is preferred here, because a negator is not a grammatical marker in the sense that is has grammatical meaning as defined here",Negation Operator,http://linguistics-ontology.org/gold/2010/NegationOperator,"""NegationOperator is a negative-marking phrase located in scope position of the verb (specifier or adjoined position). Also called a ""negation particle"", it is normally associated with the main verb of the clause but may also be a clause-level clitic.[Payne 2007:284; Haegeman 1995: 107, 286]""",,,
 28,affirmative clause,a clause lacking a negative marker with scope over the clause,,,,,,,,
-29,scope,PRIMITIVE,,,,,,,,
-30,definite or specific article,"A definite or specific article is an article that is used on nominals that are definite or specific, can be used in associative contexts, and has no spatial deictic meaning.",,,Definite Article,http://linguistics-ontology.org/gold/2010/DefiniteArticle,,definite article,http://www.isocat.org/rest/dc/1430,
+29,scope [PR],PRIMITIVE,,,,,,,,
+30,definite or specific article,"A definite or specific article is an article that is used on nominals that are definite or specific, can be used in associative contexts, and has no spatial deictic meaning.",,,Definite Article,http://linguistics-ontology.org/gold/2010/DefiniteArticle,"""A definite article is a part of speech whose members refer to a specific, identifiable entity (or class of entities) [Crystal 1997: 107].""",definite article,http://www.isocat.org/rest/dc/1430,
 32,indefinite article,An indefinite article is an article that very frequently accompanies indefinite nouns and that never accompanies definite nouns.,,"(From my Github comment: 
-The problem here may be with deciding whether nominals ""commonly"" have an indefinite article in this language. If ""there are examples of indefinite nominals without an article"", this does not mean that there can be no indefinite article – unless one is as strict as the wiki comments say ("" In this question we need explicit support that indefinite NPs cannot occur without an indefinite/non-specific article."" – but this is too strict. I think there are very few if any languages where indefinite articles MUST occur on ALL indefinite nominals. I think it's more reasonable to define ""commonly have an indefinite article"" as ""clearly more often than one would use the numeral 'one' in a language like English that distinguished between 'one' and indefinite articles"".)",Indefinite Article,http://linguistics-ontology.org/gold/2010/IndefiniteArticle,,indefinite article,http://www.isocat.org/rest/dc/1308,
-33,nominal conjunction,,,,,,,,,
-34,comitative,,,,,,,,,
-35,independent personal pronoun,An independent personal pronoun is a personal pronoun that is a free form.,"Siewierska (2004: 16): ""The basic division of person markers in regard to morphophonological form is that between independent and dependent person markers. Other terms used for the independent forms are free, full, self/standing, cardinal, focal, strong, long and disjunctive. ... Typically what is meant by an independent/free/full, etc. person form is a person marker which constitutes a separate word and may take primary word stress, such as the English I, me, you, she, they.","An alternative term that is often used is ""free personal pronoun"". Since personal pronouns in English, German and Russian are always free, the modifier ""independent"" is very often omitted. The definition here is not in terms of ""separate word"" (as in Siewierska 2004: 16), but in terms of ""free form"".",Personal Pronoun,http://linguistics-ontology.org/gold/2010/PersonalPronoun,"GOLD does not distinguish between independent personal pronouns and bound person forms. Thus, GOLD's ""Personal Pronoun"" does not provide a good match, but it is the best match.",,,
-36,dual,,,,,,,,,
-37,animacy,,,,,,,,,
-38,gender assignment,,,,,,,,,
-39,object noun,,,,,,,,,
-40,agent noun,,,,,,,,,
-41,action noun,,,,,,,,,
-42,associative plural,,,,,,,,,
-43,plural marker,A plural marker is a grammatical marker occurring on a noun or nominal that indicates that the referent set contains more than one item.,,,,,,,,
-44,singular,,,,,,,,,
-45,numeral,,,,,,,,,
-46,accusative flag,An accusative flag is a flag that marks a nominal as P-argument (in a transitive clause).,,"(1) This function need not be the only function; such flags commonly also express temporal extension (e.g. German eine-n Tag [one-ACC day] ‘for one day’), or the R-argument in a ditransitive clause.
+The problem here may be with deciding whether nominals ""commonly"" have an indefinite article in this language. If ""there are examples of indefinite nominals without an article"", this does not mean that there can be no indefinite article – unless one is as strict as the wiki comments say ("" In this question we need explicit support that indefinite NPs cannot occur without an indefinite/non-specific article."" – but this is too strict. I think there are very few if any languages where indefinite articles MUST occur on ALL indefinite nominals. I think it's more reasonable to define ""commonly have an indefinite article"" as ""clearly more often than one would use the numeral 'one' in a language like English that distinguished between 'one' and indefinite articles"".)",Indefinite Article,http://linguistics-ontology.org/gold/2010/IndefiniteArticle,"""An article is a part of speech whose members are used to refer to an entity (or class of entities) which is not capable of specific identification [Crystal 1997: 193].""",indefinite article,http://www.isocat.org/rest/dc/1308,
+33,nominal conjunction,,,###,,,,,,
+34,comitative (semantic relation),,,###,,,,,,
+35,independent personal pronoun,An independent personal pronoun is a personal pronoun that is a free form.,"Siewierska (2004: 16): ""The basic division of person markers in regard to morphophonological form is that between independent and dependent person markers. Other terms used for the independent forms are free, full, self/standing, cardinal, focal, strong, long and disjunctive. ... Typically what is meant by an independent/free/full, etc. person form is a person marker which constitutes a separate word and may take primary word stress, such as the English I, me, you, she, they.","An alternative term that is often used is ""free personal pronoun"". Since personal pronouns in English, German and Russian are always free, the modifier ""independent"" is very often omitted. One also often sees ""personal"" omitted (""independent pronoun""), which makes sense because only personal pronouns make a frequent distinction between independent and bound forms. The definition here is not in terms of ""separate word"" (as in Siewierska 2004: 16), but in terms of ""free form"".",,,,,,
+36,dual,,,###,,,,,,
+37,animacy,,,###,,,,,,
+38,gender class assignment,,,###,,,,,,
+39,object noun,,,###,,,,,,
+40,agent noun,,,###,,,,,,
+41,action noun,,,###,,,,,,
+42,associative plural,,,###,,,,,,
+43,plural marker,A plural marker is a grammatical marker occurring on a noun or nominal that indicates that the referent set contains more than one item.,,#This could be defined with reference to plural form.,,,,,,
+44,singular,,,###,,,,,,
+46,accusative flag,"An accusative flag is a flag that marks a nominal as P-argument (in a transitive clause), but not as A-argument or S-argument.","""An accusative marker is a marker that signals P-arguments, but not S- and A-arguments."" (Haspelmath 2022: 202)","(1) This function need not be the only function; such flags commonly also express temporal extension (e.g. German eine-n Tag [one-ACC day] ‘for one day’), or the R-argument in a ditransitive clause.
 
-(2) In many languages, only some of the P-arguments are marked by an accusative flag, in particular those with relatively high prominence (“differential object marking”).",Accusative Case,http://linguistics-ontology.org/gold/2010/AccusativeCase,"GOLD only takes accusative ""case"" into account, neglecting accusative ""adpositions"".",accusative case,http://www.isocat.org/rest/dc/1226,
-47,flag,A flag is a marker that occurs on a nominal and gives information about its semantic role or syntactic role.,,"The term ""flag"" is a recent innovation in typology to refer to case forms and adpositions jointly. In the past, it was often necessary to refer to ""case-marking and adpositional marking"", but ""flagging"" is much more convenient.",,,,,,
+(2) In many languages, only some of the P-arguments are marked by an accusative flag, in particular those with relatively high prominence (“differential object marking”).",accusative case,http://linguistics-ontology.org/gold/2010/AccusativeCase,"GOLD treats cases as ""morphosyntactic properties"", not as kinds of forms, so it only takes accusative ""case"" into account, neglecting accusative adpositions. There is thus a general mismatch between the types of flags here and GOLD's ""case properties"".",accusative case,http://www.isocat.org/rest/dc/1226,
+47,flag,A flag is a marker that occurs on a nominal and gives information about its semantic role or syntactic function.,,"The term ""flag"" is a recent innovation in typology to refer to case forms and adpositions jointly. In the past, it was often necessary to refer to ""case-marking and adpositional marking"", but ""flagging"" is much more convenient.",,,,,,
 48,transitive clause,A transitive clause is a clause which contains two arguments that are coded in the same way as the arguments of the verbs 'kill' and/or 'break'.,,,,,,,,
 49,P-argument,"A P-argument is the patient argument of a physical-effect verb ('kill', 'break').",,,,,,,,
-50,article,An article is a short form that often accompanies a noun and that indicates(in)definiteness or (non)specificity or a very closely related notion.,,,Article,http://linguistics-ontology.org/gold/2010/Article,,article,http://www.isocat.org/rest/dc/1892,
+50,article,An article is a short form that often accompanies a noun and that indicates (in)definiteness or (non)specificity or a very closely related notion.,,,Article,http://linguistics-ontology.org/gold/2010/Article,"""An article is a member of a small class of determiners that identify a noun's definite or indefinite reference, and new or given status [Crystal 1997: 26].""",article,http://www.isocat.org/rest/dc/1892,
 51,(in)definite nominal,A nominal is (in)definite if its referent can(not) be uniquely determined within a contextually pragmatic set by the hearer.,,,,,,,,
 52,specific nominal,A nominal is specific if it has a referent in the speaker's reality space (one of their mental spaces).,,"maybe this should be ""specific referential expression""",,,,,,
-53,demonstrative,"""A demonstrative is a form that establishes reference by deixis and that can be accompanied by a pointing gesture.""",,,,,,,,
-54,complementizer,A complementizer is a marker that indicates that the clause on which it occurs is a complement clause.,,,,,,,http://www.isocat.org/rest/dc/2266,
-55,polar question,,,,,,,,http://www.isocat.org/rest/dc/2297,
+53,demonstrative,A demonstrative is a form other than a first or second person form that can help establish reference via egocentric spatial deixis.,,"Dixon (2003):
+
+A demonstrative is here defined as a grammatical word (or, occasionally, a
+clitic or affix) which can have pointing (or deictic) reference; for example This is my favourite chair (pointing at an object) or Put it there! (pointing at a place). It could be argued that 1st and 2nd person pronouns have, by their very nature, implicit pointing reference. In view of this, the definition of demonstrative can be modified to be “any item, other than 1st and 2nd person pronouns, which can have pointing (or deictic) reference”.
+
+Diessel (2005, WALS):
+
+""Demonstratives are deictic expressions such as English this and that. They indicate the relative distance of a referent in the speech situation vis-à-vis the deictic center. The deictic center, which is also called the origo, is roughly equivalent to the speaker’s location at the time of the utterance.""
+
+Dryer (2005, WALS):
+
+For the purposes of this map, a word or affix is considered a demonstrative if it satisfies at least one of two criteria: (1) it has among its uses a meaning that contrasts with some other form in terms of physical proximity to the speaker, so that there is at least a two-way contrast of proximal (near speaker) versus distal (not near speaker); or (2) the form has among its uses an indication that the hearer is intended to direct their attention towards something in the physical environment. In many and probably most languages, demonstratives are associated with both of these functions.
+
+Diessel & Coventry (2020):
+
+The term “demonstrative” refers to a small class of expressions that are commonly divided into two basic types: nominal demonstratives such as English this and that and adverbial demonstratives such as here and there (Dixon, 2003). The two types of demonstratives are closely related. They usually include the same deictic roots (Diessel, 1999) and are defined by two basic concepts of language and cognition, i.e., joint attention and deixis (Levinson, 2004; Diessel, 2014).
+
+Wikipedia (2023):
+
+Demonstratives are words, such as this and that, used to indicate which entities are being referred to and to distinguish those entities from others. They are typically deictic, their meaning depending on a particular frame of reference, and cannot be understood without context.",Demonstrative,http://linguistics-ontology.org/gold/2010/Demonstrative,"""A demonstrative is a determiner that is used deictically to indicate a referent's spatial, temporal, or discourse location. A demonstrative functions as a modifier of a noun, or a pronoun [Crystal 1997: 312].""",,,
+54,complementizer,A complementizer is a marker that indicates that the clause on which it occurs is a complement clause.,,,Complementizer,http://linguistics-ontology.org/gold/2010/Complementizer,"""A complementizer is a connective which marks a complement clause [Crystal 1997: 75].""",,http://www.isocat.org/rest/dc/2266,
+55,polar question,,,###,,,,,http://www.isocat.org/rest/dc/2297,
 56,clusivity,the distinction between a group including speaker and hearer (inclusive) and a group including the speaker but excluding the hearer (exclusive),,,,,,,,
 57,complement clause,a clause that is an argument of a verb,,,Complement Subordinate,http://linguistics-ontology.org/gold/2010/ComplementSubordinate,,,,
-58,argument,,,,,,,,,
-59,verb,,,,,,,,,
-60,standard negation,,,,,,,,,
-61,locational adverbial,,,,,,,,,
+58,argument,,,"An argument is a kind of function or slot, not a kind of expression, so it may be unexpressed, but ""argument"" is also often used in the sense of ""argument nominal"" or (more broadly) ""argument expression"".",Syntactic Argument,http://linguistics-ontology.org/gold/2010/SyntacticArgument,"The definition does not really fit: ""SyntacticArgument is the class of syntactic words that are fundamentally referable and non-relational [Anderson 1997: 15]. Proper names are the quintessential arguments, though pronouns and nouns possess argument properties.""",,,
+59,verb,,,###,Verbal,http://linguistics-ontology.org/gold/2010/Verbal,"""A Verbal is a part of speech whose members typically signal events and actions; constitute, singly or in a phrase, a minimal predicate in a clause; govern the number and types of other constituents which may occur in the clause; and, in inflectional languages, may be inflected for tense, aspect, voice, modality, or agreement with other constituents in person, number, or grammatical gender [Crystal 1997: 409; Givon 1984: 52; Payne 1997: 47].""",,,
+60,standard negation,,,###,,,,,,
+61,locational adverbial,,,###,,,,,,
 62,adnominal modifier,(An adnominal modifier is a modifier that occurs adnominally.),,"An older alternative term is ""attribute"", and ""attributive"" is a synonym of ""adnominal"" that is still very widely used.",,,,,,
-63,modifier,,,,,,,,,
-64,affix,An affix is a bound form that occurs adjacent to roots of only one root-class and is not interruptible by free forms from it.,,,,,,,,
-65,root,"A root is a form that does not contain other forms and that denotes an event, a thing or a property.",,"Other definitions of root make reference to word, e.g. ""The unanalyzable core of a word"", but since word cannot be easily defined, it is better to define root in terms of the most important meanings. Including other meanings is not necessary, because these never behave in a special way.",,,,,,
-66,form,A form in spoken language is a conventional pairing of a sound shape and a semiotic function (i.e. a meaning in its broadest sense).,,"is form the same as ""expression""?",,,,,,
+63,modifier,,,###,,,,,,
+64,affix,An affix is a bound form that occurs adjacent to roots of only one root-class and is not separable by free forms from it.,,,affix,http://linguistics-ontology.org/gold/2010/Affix,"The GOLD definition (""An affix is a morpheme with an abstract meaning which can only be used when added to a root morpheme"") is similar but makes reference to ""abstract meaning"", which is very hard to define.",,,
+65,root,"A root is a morph that denotes an event, a thing or a property.",,"Other definitions of root make reference to word, e.g. ""The unanalyzable core of a word"", but since word cannot be easily defined, it is better to define root in terms of the most important meanings. Including other meanings is not necessary, because these never behave in a special way.",root,http://linguistics-ontology.org/gold/2010/Root,"The GOLD definition (""the base form of a word which cannot be further analyzed without total loss of identity"") defines a root in terms of the terms ""word"" (which has no good definition) and ""base"" (which is undefined in GOLD). But what is meant by GOLD is not substantially different.",,,
+66,form (or expression),A form (or expression) in a spoken language is a conventional pairing of a sound shape and a content (meaning or discourse function or grammatical function).,,"Instead of ""a form"", one may also say ""an expression"". These terms refer to the same concept, but longer forms (such as nominal phrases or clauses) are usually called ""expressions"". Note that ""form"" is often used for the signans of a linguistic sign, and signs are said to have a ""meaning"" component and a ""form"" component. For this latter sense, it is better to use ""shape"" if one wants to be very precise. – In Croft (2022), the term ""element"" is used roughly in this sense.",,,,,,
 67,root-class,"A root-class is one of the following three classes: action roots, thing roots, and property roots.",,,,,,,,
-68,free form,A free form is a form that can occur on its own as a well-formed utterance.,,,,,,,,
+68,free form,A free form is a form that can occur on its own in isolation.,,"Instead of ""in isolation"", authors often say ""on its own"". Note that a form is the same as an expression, so one may also say ""free expression"". Longer forms (such as nominal phrases and clauses) are usually called ""expressions"", not ""forms"", but these terms refer to the same concept.",free morpheme,http://linguistics-ontology.org/gold/2010/FreeMorpheme,"A free morpheme is defined by GOLD as ""a morpheme which can be used on its own as a word with a distinct meaning, as opposed to a bound morpheme"". This is less general than ""free form"" (because a form need not be minimal, i.e. it can consist of multiple morphs), but the sense of ""free"" is the same here.",,,
 69,person index,A person index is a bound person form.,,,,,,,,
-70,person form,"A person form is a form that denotes 1st, 2nd or 3rd person, i.e. the speech role of the speaker, the speech role of the hearer, or a referent that is neither speaker nor hearer.",,,,,,,,
-71,possessive person index,A possessive person index is a person index that denotes an adpossessor (i.e. an adnominal possessor).,,,,,,,,
+70,person form,"A person form is a form that denotes 1st, 2nd or 3rd person, i.e. the speech role of the speaker, the speech role of the hearer, or a referent that is neither speaker nor hearer.",,"Another way of definining ""person forms"" might be to say that a person form is an independent personal pronoun or a person index. These two concepts are fairly clear, and maybe they can be defined without making reference to a more general concept of ""person form"".",,,,,,
+71,possessive person index,A possessive person index is a person index that denotes an adpossessor (i.e. an adnominal possessor).,,"An even more explicit term would be ""adpossessive person index"", but it is probably not necessary to specify this, because person indexes are not relevant to predpossessive constructions.",,,,,,
 72,adpossessor,An adpossessor (or adnominal possessor) is an adnominal modifier that denotes a possessive relationship.,,,,,,,,
-73,possessive relationship,"A possessive relationship is a relationship of kinship, of part-whole, or of ownership.",,"In all languages, the forms for possessive relationships are also used for other, loosely associative relationships, such as 'my path (on which I'm walking)', 'my chair (on which I'm sitting)', 'my school (which I attend)'. These are not part of the definition because such meanings are never expressed in a special way.",,,,,,
-74,affixal possessive person index,"An affixal possessive person index is a possessive person index that is an affix, i.e. only occurs on the noun, not on adnominal modifiers.",,,,,,,,
+73,possessive (semantic relation),"A possessive relation is a relationship of kinship, of part-whole, or of ownership.",,"In all languages, the forms for possessive relationships are also used for other, loosely associative relationships, such as 'my path (on which I'm walking)', 'my chair (on which I'm sitting)', 'my school (which I attend)'. These are not part of the definition because such meanings are never expressed in a special way.",,,,,,
+74,affixal possessive person index,"An affixal possessive person index is a possessive person index that is an affix, i.e. only occurs on the noun, not on adnominal modifiers.",,"## Do we need such a concept? We can just say ""adpossessive person index"" and ""affix"".",,,,,,
 75,possidend noun,A possidend noun is a noun that obligatorily carries a possessive person index.,,,,,,,,
 76,possessive classifier,A possessive classifier is a genifier that is part of a possessive classifier system.,,,,,,,,
-77,neutral order,A neutral order of elements is one that occurs in constructions that do not involve special discourse highlighting such as focusing or topicalization.,,,,,,,,
+77,normal order,A normal order of elements is one that occurs in constructions that do not express focus or topicality by special intonation or special marking.,,,,,,,,
 78,property word,"A property word is a form containing at least one root that denotes a property such as 'old', 'big', 'good', 'red'.",,,,,,adjective,http://www.isocat.org/rest/dc/1230,
-79,clause,,,,Clause,http://linguistics-ontology.org/gold/2010/Clause,,,,
-82,definite(ness),"A definite nominal is a nominal whose referent can be uniquely identified by the hearer, as in anaphoric situations, to refer back to something mentioned in the preceding discourse (e.g. I bought a new bicycle... My husband likes the bicycle), or in associative contexts, to refer to something that is not mentioned in the preceding discourse but that is identifiable because of an associative relationship (e.g. I bought a new bicycle. The saddle is very comfortable).",,(cf. animacy vs. animate),,,,,,
-83,abessive flag,,,,Abessive case,http://linguistics-ontology.org/gold/2010/AbessiveCase,,abessive case,http://www.isocat.org/rest/dc/1223,
-84,absolutive flag,,,,Absolutive Case,http://linguistics-ontology.org/gold/2010/AbsolutiveCase,,absolutive case,http://www.isocat.org/rest/dc/1225,
-85,adessive flag,,,,Adessive Case,http://linguistics-ontology.org/gold/2010/AdessiveCase,,adessive case,http://www.isocat.org/rest/dc/1228,
-86,allative flag,,,,Allative Case,http://linguistics-ontology.org/gold/2010/AllativeCase,,,,
-87,benefactive flag,,,,Benefactive Case,http://linguistics-ontology.org/gold/2010/BenefactiveCase,,benefactive case,http://www.isocat.org/rest/dc/1247,
-88,comitative flag,,,,Comitative Case,http://linguistics-ontology.org/gold/2010/ComitativeCase,,,,
-89,dative flag,,,,Dative Case,http://linguistics-ontology.org/gold/2010/DativeCase,,,,
-90,subordinate clause,"A subordinate clause is a clause that is a relative clause, a complement clause, or an adverbial clause.",,,Subordinate Clause,http://linguistics-ontology.org/gold/2010/SubordinateClause,,,,
-91,common noun,,,,Common Noun,http://linguistics-ontology.org/gold/2010/CommonNoun,,,,
-92,proper name,,,,Proper Noun,http://linguistics-ontology.org/gold/2010/ProperNoun,,,,
-93,interjection,,,,Interjection,http://linguistics-ontology.org/gold/2010/Interjection,,,,
-95,coordinator,,,,,,,coordinating conjunction,http://www.isocat.org/rest/dc/1262,
-96,subordinator,A subordinator is a grammatical marker that,,"Note that traditionally, subordinators are called ""subordinating conjunctions"", but it is very hard (and actually not necessary) to define a concept ""conjunction"" that comprises both coordinators and subordinators, so here this traditional concept is not used.",,,,subordinating conjunction,http://www.isocat.org/rest/dc/1393,
-97,particle,"A particle is a short form that is not an affix, not a root, not a pronoun, not a flag, not a coordinator, not a subordinator, and not an auxiliary verb.",,,,,,,,
-98,personal pronoun,A personal pronoun is a person form that cannot cooccur with a conominal.,,"When a person form can cooccur with a conominal, it is called ""cross-index"", and when it must cooccur with it, it is called ""gramm-index"". When a personal pronoun is a bound person form (i.e. a person index), it can be called ""pro-index"".",Personal Pronoun,http://linguistics-ontology.org/gold/2010/PersonalPronoun,GOLD does not distinguish between independent personal pronouns and bound person forms.,,,
+79,clause,A clause is a combination of a predicate (full verb or nonverbal predicate) and its arguments plus modifiers.,,"Alternatively, the term clause may be regarded as a primitive.",Clause,http://linguistics-ontology.org/gold/2010/Clause,,,,
+82,definite(ness),"A definite nominal is a nominal whose referent can be uniquely identified by the hearer, as in anaphoric situations, to refer back to something mentioned in the preceding discourse (e.g. I bought a new bicycle... My husband likes the bicycle), or in associative contexts, to refer to something that is not mentioned in the preceding discourse but that is identifiable because of an associative relationship (e.g. I bought a new bicycle. The saddle is very comfortable).",,"(cf. animacy vs. animate)
+
+Dear Jürgen (and Stephanie),
+
+As you know, like David I keep asking questions about terminology, and I have the dream that one day, we will no longer be forced to ask such questions because we will have a standard morphosyntactic terminology, just as we have a standard set of phonological symbols (the IPA).
+
+So my question is: If we want to have a standard definition of the term ""definite"", would the following work:?
+
+""A definite nominal is a nominal whose referent is uniquely identifiable to the hearer because it is discourse-given or unique in the wider or immediate discourse context.""
+
+This would be a comparative concept, and it would map (not always perfectly) onto various language-particular semantic categories (as you say). My definition does not mention ""discourse status"" (because I wouldn't know how to define this concept), and it talks about the ""hearer"" rather than the ""interlocutors"" because it seems that unique identifiability for the speaker plays no role (?).
+
+Next, you use the terms ""particle"", ""function word"" and ""inflection"", but I'm not sure what exactly these mean. Would it be possible, instead, to use the term ""bound form"", i.e. a form that cannot occur on its own (= in isolation)? (see https://dlc.hypotheses.org/1779) Everyone agrees that ""inflectional markers"" cannot occur on its own, and this applies to most forms called ""particles"" as well (except for ""yes"", ""no"", and very few others). The most difficult concept is ""function word"" – but wouldn't you agree that definite articles are not expected to be free forms? It seems that in all languages, (at least some) demonstratives can occur on their own, while forms called ""definite articles"" can never occur in isolation.
+
+If one had these definitions (which I'd hope would be widely acceptable), your question could be formulated as follows:
+
+Are there glossed corpora of languages that lack bound forms that routinely mark definite nominals as definite?
+
+(Or even more briefly: Are there glossed corpora of languages that lack a definite article? if ""definite article"" is defined as ""a bound form that routinely marks definite nominals as definite"".)
+
+It seems to me that ""bound form"" is probably better suited than ""grammaticalized"", because this term is rather vague and there are a whole range of criteria that one might apply.
+
+I'd be curious to hear what you think.
+
+Best wishes,
+Martin",,,,,,
+83,abessive flag,,,###,abessive case,http://linguistics-ontology.org/gold/2010/AbessiveCase,,abessive case,http://www.isocat.org/rest/dc/1223,
+84,absolutive flag,,,###,absolutive case,http://linguistics-ontology.org/gold/2010/AbsolutiveCase,,absolutive case,http://www.isocat.org/rest/dc/1225,
+85,adessive flag,,,###,adessive case,http://linguistics-ontology.org/gold/2010/AdessiveCase,,adessive case,http://www.isocat.org/rest/dc/1228,
+86,allative flag,,,###,allative case,http://linguistics-ontology.org/gold/2010/AllativeCase,,,,
+87,benefactive flag,,,###,benefactive case,http://linguistics-ontology.org/gold/2010/BenefactiveCase,,benefactive case,http://www.isocat.org/rest/dc/1247,
+88,comitative flag,A comitative flag is a flag that codes a comitatve relation.,,###,comitative case,http://linguistics-ontology.org/gold/2010/ComitativeCase,,,,
+89,dative flag,,,###,dative case,http://linguistics-ontology.org/gold/2010/DativeCase,,,,
+90,subordinate clause,"A subordinate clause is a clause that is a relative clause, a complement clause, or an adverbial clause.",,"See Haspelmath (1995) and Cristofaro (2003) for discussion of the notion of subordination (or embedding). Most complement and relative clauses are unquestionably subordinate, but for many adverbial clauses, this is not so clear, and some relative clauses (""correlative relative clauses"") are not clearly subordinate either.",Subordinate Clause,http://linguistics-ontology.org/gold/2010/SubordinateClause,,,,
+91,common noun,,,"% Should be defined as ""a noun that is not a proper name"", but proper names are not really ""nouns"" according to the shared-core definition...",Common Noun,http://linguistics-ontology.org/gold/2010/CommonNoun,"""CommonNouns refer to a class of objects, places, ideas, and so on. This is in contrast with ProperNoun. [Brown and Miller 1999: 424]""",,,
+92,proper name,,,###,Proper Noun,http://linguistics-ontology.org/gold/2010/ProperNoun,"""ProperNoun, also referred to as proper names, is the class of nouns that are used to address particular persons or culturally significant personages or places. They refer to specific entities and are not usually with articles, modifiers, possessors. [Payne 1997: 39]""",,,
+93,interjection,,,%,Interjection,http://linguistics-ontology.org/gold/2010/Interjection,"""An interjection is a part of speech, typically brief in form, such as one syllable or word, whose members are used most often as exclamations or parts of an exclamation. An interjection, typically expressing an emotional reaction, often with respect to an accompanying sentence, is not syntactically related to other accompanying expressions, and may include a combination of sounds not otherwise found in the language [Crystal 1997: 200].""",,,
+95,coordinator,,,###,,,,coordinating conjunction,http://www.isocat.org/rest/dc/1262,
+96,subordinator,A subordinator is a grammatical marker that occurs in a peripheral clause position and that indicates that the clause is a subordinate clause.,,"Note that traditionally, subordinators are called ""subordinating conjunctions"", but it is very hard (and actually not necessary) to define a concept ""conjunction"" that comprises both coordinators and subordinators, so here this traditional concept is not used. – %% The condition that the subordinator occurs in a peripheral position may not be necessary.",Subordinating Connective,http://linguistics-ontology.org/gold/2010/SubordinatingConnective,"""A subordinating connective is a connective that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. [Crystal 1997: 370]""",subordinating conjunction,http://www.isocat.org/rest/dc/1393,
+97,particle,"A particle is a short form that is not an affix, not a root, not a pronoun, not a flag, not a connective, and that does not combine with markers that are typical for verbs.",,,Particle,http://linguistics-ontology.org/gold/2010/Particle,"""A term used to refer to an invariable item with grammatical function, especially one which does not readily fit into a standard classification of parts of speech. [Crystal 1997: 279-280]""",,,
+98,personal pronoun,A personal pronoun is a person form that cannot cooccur with a conominal.,,"When a person form can cooccur with a conominal, it is called ""cross-index"", and when it must cooccur with it, it is called ""gramm-index"". When a personal pronoun is a bound person form (i.e. a person index), it can be called ""pro-index"".
+
+##Or maybe pro-index should not be included???
+
+Lingtyp 2021.07.07-ego:
+
+Maybe the following will work:
+
+""A personal pronoun is a free form that (i) denotes a speech role (speaker/producer and/or hearer/comprehender) OR that is used as an anaphoric form AND (ii) that can be used in a complement clause coreferentially with a matrix clause argument.""
+
+This is a disjunctive definition that brings together locuphoric forms ('I', 'we', 'you') and 3rd-person anaphoric (or ""endophoric"") forms, following the Western tradition (but not following any kind of compelling logic).
+
+It seems that personal pronouns need to be delimited from three types of somewhat doubtful forms:
+
+– person indexes (I do not include bound forms under ""personal pronoun"" here, following my 2013 paper on person indexes: https://zenodo.org/record/1294059)
+– demonstratives
+– titles like ""Your Majesty""
+
+I think that if a language has a form like ""that-one"" or ""your-majesty"" that can be used coreferentially in a complement clause, one will regard it as a personal pronoun:
+
+(a) ""My sister(i) thinks that that-one(i) has an answer.""
+(b) ""Does your-majesty(i) think that your-majesty(i) has an answer?""
+
+In German, the polite second-person pronoun ""Sie"" (which has Third-Person syntax) can be used in (b), but the demonstrative ""die"" can hardly be used in (a), so it would not count as a personal pronoun (yet). However, in Hindi-Urdu and Mongolian, as mentioned by Ian, the demonstrative can be used in this way (I think), so it would count as a personal pronoun.
+
+I don't think we need the general notion of ""person"" to define ""personal pronoun"". Wikipedia's current definition is therefore quite confusing (https://en.wikipedia.org/wiki/Personal_pronoun).
+
+Thanks for this interesting challenge, Ian! It seems to me that quite a few of our traditional terms CAN be defined, but their definitions are not obvious at all (and the textbooks don't usually give the definitions).
+
+Best,
+Martin",Personal Pronoun,http://linguistics-ontology.org/gold/2010/PersonalPronoun,"GOLD does not distinguish between independent personal pronouns and bound person forms. – ""A pronoun used to refer to the speaker, the person spoken to, and other persons and things whose referents are presumed to be clear from the context. While some personal pronouns in some languages occur in essentially the same sentence position as other nominal expressions, it is rather common for them to show distributional peculiarities. Personal pronouns may be clitics whose distribution may be consistently distinct from that of non-clitic nominals. It is also common for the equivalent of personal pronouns to be expressed by affixes on the verb. [Schachter 1985: 25-26]""",,,
 99,argument coding,"Argument coding includes person indexing on the verb, flagging on the argument nominal, and fixed word order.",,,,,,,,
-100,fixed word order,,,,,,,,,
+100,rigid word order,,,###,,,,,,
 101,conominal,A conominal is a nominal that can cooccur in the same clause with a person index and that is coreferential with it.,,"Note that when a person index can cooccur with a conominal, it is a cross-index or a gramm-index. Conominals are also often referred to as ""appositional NPs"".",,,,,,
-102,syntactic role,,,,,,,,,
+102,syntactic function,,,###,,,,,,
 104,interrogative pronoun,An interrogative pronoun is a form that occurs in a content question and that occupies the position of the open parameter at issue.,,"(LINGTYP Oct 2017)
 
 This definition would comprise forms such as Italian ""cosa"" (which means 'what?' or 'thing'), as well as French ""que"" (which is a bound form, in that it cannot occur by itself). Perhaps these are not ""genuine"" interrogative pronouns, in the sense that they are free forms (like Latin ""quid?""), or in the sense that they only occur in an interrogative context (again like Latin ""quid?""). But since even the forms of well-known languages may occur in non-interrogative contexts (e.g. most English wh-pronouns, used in relative clauses), it does not seem reasonable to define ""interrogative pronoun"" in a narrow sense.
 
-I do share the feeling that Abkhaz and Abaza are unusual in some way, but I'm not sure how best to express this with clear comparative concepts. These elements may have been described as part of ""verbal morphology"", but this is more a claim about the orthography than about any clear property of the language.",,,,,,
+I do share the feeling that Abkhaz and Abaza are unusual in some way, but I'm not sure how best to express this with clear comparative concepts. These elements may have been described as part of ""verbal morphology"", but this is more a claim about the orthography than about any clear property of the language.",Interrogative Proform,http://linguistics-ontology.org/gold/2010/InterrogativeProform,"""An InterrogativeProform is a Proform that is used in questions to stand for the item questioned. [Schachter 1985: 34]""",,,
 105,person,"Person is a dimension of grammatical meaning which has three values, two of which are speech roles: the speaker (1st person) and the hearer (2nd person), plus other referents that are neither speaker nor hearer (and do not include them) (3rd person).",,,,,,,,
 106,A-argument,"An A-argument is the agent argument of a physical-effect verb ('kill', 'break').",,,,,,,,
-107,politeness in personal pronouns,,,,,,,,,
-108,title,,,,,,,,,
-110,applicative marker,An applicative marker is a grammatical marker occurring on a verb that changes the verb's valency in such a way that an argument with a specific role gets to be coded like the P-argument in simple transitive clauses.,,"There are various subtypes of applicative markers, depending on the role which they transform into a P-argument. Thus, for example, an instrumental applicative marker is an applicative marker that transforms a nominal with an instrumental role into a P-argument.",,,,,,
-111,instrumental role,"A nominal bears an instrumental role if it serves to express the instrument (implement carried in the hand, body part, means of transport, or language) with which an action is carried out by the agent.",,,,,,,,
+107,politeness in personal pronouns,,,###,,,,,,
+108,title,,,###,,,,,,
+110,applicative marker,An applicative marker is a grammatical marker occurring on a verb that changes the verb's valency in such a way that an argument other than the P of the base verb gets to be coded like the P-argument in a simple transitive clause.,"""The effect of the applicative is to introduce a new internal argument into the argument structure of a verb. It thus allows a role that would be expressed as an oblique, if at all, to be expressed as a direct argument. The theta roles that the applicative can affect in this way are those which in many languages are expressed as obliques (adpositional or semantically case-marked phrases) and which are often optional arguments of the verb: beneficiaries, goals, instrumentals, etc."" (Alsina & Mchombo 1993: 27)
+
+""Applicatives assign the status of direct object to oblique roles of different kinds. [...] The applicative transitivizes an intransitive verb, providing it with a direct object. If a transitive verb is extended by an applicative the original direct object [...] will normally give up its status. But there are instances [...] where the original patient retains its ability to become the subject of a passive even after applicative formation has taken place."" (Haspelmath & Müller-Bardey 2004: 1134)
+
+""In terms of their morphosyntax, applicative constructions are constructions, or sentential structures, which involve a participant that normally would not be instantiated in a core object relation, but rather as an oblique of one or another sort, in a core (usually direct object) instantiation. There must be overt marking of the construction in the verbal complex [...]. The construction should also be highly productive across a significant portion of the verbal lexicon"" (Peterson 2007: 39)","There are various subtypes of applicative markers, depending on the role which they transform into a P-argument. Thus, for example, an instrumental applicative marker is an applicative marker that transforms a nominal with an instrumental role into a P-argument, and languages often have benefactive or comitative applicative markers.
+
+Polinsky (2005), Peterson (2007) and Pacchiarotti (2017) offer general cross-linguistically informed discussions of applicatives, and Pacchiarotti's Chapter 2 has extensive discussion of the terminology.
+
+Many authors think of applicative constructions as containing an additional ""direct object"" of some kind, and then the question of the cross-linguistic identification of ""direct object"" arises. The definition in terms of ""P-argument"" (= coded like the monotransitive P) solves this problem.
+
+Some languages have object-adding markers that indicate the addition (or mere presence) of a different kind of ""object"", e.g. a dative or oblique object, or even an adpossessor of an object. Such constructions are not applicatives by the definition given here, though they are of course very similar to them and may be treated identically in particular languages.",,,,,,
+111,instrumental (role),"A nominal bears the instrumental role if it serves to express the instrument (implement carried in the hand, body part, means of transport, or language) with which an action is carried out by the agent.",,,,,,,,
 112,valency,...,,,,,,,,
 113,R-argument,The R-argument of a ditransitive verb is the argument that expresses the recipient or addressee participant or that is coded in the same way as these.,,,,,,,,
-114,ditransitive verb,"A ditransitive verb is a verb that expresses transfer – physical transfer of possession, like 'give', or mental transfer of information, like 'tell'.",,,,,,,,
-115,recipient role,"A nominal bears a recipient role if it serves to express the recipient of a physical transfer of possession verb ('give', 'lend').",,,,,,,,
-116,addressee role,"A nominal bears an addressee role if it serves to express the addressee of a mental transfer of information verb ('tell', 'teach').",,,,,,,,
-117,negation,(no definition – a primitive),,,,,,,,
+114,ditransitive verb,"A ditransitive verb is a verb that expresses transfer – physical transfer of possession, like 'give', or mental transfer of information, like 'tell'.",,,Ditransitive Verb,http://linguistics-ontology.org/gold/2010/DitransitiveVerb,"The GOLD definition (""a ditransitive verb is a verb that takes two objects [Crystal 1997: 397]"") is somewhat broader, as it would also include verbs like 'call' (e.g. They call me Lili), and it is not quite clear what is meant by ""object"" (do oblique arguments count?). However, the most common verbs with two objects are ditransitive verbs.",,,
+115,recipient (role),"A nominal bears the recipient role if it serves to express the recipient of a physical transfer of possession verb ('give', 'lend').",,,,,,,,
+116,addressee (role),"A nominal bears the addressee role if it serves to express the addressee of a mental transfer of information verb ('tell', 'teach').",,,,,,,,
+117,negation [PR],PRIMITIVE: Negation means that a proposition has the opposite truth value.,,,,,,,,
 118,standard negator,A standard negator is a negator that occurs in declarative nonsubordinate clauses with a verbal predicate.,,,,,,,,
-119,declarative sentence,(no definition – primitive concept),,,,,,,,
+119,declarative sentence [PR],"PRIMITIVE: A declarative sentence makes a statement, rather than asking a question or giving a command.",,,,,,,,
 120,root suppletion,Root suppletion is a situation where two different root forms have the same meaning and occur in different grammatical contexts in complementary distribution.,,,,,,,,
-121,strong root suppletion,Strong root suppletion is a situation where two root forms that do not share the first two segments have the same meaning and occur in different grammatical contexts in complementary distribution.,,,,,,,,
-122,weak root suppletion,Weak root suppletion is a situation where two root forms that share the first two segments but are not regularly related have the same meaning and occur in different grammatical contexts in complementary distribution.,,,,,,,,
+121,strong root suppletion,Strong root suppletion is a situation where two root forms that do not share the first plus another segment have the same meaning and occur in different grammatical contexts in complementary distribution.,,,,,,,,
+122,weak root suppletion,Weak root suppletion is a situation where two root forms that share the first plus at least another segment but are not regularly related have the same meaning and occur in different grammatical contexts in complementary distribution.,,"It seems to me that it would be useful to have a general clear (if arbitrary) policy on what to count as strongly suppletive and what to count as weakly suppletive. I would suggest that two root forms are weakly suppletive if they do not form any regular pattern (= a pattern that comprises at least 3 cases) but share two segments, as is the case with bring/brough-t in English, or with Spanish pod-er/pud-e ('can'). If they share only the first segment, the two forms would count as strongly suppletive (e.g. Spanish pon-er/pus-e, and also English think/though-t), just as forms that don't even share the first segment (English go/wen-t). One could make the latter less stringent, by saying that if the first segment is shared, it's weak suppletion – but anything else would seem to be too complicated (e.g. asking for a certain percentage of segments to be shared).",,,,,,
 123,core argument,"A core argument is an A-argument, a P-argument, or an S-argument, or another argument that is coded like one of these.",,,,,,,,
 125,S-argument,"An S-argument is the single argument of a noncausal change-of-state verb ('die', 'fall').",,,,,,,,
-126,tense,,,,,,,,,
-127,aspect,,,,,,,,,
-128,agent role,,,,,,,,,
+126,tense,,,###,,,,,,
+127,aspect,,,###,,,,,,
+128,agent role,,,###,,,,,,
 129,transitivizer,A transitivizer is a grammatical marker that combines with an intransitive verb and indicates that the resulting verb is transitive.,,,,,,,,
-130,transitive verb,A transitive verb is a verb that may occur in a transitive clause.,,,,,,,,
-131,intransitive clause,"An intransitive clause is a clause which is not transitive, i.e. which does not contain two arguments that are coded in the same way as the arguments of the verbs 'kill' and/or 'break'.",,,,,,,,
-132,intransitive verb,An intransitive verb is a verb that may occur in an intransitive clause.,,,,,,,,
-133,reflexive pronoun,A reflexive pronoun is a form that is nominal-like in that it can be flagged and that indicates that its referent is coreferential with the subject.,,,,,,,,
+130,transitive verb,A transitive verb is a verb that may occur in a transitive clause.,,,Transitive Verb,http://linguistics-ontology.org/gold/2010/TransitiveVerb,"""A transitive verb is a verb that takes a direct object, and describes a relation between two participants [Crystal 1997: 397; Payne 1997: 171].""",,,
+131,intransitive clause,"An intransitive clause is a clause which is not transitive, i.e. which does not contain two argument positions that are coded in the same way as the arguments of the verbs 'kill' and/or 'break'.",,,,,,,,
+132,intransitive verb,An intransitive verb is a verb that normally occurs in an intransitive clause.,,"(Ideally, this would be defined in terms of ""verb root"".)",Intransitive Verb,http://linguistics-ontology.org/gold/2010/IntransitiveVerb,"""An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].""",,,
+133,reflexive nominal,A reflexive nominal is a form that is nominal-like in that it can be flagged and that indicates that its referent is coreferential with the subject.,,"A much more common term is ""reflexive pronoun"", but in most languages, such elements are more noun-like than pronoun like.",,,,,,
 134,reflexive marker,A reflexive marker is a bound form that occurs on verbs and indicates that the subject and an object are coreferential.,,,,,,,,
 135,subject,The subject of a clause is its S-argument when the clause is intransitive and its A-argument when the clause is transitive.,,,,,,,,
 136,object,"An object of a clause is its P-argument when the clause is transitive, and its T-argument or its R-argument when the clause is ditransitive.",,,,,,,,
-137,ditransitive clause,,,,,,,,,
-138,T-argument,,,,,,,,,
+137,ditransitive clause,,,###,,,,,,
+138,T-argument,,,###,,,,,,
 139,reciprocal marker,A reciprocal marker is a bound form that occurs on verbs and indicates that the subject and an object are in a mutual relationship.,,,,,,,,
-140,serial verb construction,,,,,,,,,
+140,serial verb construction,,,###,,,,,,
 141,dominant order,The dominant order of two (or more) forms is the order that occurs in at least two thirds of the occurrences in texts.,,,,,,,,
 142,animate,A noun or nominal or referent is animate if it denotes a human being or an animal.,,,,,,,,
+143,relative pronoun,A relative pronoun is a relativizer that can carry a flag or has distinct forms for the roles A and P.,"Comrie & Kuteva (2005: xxx)
+“[T]he position relativized is indicated inside the relative clause by means of a clause-initial pronominal element, and this pronominal element is case-marked (by case or by an adposition) to indicate the role of the head noun within the relative clause.” (http://wals.info/chapter/122)
+
+Michaelis et al. (2013)
+""a relative-clause marker is regarded as a relative pronoun if it has different subject and object forms ..., or if it can be combined with an adposition"" (http://apics-online.info/parameters/92.chapter.html).","Note that relativizers sometimes show gender or number distinctions reflecting the gender/number of the head noun, as in Standard Arabic, but do not carry a flag or distinguish syntactic roles. Such relativizers are not regarded as relative pronouns. (Cf. Comrie & Kuteva 2005: ""Note that the mere presence of a pronoun that is restricted to relative clauses, and is thus in some intuitive sense a relative pronoun, is not sufficient to define an instance of the pronoun strategy  (Comrie 1998: 61-62). Such a relative pronoun can be case-marked, for instance, not to indicate its role in the relative clause, but rather to agree in case with the head noun in the main clause."")",Relative Pronoun,http://linguistics-ontology.org/gold/2010/RelativePronoun,"""A relative pronoun is a pronoun that marks a relative clause, functions grammatically within the relative clause, and is coreferential to the word modified by the relative clause [Crystal 1997: 329].""",,,
+144,relativizer,A relativizer is a form that marks a clause as being a relative clause.,,"A relativizer can have the same shape as a complementizer, i.e. one and the same form can be simultaneously a relativizer and a complementizer.",Relativizer,http://linguistics-ontology.org/gold/2010/Relativizer,"""A relativizer is a subordinating connective that links a relative clause to its head noun. It is distinguishable from a relative pronoun in that it does not have a nominal function within the relative clause. [Payne 1997: 332]""",,,
+145,relative clause,,,###,,,,,,
+149,labile verb pair,A labile verb pair is an alternating verb pair where the P-argument of the transitive alternant corresponds to the S-argument of the intransitive alternant.,"Letuchiy (2009: 223):
+""In this discussion, I consider the traditional definition of a labile verb, adopted in Chikobava (1942), Kibrik et al. (1977) and many other typological and descriptive works: a labile verb is a verb which can be used transitively or intransitively without any formal change. In many other works, such as Haspelmath (1993a) and Ljutikova (2002), the definition is more restrictive: “in labile alternations, the same verb is used both in the inchoative and in the causative sense” (Haspelmath 1993a: 92); thus, a labile verb must have one monovalent (inchoative) and one bivalent (causative) use.""","Labile verb pairs are often called simply ""labile verbs"", treating both verbs as belonging to the same lexeme.
+
+For example, English break can be used transitively (I broke it) and intransitively (it broke), and English eat can be used transitively (I ate it) and intransitively (I ate).",,,,,,
+150,ergative flag,"An ergative flag is a flag that marks a nominal as A-argument (in a transitive clause), but not as P-argument or S-argument.","""An ergative argument marker is a marker that signals A-arguments, but not S- and P-arguments."" (Haspelmath 2022: 202)",,ergative case,http://linguistics-ontology.org/gold/2010/ErgativeCase,,,,
+151,neutral monotransitive alignment,,,###,,,,,,
+152,propositional verb,A propositional verb is a verb of thinking or of knowing that can take a complement clause.,,,,,,,,
+153,determiner,A determiner is an article or an adnominal demonstrative.,,"The term was introduced by Bloomfield (1933) as a cover term for articles and demonstratives in English, because these occur in the same slot and are mutually exclusive. But they also have some semantic similarity, so the term can also be used as a comparative concept, for adnominal modifiers that are articles or demonstratives.",,,,,,
+154,plural form,"A plural form is a form that can be used for a set of three or more entities of the same kind, that cannot be used for one entity of this kind, and that corresponds to a non-plural form that can be used for one entity.",,,,,,,,
+155,logophoric pronoun,A logophoric pronoun is an anaphoric form for a 3rd person referent in a complement clause of a verb of speech or a verb of thought that indicates coreference with the subject (the speaker or thinker) of the matrix clause.,"von Roncador (1992: 164): ""The logophoric form in a dependent clause is taken to mark coreference with a higher subject of a verb of saying... The logophoric form denotes reference to the reported speaker, whereas the regular pronominal form... in reported speech indicates reference to someone else.""
+
+Huang (2002: 211): ""Logophoricity refers to the phenomenon whereby the ‘perspective’ of an internal protagonist of a sentence or discourse, as opposed to that of the current, external speaker, is being reported by some morphological and/or syntactic means.""","Works on logophoric pronouns often emphasize that the antecedent of the logophoric pronoun is best characterized in semantic terms, but the subject of the verb of speech or of thought is always included, so the narrower definition given here is not problematic.",,,,,,
+156,matrix clause,The matrix clause of subordinate clause S is the minimal clause that contains it.,,"A *matrix-clause fragment* is the part of a matrix clause that is not the subordinate clause. In many cases, linguists actually mean a matrix-clause fragment when they use the term ""matrix clause"". (Another term that is frequently used in the same sense is ""main clause"", but a main clause is expected to be non-subordinate, in contrast to a matrix clause, which can itself be subordinate.)",,,,,,
+157,ownership (semantic relation) [PR],"PRIMITIVE: Ownership (of a possessum by a possessor) means that the possessor (a person) has control over the the possessum (an artifact, domestic animal, or piece of land) in the way that is usually referred to as ""owning"".",,,,,,,,
+158,applicative construction,(preliminary entry),,"Lingtyp:
+
+I think the answer to Adam's question is that a construction is an applicative only if the new object is coded like the P-argument of a basic transitive construction.
+
+Thus, Simon Musgrave's example (1c) from Taba (based on Bowden 2001) is an (instrumental) applicative:
+
+npun-ak kolay peda
+kill-APPL snake machete
+
+But when the instrument 'machete' has its instrumental preposition (ada peda 'with a machete'), it is not an applicative, from a typological perspective (= as a comparative concept).
+
+There is no ""official"" definition of the (typological) term ""applicative"", of course, but it is my understanding that most people use the term in this way. The Wikipedia article reflects this by speaking about promotion to ""(core) object"": https://en.wikipedia.org/wiki/Applicative_voice.
+
+(Maria Polinsky's WALS article is vague and speaks just about ""increasing the number of object arguments by one"", without making precise what is meant by ""object"", https://wals.info/chapter/109. But her examples and the discussion make it clear that she means objects coded like P-arguments.)
+
+This does not mean, of course, that the description of Taba should not use the term ""Applicative"" for the suffix -ak in all cases – but this would be a language-specific descriptive category, somewhat like Dative is used in Russian-type languages also when the case in question is not used in its definitional function (recipient of 'give').",,,,,,
+159,diminutive marking pattern,"a pattern with an affix, or stem change, or partial reduplication marking diminutive meaning",,,,,,,,
+160,augmentative marking pattern,"a pattern with an affix, or stem change, or partial reduplication marking augmentative meaning",,,,,,,,
+161,collective universal quantifier,an adnominal form that expresses 'all' (contrasting with distributive universal quantifier),,,,,,,,
+162,distributive universal quantifier,an adnominal form that expresses 'every' (contrasting with collective universal quantifier),,,,,,,,
+163,predpossessive construction,A predpossessive construction is a construction which can express an ownership relation with the possessor as background and the possessum as focus.,,e.g. 'My sister has a house.',,,,,,
+164,comparative construction,,"""In semantic or cognitive terms, comparison can be defined as a mental act by which two objects are assigned a position on a predicative scale. If the positions on the scale are different, then we speak of the comparison of inequality, which finds its linguistic encoding in comparative constructions. Such a construction essentially involves three things: a predicative scale, which, in language, is usually encoded as a gradable predicate, and two objects."" (Stassen 2005)",###,,,,,,
+165,standard-marker,,,This term needs a hyphen because otherwise it could be understood as a marker that is standard.,,,,,,
+166,comparative degree marker,,,This term needs a hyphen because otherwise it could be understood as a marker that is standard.,,,,,,
+167,inclusory construction,An inclusory construction is a construction in which a nonsingular person form (person index or independent personal pronoun) (= the inclusory conjunct) cooccurs in the same clause with a nominal (= the included conjunct) that denotes a proper subset of the referents of the inclusory conjunct.,,"alternative:
+
+I would define an inclusory construction as a construction where a nonsingular referent is expressed by two forms, one of which is nonsingular (the superset form) and one of which is singular (the subset form), where the subset form denotes a subset of the superset form.",,,,,,
+168,propripossessive construction,A propripossessive construction is a construction which can express an ownership relation with the possessum as background ad the possessor as focus.,,e.g. 'This house belongs to my sister.',,,,,,
+169,causative construction,,,###,,,,,,
+170,antipossessive marker,,,###,,,,,,
+171,sentence,"A sentence is a maximal clause, i.e. a clause that is not part of another clause.",,https://dlc.hypotheses.org/1725,,,,,,
+172,complex clause,A complex clause is a clause that contains at least one other clause.,,"The term ""complex sentence"" is often used as an alternative (but less precise) term.",,,,,,
+173,kinship (semantic relation) [PR],PRIMITIVE: A kinship relation means that two people are related to each other through parenthood or mating or relations derived from these.,,###,,,,,,
+174,main clause,A main clause is a clause that is not a subordinate or dependent clause.,,,,,,,,
+175,locuphoric person,,,###,,,,,,
+176,3rd person form,,,###,,,,,,
+177,reduplication,xxx,,,,,,,,
+178,morph,A morph is a minimal form.,,"Colloquially, morphs are usually called ""morphemes"", but this term also has a range of technical uses. For example, one sometimes says that English has an abstract morpheme [PLURAL] that can be realized by -s (in student-s) or by -i (in alumn-i). But -s and -i are different forms, and hence different morphs (see Haspelmath 2020 for discussion).",morpheme,http://purl.org/linguistics/gold/Morpheme,"The GOLD definition say that a morpheme is ""the smallest functioning unit in the composition of words"", but it is unclear what is meant by a ""unit"". Maybe zeroes or stem changes could be regarded as ""units"", but these are not morphs (because a morph is a segmental form).",,,
+179,clitic,A clitic is a bound morph that is not a root or an affix.,,"The term ""clitic"" is used very inconsistently in the literature, but typically in contrast to ""affix"", and very often in contrast to ""free form"" (there is thus widespread agreement that clitics are bound forms). However, many authors say that affixes are somehow ""more bound"" than clitics, and/or that clitics are somehow ""phonologically deficient"" (and thus in need of a host). These statements have never been made fully precise. In the definition given here, there is no reference to phonological properties, and all that counts is indiscriminacy (or ""promiscuity"", i.e. lack of word-class selectivity).",clitic,http://linguistics-ontology.org/gold/2010/Clitic,"According to GOLD, clitic refers to ""the class of units whose members exhibit syntactic characteristics of a lexical unit, but show evidence of being morphologically bound to another lexical unit, the host, by being unstressed or subject to word-level phonological rules"". This makes reference to phonological properties in a rather vague way, as is not uncommon in the literature.",,,
+180,enclitic,An enclitic is a clitic that can occur at the end of a free form but not at the beginning.,,,enclitic,http://linguistics-ontology.org/gold/2010/Enclitic,"""An enclitic is a clitic that is phonologically joined at the end of a preceding lexical unit to form a single phonological unit [Crystal 1980: 64; Pei and Gaynor 1954: 65].""",,,
+181,proclitic,A proclitic is a clitic that can occur at the beginning of a free form but not at the end.,,,proclitic,http://linguistics-ontology.org/gold/2010/Proclitic,"""A proclitic is a clitic that precedes the lexical unit to which it is phonologically joined [Crystal 1980: 64; Hartmann and Stork 1972: 185; Pei and Gaynor 1954: 176].""",,,
+182,suffix,A suffix is an affix that follows its root.,,,suffix,http://linguistics-ontology.org/gold/2010/Suffix,,,,
+183,prefix,A prefix is an affix that precedes its root.,,,prefix,http://linguistics-ontology.org/gold/2010/Prefix,,,,
+184,circumfix,,,###,circumfix,http://linguistics-ontology.org/gold/2010/Circumfix,,,,
+185,infix,An infix is an affix that occurs in the middle of its root.,,,infix,http://linguistics-ontology.org/gold/2010/Infix,,,,
+186,genitive flag,,,###,genitive case,http://linguistics-ontology.org/gold/2010/GenitiveCase,,,,
+187,locative flag,,,###,locative case,http://linguistics-ontology.org/gold/2010/LocativeCase,,,,
+188,nominative flag,,,###,nominative case,http://linguistics-ontology.org/gold/2010/NominativeCase,,,,
+189,locational predication,,,###,,,,,,
+190,identity predication,,,###,,,,,,
+191,adjectival predication,,,###,,,,,,
+192,shape or orientation copula,A shape or orientation copula is a locational copula that depends on the shape or the orientation of the located object or person.,,,,,,,,
+194,anaphoric form,An anaphoric form is a form which always receives its referential interpretation from another expression in the context.,,"LINGTYP 2021.05.21:
+
+It seems to me that this example (Korean Hyeng-kwa hyeng-uy chinkwu 'older brother and his friend') should not be subsumed under ""anaphora"".
+
+I think the term ""anaphoric form"" should probably be defined as follows:
+
+An anaphoric form is a form which always receives its referential interpretation from another expression in the context.
+
+(One might also say ""anaphor"" instead of ""anaphoric form"", but in generative grammar's ""binding theory"", anaphor is often used for a special subset of anaphoric forms.)
+
+A noun or nominal which is not an anaphoric form is typically banned from being coreferential with another element in the same minimal clause (*Kim(1) went home with Kim(1)'s friend). But with titles and kinship terms, and in some languages also names, such coreference is often possible (e.g. Vietnamese
+Đạti nghĩ là Đạti sẽ thắng [Dat think that Dat will win], Pham 2011: http://www.mikettpham.com/wp-content/uploads/2011/08/kinship-terms-squib.pdf). So there is something special going on here.
+
+Are such forms (which are not anaphoric forms by definitions) pronouns? This depends on how we define ""pronoun"", but I would think that pronouns should not be an open class. So we probably need some new terms here. Maybe something has been proposed in the literature on East/Southeast Asian languages?
+
+Best,
+Martin
+
+Ian Joo:
+
+Dear all,
+
+is there a term for “non-pronominal anaphora”, i. e. using personal names or titles for anaphoric reference?
+Example:
+
+    Hyeng-kwa hyeng-uy chinkwu
+    older.brother-COM older.brother-GEN friend
+    `Older brother and his (lit. older brother’s) friend’ (Korean)
+
+I tried to search it in Google, but since I don’t know what this phenomenon is called, I don’t know what to search for.
+I would appreciate your help.
+
+Regards,
+ian",,,,,,
+195,future tense construction,A future tense construction is a construction with grammatical marking on the verb which indicates temporal location after the moment of speech and which is distinct from at least one other construction that does not indicate this.,"Bybee et al. (1994: 316): ""future (tense): the situation takes place after the moment of speech; the speaker predicts that the situation in the proposition will hold.""","# maybe ""indicate"" implies distinctness?",,,,,,
+196,past tense construction,A past tense construction is a construction with grammatical marking on the verb which indicates temporal location before the moment of speech and which is distinct from at least one other construction that does not indicate this.,"Bybee et al. (1994: 316): ""past (tense): the situation occurred before the moment of speech.""","# maybe ""indicate"" implies distinctness?",,,,,,
+197,direct sensory evidential construction,A direct sensory evidential construction is a construction with grammatical marking on the verb which indicates that the information source is direct sensory evidence.,,,,,,,,
+198,indirect evidential construction,An indirect evidential construction is a construction with grammatical marking on the verb which indicates that the information source is not direct sensory evidence.,,Indirect evidence most often means hearsay (reportative evidentials) or inference (inferential evidentials).,,,,,,
+199,grammatical marking,"Grammatical marking is a cover term for marking by (i) grammatical markers, i.e. bound non-root forms (especially affixes, but also ""clitics"" of various kinds), (ii) reduplication, or (iii) root modifications.",,"A quasi-synonym of ""marking"" is ""coding"", and ""grammatical"" is redundant because ""marking"" implies ""grammatical"" (there is no such thing as ""lexical marking""; however, ""lexical coding"" is sometimes used as a synonym of ""lexical expression""). ""Grammatical marking"" is broader than ""use of a grammatical marker"", because grammatical marking may also occur by root modification or reduplication (e.g. English past tense may be expressed by root modification: sing vs. sang). ### Is zero-marking included?",,,,,,
+200,count noun,A count noun root is a root that denotes an object or person and that can be modified by a cardinal numeral without requiring a mensurative noun.,,,,,,,,
+201,mass noun,A mass noun root is a root that denotes a substance and that cannot be modified by a cardinal numeral without requiring a mensurative noun.,,,,,,,,
+202,mensurative,A mensurative form is a form denoting a measure that can be modified by an adjective like a noun and that can be used with cardinal numerals to denote a part of a mass or a plurality.,,"Typical mensuratives are slice (a slice of bread), basket (a basket of apples), and kilo (a kilo of rice).",,,,,,
+203,in situ position,An interrogative expression/phrase is said to occur in situ if it occurs in the same position in which the corresponding non-interrogative expression/phrase would occur in an answer.,"""Languages in which interrogative phrases occur in the same position as corresponding noninterrogative phrases are sometimes described as placing interrogative phrases in situ."" (Dryer 2005: Position of Interrogative Phrases in Content Questions)",,,,,,,
+204,interrogative phrase,,,#,,,,,,
+205,internally-headed relative clause,,,###,,,,,,
+206,decimal numeral system,,,"###
+
+# In Grambank, there is a disjunctive definition, but presumably, the definition should make reference to multiples of 10. In other words, if a language had unique forms for 30, 40, 50, 60, .... 100 (as with Russian sorok '40'), then this would not be a decimal system.",,,,,,
+207,correlative relative clause construction,,,###,,,,,,
+208,head noun of relative clause,,,###,,,,,,
+209,cardinal numeral,,,###,Cardinal Numeral,http://linguistics-ontology.org/gold/2010/CardinalNumeral,"""A cardinal numeral is a numeral of the class whose members are considered basic in form, are used in counting, and are used in expressing how many objects are referred to [Crystal 1997: 52].""",,,
+210,present tense construction,A present tense construction is a construction with grammatical marking on the verb which indicates temporal location before the moment of speech and which is distinct from at least one other construction that does not indicate this.,"Bybee et al. (1994: 316): ""past (tense): the situation occurred before the moment of speech.""","# maybe ""indicate"" implies distinctness?",,,,,,
+211,meronymy (semantic relation) [PR],PRIMITIVE: Meronymy means that two entities are related to each other as part and whole.,,,,,,,,
+212,shape distinctness [PR],PRIMITIVE: Shape distinctness means that the shapes of two markers are different.,,,,,,,,
+213,male and female sex [PR],PRIMITIVE: Male and female sex mean roughly what these concepts mean in biology.,,,,,,,,
+214,deictic distance [PR],PRIMITIVE: Deictic distance means distance from the speaker/producer or speech situation and is relevant to demonstratives in many languages.,,,,,,,,
+215,deictic elevation [PR],PRIMITIVE: Deictic elevation means upward or downward position from the speaker/producer or speech situation and is relevant to demonstratives in some languages.,,,,,,,,
+216,deictic visibility [PR],PRIMITIVE: Deictic visibility means visibility by the speaker/producer or in the speech situation and is relevant to demonstratives in some languages.,,,,,,,,
+217,imperfective construction,An imperfective construction is a construction with grammatical marking on the verb which indicates ... and which is distinct from at least one other construction that does not indicate this.,,"# maybe ""indicate"" implies distinctness?
+
+###",,,,,,
+218,perfective construction,A perfective construction is a construction with grammatical marking on the verb which indicates ... and which is distinct from at least one other construction that does not indicate this.,,"# maybe ""indicate"" implies distinctness?
+
+###",,,,,,
+219,paucal form,"A paucal form is a form that can be used for a set of between three and seven of the same kind, that cannot be used for one or two entities of this kind, and that corresponds to a non-paucal form that can be used ...
+...",,,,,,,,
+220,passive voice construction,,,###,,,,,,
+221,antipassive voice construction,,,,,,,,,
+222,nonverbal clause construction,,,,,,,,,
+223,verbal clause construction,,,,,,,,,
+224,imperative sentence [PR],"PRIMITIVE: An imperative sentence expresses a command, rather than asking a question or making a statement.",,,,,,,,
+225,flexible word order,,,###,,,,,,
+226,preposition,A preposition is an adposition that precedes its complement nominal.,,,Preposition,http://linguistics-ontology.org/gold/2010/Preposition,"""A preposition is an adposition that occurs before its complement [Crystal 1997: 305; Payne 1997: 86].""",,,
+227,adposition,An adposition is a flag that is not an affix.,,,Adposition,http://linguistics-ontology.org/gold/2010/Adposition,"""An adposition is a part of speech whose members are of a closed set and occur before or after a complement composed of a noun phrase, noun, pronoun, or clause that functions as a noun phrase and forms a single structure with the complement to express its grammatical and semantic relation to another unit within a clause [Comrie 1989: 91; Crystal 1997: 305; Payne 1997: 86].""",,,
+228,secondary predicate,,,,Complement,http://linguistics-ontology.org/gold/2010/Complement,"""A complement, also called a predicative, is a phrase that gives a description of the subject or object via the verb, while the verb itself expresses no adequate thought without being complemented by this addition. Most typically this is an adjective phrase. [Asher 1994: 4881; Jespersen 2006: 89; Huddleston and Pullum 2002: 251]""",,,
+229,existive,,,,Existential Marker,http://linguistics-ontology.org/gold/2010/ExistentialMarker,An existential marker is a syntactic category whose members are found in distinct clause types and which mark a referent's existence [Crystal 1997: 142].,,,
+230,pro-verb,,,,Proverb,http://linguistics-ontology.org/gold/2010/ProVerb,"""A proverb (frequently written ""pro-verb"") is a ProForm that substitutes for a verb or verb phrase. [Schachter 1985: 34]""",,,
+231,auxiliary verb [UNDEFINED],"(The term ""auxiliary verb"" is used frequently for European languages, and also for other languages of Eurasia, but in many languages of other types, it is unclear how one would identify auxiliary verbs. ""Verbs"" are primarily defined across languages by their action or event meaning, and this criterion does not hold for ""auxiliary verbs"".)",,"The term is often abbreviated as ""auxiliary"", because other elements with auxiliary or ancillary function are not called ""auxiliaries"" (for example, there are no ""auxiliary nouns"" or ""auxiliary adjectives"").",Auxiliary,http://linguistics-ontology.org/gold/2010/Auxiliary,"""Auxiliary is a term used to describe verbs which are used in coordination with another verb to express mood, tense or aspect of the action denoted by the main verb. Marginal auxiliaries share some of these properties, but not all. [Crystal 1985: 28; Pei & Gaynor 1980: 23]""",,,
+232,converb,"A converb is a form consisting of a verb root and an affix that can be used in converbal clauses, but not in independent clauses, in relative clauses, or in complement clauses.","""A converb is defined here as a nonfinite verb form whose main function is to mark adverbial subordination. Another way of putting it is that converbs are verbal adverbs, just like participles are verbal adjectives."" (Haspelmath 1995: 3)","The definition here makes reference to ""converbal clause"", because this is the basic use of converbs. They may also occur in auxiliary-like monoclausal constructions in several languages.",Converb,http://linguistics-ontology.org/gold/2010/Converb,"""A nonfinite verb form, i.e., lacking specifications for tense, mood, and agreement with their arguments, whose main function is to mark adverbial subordination. Converbal constructions are generally not arguments but modifiers, and they generally modify verbs, clauses or sentences, but not nouns or noun phrases. They are embedded or incorporated into the superordinate clause, and contrast with coordinate constructions. Converbal constructions can often be paraphrased by means of coordinate constructions in languages that allow coordination of clauses, such as in the gloss for the Korean example below. [Haspelmath 1995: 3-8]""",,,
+233,coverb,(from GOLD),,,Co Verb,http://linguistics-ontology.org/gold/2010/CoVerb,"""A term referring to complex predicates comprised of two verbs; one of these is an auxiliary which contributes some form of meaning in the form of modality, direction, etc. They serve a similar purpose to adpositions in Indo-European languages, and are almost always translated as such. Some examples are found in some east and southeast Asian languages, as well as African languages and Hungarian. [Yang & Kuo 1998: 20]""",,,
+234,postposition,A postposition is an adposition that follows its complement nominal.,,,Postposition,http://linguistics-ontology.org/gold/2010/Postposition,"""A postposition is an adposition that occurs after its complement [Crystal 1997: 300; Payne 1997: 86].""",,,
+235,connective,A connective is a subordinator or a coordinator.,,"In earlier times, the term ""conjunction"" was used as a cover term for ""subordinating conjunctions"" and ""coordinating conjunctions"", and this usage still survives in the pedagogical literature. However, it is not clear that subordinators and coordinators are really a natural class, so it is better to use the new terms ""subordinator"" and ""coordinator"", and to define the cover term ""connective"" in terms of these two terms, rather than the other way round.",Connective,http://linguistics-ontology.org/gold/2010/Connective,"""Also known as a conjunction, a Connective is a class of parts of speech whose members syntactically link words or larger constituents, and expresses a semantic relationship between them. A conjunction is positionally fixed relative to one or more of the elements related by it, thus distinguishing it from constituents such as English conjunctive adverbs [Crystal 1997: 81].""",,,
+236,adverbial subordinator,,"""[Adverbial subordinators:] morphemes which mark adverbial clauses for their semantic relationship to the main clause"" (Dryer 2005)","The term ""adverbializer"" (used e.g. by GOLD) is not used here as it is not common in the literature and could be misunderstood as referring to a marker that turns adjectives into adverbs.",Adverbializer,http://linguistics-ontology.org/gold/2010/Adverbializer,"""An adverbializer is a subordinating connective that links a subordinate clause to a main clause, and indicates that the subordinate clause has an adverbial or interpropositional relation to the main clause, indicating purpose, condition, time, and location. [SIL International 2004]
+
+Marks clauses as having some adverbial function, such as the expression of time, purpose, result, etc. In some languages, many of the words that serve as adverbializers also serve as prepositional or postpositional noun adjuncts. In some languages, an adverbializer in a subordinate clause may be optionally paired with another conjunction occurring in the main clause. There are also cases where an adverbializer in a subordinate clause is obligatorily paired with a conjunction in the main clause. [Schachter 1985: 51-52]""",,,
+238,event nominalization form,,,"The simpler ""event nominalization"" can also refer to the entire construction, including the arguments. For this, the fuller ""event nominalization construction"" could be used. – % But unfortunately, event nominalization forms are also constructions...",Gerund,http://linguistics-ontology.org/gold/2010/Gerund,"""A part of speech derived from a verb and used as a noun, usually restricted to non-finite forms of the verb [Crystal 1997: 279].""",,,
+239,adverbial pronoun,,,,Proadverb,http://linguistics-ontology.org/gold/2010/Proadverb,"""A Proadverb is a Proform that substitutes for an adverb or other expression having an adverbial function. [Crystal 1997: 310]""",,,
+240,adjectival pronoun,,,,Proadjective,http://linguistics-ontology.org/gold/2010/Proadjective,"""A Proadjective is a ProForm that substitutes for an adjective or adjective phrase. [Crystal 1997: 310]""",,,
+241,pronoun,"A pronoun is a personal pronoun, or interrogative pronoun, or demonstrative pronoun, or indefinite pronoun, or relative pronoun.",,"It does not seem to be possible to define ""pronoun"" in a non-enumerative way. Note that pronouns need not be nominal, but can be adjectival, adverbial, and even verbal. Adverbial pronouns are often called ""pronominal adverbs"", or ""pro-adverbs"", and similarly for ""pro-adjectives"" and ""pro-verbs"", and if this usage is adopted, then ""pronoun"" is replaced by ""pro-form"". However, it has never been widely adopted by linguists, so here ""pronoun"" is used in a broad sense, with no relation to ""noun"".",Pro Form,http://linguistics-ontology.org/gold/2010/ProForm,"""A ProForm is a partOfSpeech whose members usually substitute for other constituents, including phrases, clauses, or sentences, and whose meaning is recoverable from the linguistic or extralinguistic context [Crystal 1997: 310; Schachter 1985: 24-25].""",,,
+242,indefinite pronoun,,,,Indefinite Pronoun,http://linguistics-ontology.org/gold/2010/IndefinitePronoun,"""An indefinite pronoun is a pronoun that belongs to a class whose members indicate indefinite reference [Crystal 1997: 312].""",,,
+243,nominal pronoun,,,,Pronominal,http://linguistics-ontology.org/gold/2010/Pronominal,"""A Pronoun is a ProForm which functions like a noun and substitutes for a noun or noun phrase [Crystal 1997: 312]."" – It is odd to use ""pronominal"" for this sense, because de facto, everyone uses ""pronoun"". However, ""pronoun"" can also be used more broadly to include adverbs, adjectives etc., so one would have to say ""nominal pronoun"" (a term that is not really used).",,,
+244,adpossessive personal pronoun,,,"In the older tradition, the term ""possessive pronoun"" was often used for adpossessive personal pronouns, as if these were not a special kind of personal pronoun. This terminology is still current for European languages, though the older distinction between ""possessive adjectives"" (= dependent adpossessive personal pronouns) and ""possessive pronouns"" (= independent adpossessive personal pronouns) is apparently no longer used.",Possessive Pronoun,http://linguistics-ontology.org/gold/2010/PossessivePronoun,"GOLD's definition neglects the fact that ""possessive pronouns"" are always a kind of personal pronouns: – ""A possessive pronoun is a pronoun that expresses ownership and relationships like ownership, such as kinship, and other forms of association [Crystal 1997: 312].""",,,
+245,reciprocal pronoun,,,,Reciprocal Pronoun,http://linguistics-ontology.org/gold/2010/ReciprocalPronoun,"""A reciprocal pronoun is a pronoun that expresses a mutual feeling or action among the referents of a plural subject [Crystal 1997: 323].""",,,
+246,reflexive pronoun,,,,Reflexive Pronoun,http://linguistics-ontology.org/gold/2010/ReflexivePronoun,"""A pronoun which is interpreted as coreferential with another nominal, usually the subject, of the sentence or clause in which it occurs. [Schachter 1985: 27]""",,,
+247,classifier,,,,Classifier,http://linguistics-ontology.org/gold/2010/Classifier,"There are three subtypes in GOLD: nominal classifiers, noun classifiers, and numeral classifiers; the first two of these are unclear. – ""In grammar, a morpheme whose function is to indicate the formal or semantic class to which items belong are sometimes called classifiers, e.g. -ly is an adverb classifier, -ess is a 'femininity' classifier. The marking of lexical items as belonging to the same semantic class is an important feature in many languages (e.g. Chinese, Vietnamese, Hopi), and sometimes quite unexpected bases of classification are found, in terms of shape, size, colour, movability, animacy, status and so on. [Crystal 2003: 74]""",,,
+248,numeral classifier,,,,Numeral Classifier,http://linguistics-ontology.org/gold/2010/NumeralClassifier,"""Numeral classifiers are free or bound morphemes that occur in the context of quantification, appearing contiguous to numerals in numeral noun phrases and expressions of quantity. [Aikhenvald 2003: 98; Aikhenvald in Senft 2000: 93] – Numeral classifiers are a grammatical device that reflects how speakers categorize objects that they count or quantify [Yamamoto 2005: 1]. They are a set of classifiers used in certain languages, e.g., Japanese, to indicate the class to which the noun modified by the numeral belongs [Pei and Gaynor 1980: 23].""",,,
+250,universal quantifier,,,,,,,,,
+251,quantifier,,,,Quantifier,http://linguistics-ontology.org/gold/2010/Quantifier,"""A quantifier is a determiner that expresses a referent's definite or indefinite number or amount. A quantifier functions as a modifier of a noun, or a pronoun. [Crystal 1997: 317]""",,,
+252,distributive numeral,,,,Distributive Numeral,http://linguistics-ontology.org/gold/2010/DistributiveNumeral,"""Most languages also have various series of numerals, whose denotations combine the concept of number with other concepts of a variety of different kinds. The meaning of sentences containing distributive numerals can be described in terms of a binary semantic relationship of distributivity that obtains between an expression containing the distributive numeral, the distributive share, and some other expression in the sentence, the distributive key. [Gill 2005: 222] Distributive numerals are special adnominal numerals that express distributive relations, as in German ‘Die Männer trugen je drei Koffer’, ‘The men carried three suitcases each.’ English lacks distributive numerals, because in a sentence like ‘They carried three suitcases each, the numeral does not form a continuous constituent with the distributive word ‘each’, i.e. ‘three…each’ does not qualify as a numeral. [Michaelis, Maurer, Haspelmath and Huber 2008]""",,,
+253,multiplicative numeral,,,,Multiplicative Numeral,http://linguistics-ontology.org/gold/2010/MultiplicativeNumeral,"""A multiplicative numeral is a numeral that expresses how many fold or how many times [Pei and Gaynor 1954: 149; Hartmann and Stork 1972: 147].""",,,
+254,ordinal numeral,,,,Ordinal Numeral,http://linguistics-ontology.org/gold/2010/OrdinalNumeral,"""An ordinal numeral is a numeral belonging to a class whose members designate positions in a sequence [Crystal 1997: 272].""",,,
+255,question marker,,,"also called ""question particle""; this term applies both to polar and constituent questions",Interrogative Operator,http://linguistics-ontology.org/gold/2010/InterrogativeOperator,"Also referred to as a 'question particle', an interrogative operator is a category whose members signal a yes/no question [Payne 1997: 296]. – The term ""question marker"" is generally used also for constituent questions, so it is broader than this term.",,,
+256,participle,,,,Participle,http://linguistics-ontology.org/gold/2010/Participle,"""A participle is a word which participates as both a verb (by showing tense) and as an adjective (by showing adjectival inflection). In modern usage, the term refers to a non-finite part of the verb other than the infinitive (independent of the function of these forms in the sentence). [Bauer 2004: 82]""",,,
+257,ignorative pronoun,An ignorative pronoun is a pronoun that is (used as) an interrogative pronoun or an indefinite pronoun.,,"Used by Johan van der Auwera, e.g. in the paper on MSEA languages
+
+Karcevski, Serge. 1969. Sur la parataxe et la syntaxe en russe. In Robert Godel (ed.), A Geneva school reader. 212‒217. Bloomington: Indiana University Press.",,,,,,
+259,appertentive clause,An appertentive clause is a clause construction with a topic-comment structure with a definite subject that is associated with a predicate that is a possessor nominal.,,"Appertentive clauses are also simply called ""belong clauses"". The predicate nominal in an appertentive clause can be called ""appertentum"". The term was first proposed by Haspelmath (2023).",,,,,,
+260,possessor,,,,,,,,,
+261,topic-comment structure,,,,,,,,,
+262,ascriptive clause,"The term ""ascriptive clause"" is a cover term for classificational and attributional clause constructions.",,"""Ascriptive"" is used in a somewhat different sense by Hengeveld (1992) and by Huddelston & Pullum (2002: §5.5.1). Creissels et al. (2023: §4.1) use the term “proper inclusion” to cover both of these types.",,,,,,
+263,classificational clause,A classificational clause is a duonominal clause with a topic-comment structure which has a definite subject argument and an indefinite nominal as the predicate.,,,,,,,,
+264,attributional clause,An attributional clause is a nonverbal clause with a topic-comment structure in which the predicate is a property word.,,"% don't include ""nonverbal clause"" in the definition",,,,,,
+265,characterizational clause,"A characterizational clause is an equational clause in which the topic is a value nominal and the comment is a variable nominal, contrasting with a specificational clause, where it is the other way round.",,,,,,,,
+266,equational clause,,,,,,,,,
+267,topic,,,,,,,,,
+268,value nominal,,,,,,,,,
+269,variable nominal,,,,,,,,,
+270,classificatory nominal,A classificatory nominal is the predicate nominal in a classificational clause.,,,,,,,,
+271,duonominal clause,,,,,,,,,
+272,indefinite,,,,,,,,,
+273,plural word,A plural word is a jotic that expresses plural meaning.,,"Dryer (1989: 865): ""A plural word is a morpheme whose meaning and function is similar to that of plural affixes in other languages, but which is a separate word that functions as a modifier of the noun.""",,,,,,
+274,noun incorporation,"A verb-object construction is a noun incorporation construction if the object is expressed by a noun that (i) occurs next to the verb root, at most separated by affixes, that (ii) occurs in a special position where ordinary nominals cannot occur, and that (iii) cannot be modified by an adjective.","""In [noun incorporation], a noun stem is compounded with a verb stem to yield a larger, derived verb stem."" (Mithun 1984: 847)","The definition given here closely follows the formulation in Haspelmath (2018: 318).
+
+Note that the term ""incorporated"" is sometimes also used for person forms that occur as affixes, e.g. ""Anaphoric agreement markers are incorporated pronouns that fulfill the function of clausal arguments."" (Siewierska 2001: 233; Revista Canaria...)",,,,,,
+275,ambiclitic,An ambiclitic is a clitic that can occur at the beginning or at the end of a free form.,,,,,,,,
+276,interclitic,An interclitic is a clitic that can occur neither at the end of a free form nor at the beginning.,,,,,,,,
+277,negindefinite pronoun,"A negindefinite pronoun is a pronoun (or determiner) which either (i) can express negation in isolation, or (ii) always occurs in the scope of a clausal negation meaning.",,,,,,,,
+278,negative concord construction,A negative concord construction is a construction in which a negindefinite pronoun cooccurs with another negative form in the same minimal clause resulting in a simplex negation meaning.,,,,,,,,
+279,concord negindefinite,A concord negindefinite is a pronoun (or determiner) which can occur in a negative concord construction in the scope of the negation meaning.,,,,,,,,
+280,negative polarity item,A negative polarity item is a form which may occur in the scope of a clausal negation meaning (of the same clause or of a superordinate clause) that is expressed by some other negative form and which may not occur in affirmative declarative independent clauses.,,,,,,,,
+281,converbal clause,A converbal clause is a subordinate clause that is neither a relative clause nor a complement clause and whose verb lacks person-indexing and includes an affix that marks the clause as subordinate.,,,,,,,,
+282,construction,A construction is a conventional schema for creating or motivating well-formed expressions in which there is at least one open slot that can be filled by one of several expressions belonging to the same form-class.,,,,,,,,
+283,form-class,A form-class is a class of forms (or expressions) that can occur in the same slot in a construction.,,"The terms ""construction"" and ""form-class"" are interdefined here. This is not an ideal solution which should be considered preliminary.",,,,,,
+284,word,"A word is (i) a free morph, or (ii) a clitic, or (iii) a root or a compound possibly augmented by nonrequired affixes and augmented by required affixes if there are any.",,,,,,,,
+285,compound,A compound is a form that was created by or is motivated by a compound construction.,,,,,,,,
+286,compound construction,"A compound construction is a construction consisting of two strictly adjacent slots for roots that cannot be expanded by full nominal, adjectival, or degree modifiers.",,,,,,,,
+287,full nominal,A full nominal is a nominal that is not a pronoun.,,,,,,,,
+288,degree modifier,,,,,,,,,
+289,goal (role),A nominal bears the goal role if it serves to express the goal of a of a spatial motion verb ('go').,,,,,,,,
+290,semantic role,(primitive),,,,,,,,
+291,2nd person form,A second person form is a form that must refer to the addressee of the current utterance or to a group of people including the addressee.,,,,,,,,
+292,1st person form,A first person form is a form that must refer to the producer (speaker/signer) of the current utterance or to a group of people including the producer.,,,,,,,,
+293,locatum (role),A nominal bears the locatum role if it serves to express the object whose location or path of motion is described relative to a ground place.,,,,,,,,
+294,free relative clause,,,,,,,,,
+295,force role,,,,,,,,,
+296,free choice indefinite,,,,,,,,,
+297,synexpression,Two meanings A and B are said to be synexpressed if they are expressed simultaneously by a minimal form (a morph).,,Two subtypes of synexpression are syllexification and syngrammification. These three terms were first proposed by Haspelmath (2023).,,,,,,
+298,factive subordinate clause,,,,,,,,,
+299,echo polarity response,,,,,,,,,
+300,appertentum,An appertentum is the predicate nominal of an appertentive clause.,,"For example, in ""This house belongs to my mother"", the appertentum is ""my mother"". This term was first proposed by Haspelmath (2023). Hengeveld (1992: 100) refers to the appertentum as “possessive predicate”.",,,,,,
+301,extroverted action,An extroverted event is an action not normally performed on oneself or on each other (contrasting with introverted action).,,,,,,,,
+302,adnominal relative clause,,,"This roughly corresponds to Croft's (2022) ""externally headed"" type, but according to Croft, ""externally headed relative clauses may be prenominal, postnominal, or extraposed"", i.e. he includes extraposed relative clauses, whereas they are treated as distinct from adnominal relative clauses here.",,,,,,
+303,extraposed relative clause,An extraposed relative clause construction is a construction in which the relative clause occurs on the margin of the matrix clause but is in all other respects identical to an adnominal relative clause.,,,,,,,,
+304,external possessor construction,An external possessor construction is a construction in which a notionally adnominal possessor argument is coded like a P-argument or R-argument of the verb and differently from an ordinary adnominal possessor.,,,,,,,,
+305,exclusive person form,,,###,,,,,,
+306,eventuality (or event),,,,,,,,,
+307,ergative coexpression pattern,,,,,,,,,
+308,equative construction,,,,,,,,,
+309,accusative coexpression pattern,,,,,,,,,
+310,demonstrative pronoun,A demonstrative pronoun is a demonstrative that can occur on its own.,,,,,,,,
+311,adnominal demonstrative,An adnominal demonstrative is a demonstrative that can occur next to a noun in a nominal.,,,,,,,,
