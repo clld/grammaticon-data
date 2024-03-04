@@ -2,7 +2,7 @@ Grammaticon-data
 ================
 
 Data repository for the Grammaticon.  The general structure of the project
-mimicks that of a [cldfbench](https://pypi.org/project/cldfbench/).
+mimics that of a [cldfbench](https://pypi.org/project/cldfbench/).
 
 ## Usage
 
