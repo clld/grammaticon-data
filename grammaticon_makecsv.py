@@ -46,7 +46,7 @@ RAW_TO_CSWV_MAP = {
                 'name': 'ISOCAT_URL',
                 'datatype': 'string'},
             'ISOCAT comments': {
-                'name': 'ISOCAT_Comments',
+                'name': 'ISOCAT_Comment',
                 'datatype': 'string'}}},
 
     'Metafeatures.csv': {
