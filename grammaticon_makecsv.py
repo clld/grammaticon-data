@@ -115,7 +115,7 @@ RAW_TO_CSWV_MAP = {
                 'datatype': 'string'},
             # TODO: should this be a list?
             'collection numbers': {
-                'name': 'Feautre_List_Numbers',
+                'name': 'Feature_List_Numbers',
                 'datatype': 'string'}},
         'foreign-keys': {
             'Metafeature_ID': 'metafeatures.csv',
