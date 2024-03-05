@@ -214,6 +214,28 @@ def main():
 
     # load data
 
+    # FIXME: meta feature names are not unique
+    # So far the webapp has just collapsed them and mapped all the references
+    # in other tables to the first occurence:
+    #
+    #     | ID | Name   | Area         |   | Bla | Metafeature_ID |
+    #     |----+--------+--------------|   |-----+----------------|
+    #     |  1 | name 1 | an area      |   | ... |              1 |
+    #     |  2 | name 2 | another area |   | ... |              2 |
+    #     |  3 | name 1 | an area      |   | ... |              3 |
+    #     |  4 | name 4 |              |   | ... |              4 |
+    #
+    #                 vvvv                           vvvv
+    #
+    #     | ID | Name   | Area         |   | Bla | Metafeature_ID |
+    #     |----+--------+--------------|   |-----+----------------|
+    #     |  1 | name 1 | an area      |   | ... |              1 |
+    #     |  2 | name 2 | another area |   | ... |              2 |
+    #     |  4 | name 4 |              |   | ... |              1 |
+    #                                      | ... |              4 |
+    #
+    # It does not do that anymore because this should be handled at the data
+    # curation level.
     for raw_path in raw_tables:
         table_spec = RAW_TO_CSWV_MAP[raw_path.name]
         table_name = table_spec['name']
