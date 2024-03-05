@@ -55,7 +55,7 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "ISOCAT_Comments"
+                        "name": "ISOCAT_Comment"
                     }
                 ]
             },
@@ -147,7 +147,7 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Feautre_List_Numbers"
+                        "name": "Feature_List_Numbers"
                     }
                 ],
                 "foreignKeys": [

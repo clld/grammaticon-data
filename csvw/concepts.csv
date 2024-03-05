@@ -1,4 +1,4 @@
-ID,Name,Description,Quotation,Comment,GOLD_Counterpart,GOLD_URL,GOLD_Comment,ISOCAT_Counterpart,ISOCAT_URL,ISOCAT_Comments
+ID,Name,Description,Quotation,Comment,GOLD_Counterpart,GOLD_URL,GOLD_Comment,ISOCAT_Counterpart,ISOCAT_URL,ISOCAT_Comment
 1,grammatical marker,A grammatical marker (or simply marker) is a bound form occurring on a single host root class or in second clause position that expresses some grammatical meaning related to its host or to the clause.,,,,,,,,
 2,bound form,A bound form is a form that cannot occur on its own as a complete utterance.,noun,"# maybe better: ""...that is not self-standing, i.e. cannot occur on its own in an uninterrupted utterance""",Bound Morpheme,http://linguistics-ontology.org/gold/2010/BoundMorpheme,"A bound morpheme (or bound form) is one which cannot occur on its own as a separate word, e.g. various affixes de-, -tion, -ize. [Crystal 2003: 56]",,,
 4,second (clause) position,"The second position of a clause is the position after the initial nominal, adverbial or verb form.",adjective,,,,,,,
