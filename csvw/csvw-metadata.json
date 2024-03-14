@@ -21,6 +21,10 @@
                     },
                     {
                         "datatype": "string",
+                        "name": "Grammar_Code"
+                    },
+                    {
+                        "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#definition",
                         "name": "Description"
                     },
@@ -35,27 +39,19 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "GOLD_Counterpart"
+                        "name": "Croft_Counterpart"
                     },
                     {
                         "datatype": "string",
-                        "name": "GOLD_URL"
+                        "name": "Croft_Definition"
                     },
                     {
                         "datatype": "string",
-                        "name": "GOLD_Comment"
+                        "name": "Wikipedia_Counterpart"
                     },
                     {
                         "datatype": "string",
-                        "name": "ISOCAT_Counterpart"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ISOCAT_URL"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ISOCAT_Comment"
+                        "name": "Wikipedia_URL"
                     }
                 ]
             },

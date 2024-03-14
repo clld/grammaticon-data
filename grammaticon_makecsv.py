@@ -19,6 +19,9 @@ RAW_TO_CSWV_MAP = {
                 'name': 'Name',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name'},
+            'grammacode': {
+                'name': 'Grammar_Code',
+                'datatype': 'string'},
             'definition': {
                 'name': 'Description',
                 'datatype': 'string',
@@ -30,23 +33,17 @@ RAW_TO_CSWV_MAP = {
                 'name': 'Comment',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#comment'},
-            'GOLD counterpart': {
-                'name': 'GOLD_Counterpart',
+            'Croft counterpart': {
+                'name': 'Croft_Counterpart',
                 'datatype': 'string'},
-            'GOLD URL': {
-                'name': 'GOLD_URL',
+            'Croft definition': {
+                'name': 'Croft_Definition',
                 'datatype': 'string'},
-            'GOLD comment': {
-                'name': 'GOLD_Comment',
+            'Wikipedia counterpart': {
+                'name': 'Wikipedia_Counterpart',
                 'datatype': 'string'},
-            'ISOCAT counterpart': {
-                'name': 'ISOCAT_Counterpart',
-                'datatype': 'string'},
-            'ISOCAT URL': {
-                'name': 'ISOCAT_URL',
-                'datatype': 'string'},
-            'ISOCAT comments': {
-                'name': 'ISOCAT_Comment',
+            'Wikipedia URL': {
+                'name': 'Wikipedia_URL',
                 'datatype': 'string'}}},
 
     'Metafeatures.csv': {
