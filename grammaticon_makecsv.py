@@ -20,7 +20,7 @@ RAW_TO_CSWV_MAP = {
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name'},
             'grammacode': {
-                'name': 'Grammar_Code',
+                'name': 'Grammacode',
                 'datatype': 'string'},
             'definition': {
                 'name': 'Description',

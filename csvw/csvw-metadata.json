@@ -21,7 +21,7 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Grammar_Code"
+                        "name": "Grammacode"
                     },
                     {
                         "datatype": "string",
