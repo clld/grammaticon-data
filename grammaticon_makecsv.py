@@ -278,6 +278,21 @@ def main():
 
     metafeature_ids = {row['ID'] for row in table_data['metafeatures.csv']}
 
+    def correct_concept(row):
+        if 'Name' not in row:
+            msg = (
+                'concepts.csv:'
+                ' missing name for concept {}'.format(row['ID']))
+            print(msg, file=sys.stderr)
+            return False
+        else:
+            return True
+
+    table_data['concepts.csv'] = [
+        row
+        for row in table_data['concepts.csv']
+        if correct_concept(row)]
+
     def correct_concept_metadata(row):
         if 'Metafeature_ID' not in row:
             msg = (
