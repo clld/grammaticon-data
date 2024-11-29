@@ -26,18 +26,15 @@ RAW_TO_CSWV_MAP = {
                 'name': 'Description',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#definition'},
-            'quotation': {
-                'name': 'Quotation',
-                'datatype': 'string'},
             'comments': {
                 'name': 'Comment',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#comment'},
-            'Croft counterpart': {
-                'name': 'Croft_Counterpart',
+            'SIL counterpart': {
+                'name': 'SIL_Counterpart',
                 'datatype': 'string'},
-            'Croft definition': {
-                'name': 'Croft_Definition',
+            'SIL URL': {
+                'name': 'SIL_URL',
                 'datatype': 'string'},
             'Wikipedia counterpart': {
                 'name': 'Wikipedia_Counterpart',
@@ -121,10 +118,10 @@ RAW_TO_CSWV_MAP = {
     'Concepts_metafeatures.csv': {
         'name': 'concepts-metafeatures.csv',
         'columns': {
-            'concept_id': {
+            'x_Concepts_Metafeatures::concept_id': {
                 'name': 'Concept_ID',
                 'datatype': 'string'},
-            'meta_feature__id': {
+            'x_Concepts_Metafeatures::meta_feature__id': {
                 'name': 'Metafeature_ID',
                 'datatype': 'string'}},
         'foreign-keys': {
@@ -133,25 +130,31 @@ RAW_TO_CSWV_MAP = {
 
 
 def simplified_concept_hierarchy(original_hierarchy, concept_ids):
+    CONCEPT_ID_COL = 'x_concepthierarchy::concept_id'
+    CHILD_COL = 'x_concepthierarchy::concept_child_id'
+    PARENT_COL = 'x_concepthierarchy::concept_parent_id'
+
     # The table looks like rows only have *either* a child_id *or* a parent id.
     # Check this assumption:
-    assert all(
+    conflicting = [
+        row
+        for row in original_hierarchy
         # source for the hacky xor: https://stackoverflow.com/a/433161
-        bool(row.get('concept_child_id')) != bool(row.get('concept_parent_id'))
-        for row in original_hierarchy), 'I expect either parent or child'
+        if bool(row.get(CHILD_COL)) == bool(row.get(PARENT_COL))]
+    assert not conflicting, f'concepthierarchy: concepts with parent *and* child: {conflicting}'
 
     # The table also looks reflexive. Every concept--child pair seems to have
     # a redundant concept--parent pair.
     # Check this assumption:
     children = {
-        (row['concept_child_id'], row['concept_id'])
+        (row[CHILD_COL], row[CONCEPT_ID_COL])
         for row in original_hierarchy
-        if 'concept_child_id' in row}
+        if row.get(CHILD_COL) in concept_ids}
     parents = {
-        (row['concept_id'], row['concept_parent_id'])
+        (row[CONCEPT_ID_COL], row[PARENT_COL])
         for row in original_hierarchy
-        if 'concept_parent_id' in row}
-    assert children == parents, 'I expect all pairs to be reflexive'
+        if row.get(PARENT_COL) in concept_ids}
+    assert children == parents, f'I expect all pairs to be reflexive'
 
     def valid_hierarchy_path(child_id, parent_id):
         if child_id not in concept_ids:
@@ -180,15 +183,15 @@ def simplified_concept_hierarchy(original_hierarchy, concept_ids):
 
 def main():
     here = Path(__file__).parent
-    raw_dir = here / 'raw'
-    csvw_dir = here / 'csvw'
+    src_dir = here / 'raw' / 'csv-export'
+    dest_dir = here / 'csvw'
 
     raw_tables = [
-        raw_dir / 'Concepts.csv',
-        raw_dir / 'Metafeatures.csv',
-        raw_dir / 'Feature_lists.csv',
-        raw_dir / 'Features.csv',
-        raw_dir / 'Concepts_metafeatures.csv',
+        src_dir / 'Concepts.csv',
+        src_dir / 'Metafeatures.csv',
+        src_dir / 'Feature_lists.csv',
+        src_dir / 'Features.csv',
+        src_dir / 'Concepts_metafeatures.csv',
     ]
 
     table_data = {}
@@ -239,11 +242,16 @@ def main():
         columns = table_spec['columns']
         with open(raw_path, encoding='utf-8') as f:
             reader = csv.reader(f)
-            header = [
+            header = next(reader)
+            missing = [col for col in columns if col not in header]
+            assert not missing, f'{raw_path}: missing fields: {missing}'
+            unknown_fields = [col for col in header if col not in columns]
+            assert not unknown_fields, f'{raw_path}: unknown fields: {unknown_fields}'
+            mapped_colnames = [
                 columns[colname]['name']
-                for colname in next(reader)]
+                for colname in header]
             table_data[table_name] = [
-                {k: v for k, v in zip(header, row) if v}
+                {k: v for k, v in zip(mapped_colnames, row) if v}
                 for row in reader]
 
         table = Table(url=table_name)
@@ -255,7 +263,7 @@ def main():
 
     # deal with the concept hierarchy separately
 
-    with open(raw_dir / 'Concepthierarchy.csv', encoding='utf-8') as f:
+    with open(src_dir / 'Concepthierarchy.csv', encoding='utf-8') as f:
         reader = csv.reader(f)
         header = list(next(reader))
         original_hierarchy = [
@@ -318,8 +326,8 @@ def main():
 
     # write data
 
-    csvw_dir.mkdir(parents=True, exist_ok=True)
-    table_meta_data.write(csvw_dir / 'csvw-metadata.json', **table_data)
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    table_meta_data.write(dest_dir / 'csvw-metadata.json', **table_data)
 
 
 if __name__ == '__main__':
