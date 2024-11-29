@@ -23,25 +23,30 @@ def pad_list(ls, width):
         raise ValueError(f'too long: {ls}')
 
 
-def xlsx2csv(path):
-    wb = load_workbook(filename=str(path), read_only=True, data_only=True)
+def xlsx2csv(excel_path, outdir):
+    wb = load_workbook(filename=str(excel_path), read_only=True, data_only=True)
     worksheets = wb.worksheets
-    assert len(worksheets) == 1, f'{path}: not exactly 1 worksheet'
+    assert len(worksheets) == 1, f'{excel_path}: not exactly 1 worksheet'
     sheet = worksheets[0]
     rows = [
         row_norm
         for row in sheet.iter_rows()
         if any(row_norm := [normalise_cell(cell.value) for cell in row])]
 
+    dest = outdir.joinpath(excel_path.name).with_suffix('.csv')
     table_width = max(len(row) for row in rows)
-    with open(path.with_suffix('.csv'), 'w', encoding='utf-8') as f:
+    if not outdir.is_dir():
+        outdir.mkdir()
+    with open(dest, 'w', encoding='utf-8') as f:
         wtr = csv.writer(f)
         wtr.writerows(pad_list(row, table_width) for row in rows)
 
 
 def main():
-    for p in Path(__file__).parent.glob('*.xlsx'):
-        xlsx2csv(p)
+    here = Path(__file__).parent
+    outdir = here / 'csv-export'
+    for p in here.glob('*.xlsx'):
+        xlsx2csv(p, outdir)
 
 
 if __name__ == '__main__':
