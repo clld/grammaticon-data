@@ -285,6 +285,11 @@ def main():
     # ensure valid data
 
     metafeature_ids = {row['ID'] for row in table_data['metafeatures.csv']}
+    assert '' not in metafeature_ids
+    assert None not in metafeature_ids
+    feature_list_ids = {r['ID'] for r in table_data['feature-lists.csv']}
+    assert '' not in feature_list_ids
+    assert None not in feature_list_ids
 
     def correct_concept(row):
         if 'Name' not in row:
@@ -323,6 +328,36 @@ def main():
         row
         for row in table_data['concepts-metafeatures.csv']
         if correct_concept_metadata(row)]
+
+    def correct_feature(row):
+        if 'Metafeature_ID' not in row or 'Feature_List_ID' not in row:
+            msg = (
+                'features.csv:'
+                ' missing metafeature id or missing feature list id'
+                ' for feature {}'.format(row['ID']))
+            print(msg, file=sys.stderr)
+            return False
+        elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
+            msg = (
+                'features.csv:'
+                ' invalid metafeature id for feature {}: {}'.format(
+                    mfid, row['ID']))
+            print(msg, file=sys.stderr)
+            return False
+        elif (flid := row['Feature_List_ID']) not in feature_list_ids:
+            msg = (
+                'features.csv:'
+                ' invalid feature list id for feature {}: {}'.format(
+                    flid, row['ID']))
+            print(msg, file=sys.stderr)
+            return False
+        else:
+            return True
+
+    table_data['features.csv'] = [
+        row
+        for row in table_data['features.csv']
+        if correct_feature(row)]
 
     # write data
 
