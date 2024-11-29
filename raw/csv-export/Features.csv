@@ -1,12 +1,440 @@
 feature_ID,feature name,feature description,meta_feature_id,collection_id,collection URL,collection numbers
+13,Is sex a relevant category in the noun class/gender system?,,4,2,http://sails.clld.org/parameters/ARW2-5-02,
+14,Does the language have the same TAM marking in negated clauses?,,6,1,,050-1
+15,Gender agreement of adnominal adjectives: No adjective agrees with the noun,,7,1,,040-1
+16,Gender agreement of adnominal adjectives: Only few adjectives agree with the noun,,8,1,,040-2
+17,Gender agreement of adnominal adjectives: Many adjectives agree with the noun,,9,1,,040-3
+18,Gender agreement of adnominal adjectives: All adjectives agree with the noun,,10,1,,040-4
+19,Predicative adjectives: Verbal encoding,,11,1,,074-1
+20,Predicative adjectives: Nonverbal encoding,,12,3,,118A-2
+21,Predicative adjectives: Mixed [encoding],,13,3,,118A-3
+22,Predicative noun phrases: (V) Invariant copula,,14,1,,073-1
+23,Predicative noun phrases: (V) Variable copula,,15,1,,073-3
+24,Predicative noun phrases: (V) No copula,,16,1,,073-2
+25,Zero copula for predicate nominals: Zero copula is impossible,,16,3,,120A-1
+26,Is there an inclusive/exclusive distinction in personal pronouns? – no,"SAILS gives no information on what kinds of ""personal pronouns"" are intended, so it is assumed here that the deature is about independent personal pronouns.",1,2,http://sails.clld.org/parameters/NP7,NP7-1
+27,Is there an inclusive/exclusive distinction in personal pronouns? (V) yes,,17,2,,
+28,Inclusive/exclusive distinction in independent pronouns: No inclusive/exclusive,,1,3,,039A-3
+29,Inclusive/exclusive distinction in independent pronouns: Inclusive/exclusive,"For speakers of English (or any other European language), both the inclusive and the exclusive pronouns are to be translated as we. The difference between the two depends on the intended meaning. An inclusive pronoun necessarily includes reference to the addressee. For example, the Mandarin inclusive pronoun zámen means ‘we, I and you’; others can optionally be included. An exclusive pronoun, like the Mandarin pronoun wŏmen, excludes the addressee from the reference, resulting in a meaning like ‘I and some others, but not you’.",17,3,http://wals.info/chapter/39,039A-5
+30,Inclusive/exclusive distinction in independent personal pronouns: No inclusive/exclusive distinction,,1,1,http://apics-online.info/parameters/15,015-1
+31,Inclusive/exclusive distinction in independent personal pronouns: Inclusive and exclusive differentiated,"In this feature (based on WALS feature 39, by Michael Cysouw), we ask whether a language has an inclusive/exclusive distinction in independent personal pronouns. An inclusive pronouns means 'we including the hearer', and an exclusive pronoun means 'we excluding the hearer'.",17,1,http://apics-online.info/parameters/15,015-2
+32,Complementizer Clause (V: Yes),"The property Complementizer Clause has the value ""yes"" when there is at least one complementizer that precedes its clause. As with all word order properties, we restrict our attention to productive word order patterns.",2,5,http://sswl.railsplayground.net/browse/properties/455,C 01
+33,Clause Complementizer (V: Yes),"The property Clause Complementizer has the value ""yes"" when there is at least one complementizer that follows its clause. As with all word order properties, we restrict our attention to productive word order patterns.",3,5,http://sswl.railsplayground.net/browse/properties/456,C 02
+34,Distinct negation of location (V: Yes),Distinct Negation of Location is set to yes when the strategy used for the negation of predications of location differs from Standard Negation.,19,5,http://sswl.railsplayground.net/browse/properties/488,Neg 14
+35,Numeral classifiers: Absent,"Gil (2005): Gil (2005): ""in many ... languages, nouns in construction with numerals may occur with an additional grammatical element even when such nouns are of high countability... Such elements are typically referred to as sortal numeral classifiers. This term makes reference to one of the most salient functions of such forms, which is to divide the inventory of count nouns into semantic classes, each of which is associated with a different classifier.""",20,3,http://wals.info/feature/55A,055A-1
+36,Number of genders: None,,21,3,http://wals.info/feature/30A,030A-1
+37,The language has no numeral classifiers,,20,1,http://apics-online.info/parameters/36,036-1
+38,Numeral classifiers: Optional,,22,3,http://wals.info/feature/55A,055A-2
+39,Numeral Classifiers: Obligatory,,23,3,http://wals.info/feature/55A,055A-3
+40,Position of pronominal possessive affixes: Possessive prefixes,,25,3,http://wals.info/feature/57A,057A-1
+41,Position of pronominal possessive affixes: Possessive suffixes,,24,3,http://wals.info/feature/57A,057A-2
+42,"Position of pronominal possessive affixes: Both possessive prefixes and possessive suffixes, with neither primary",,26,3,http://wals.info/feature/57A,057A-3
+43,Position of pronominal possessive affixes: No possessive affixes,,27,3,http://wals.info/feature/57A,057A-4
+44,Obligatory possessive inflection: Exists,,28,3,http://wals.info/feature/58A,058A-1
+45,Obligatory possessive inflection: Absent,,29,3,http://wals.info/feature/58A,058A-2
+46,Number of possessive nouns: None reported,,30,3,http://wals.info/feature/58B,058B-1
 48,Number of possessive nouns: Two to four,"Bickel & Nichols (2005): ""The head noun 'chicken' is grammatically non-possessible, though as the example indicates its referent can be owned, showing that non-possessibility is a grammatical rather than a purely semantic property. The formally possessed generic noun 'pet' is a more or less conventional choice in this construction.  Such nouns will be called possessive nouns here. ... In most languages with possessive nouns, there is a small and closed set of nouns grammaticalized for such usage, and their semantics amounts to classification of possessive relations (so that possessive nouns are also referred to as possessive classifiers).""",31,3,http://wals.info/feature/58B,058B-3
+49,Number of possessive nouns: Five or more,,32,3,http://wals.info/feature/58B,058B-4
+50,Are there definite or specific articles? NO (0),This is the negative version of the binary feature GB020.,34,4,http://grambank.clld.org/parameters/GB020,GB020-0
 51,Are there definite or specific articles? YES (1),"An article is defined as ""a marker that accompanies the noun and expresses notions such as (non-)specificity and (in)definiteness (""identifiability"")"", but suprasegmental marking also counts. Definite articles often arise from demonstratives and form a continuum with them; to qualify as an article, a marker should be used in some cases to express definiteness without also expressing a spatial deictic meaning.",33,4,http://grambank.clld.org/parameters/GB020,GB020-1
+52,Definite article: Definite affix,,35,3,http://wals.info/feature/37A,037A-3
+53,Do indefinite nominals commonly have indefinite articles? YES (1),"For this feature, we need explicit support that indefinite/non-specific NPs commonly occur with an indefinite/non-specific article. Three or more examples of indefinite/non-specific nominals occurring with an indefinite/non-specific article is sufficient to code 1.
+
+An indefinite article is a marker that accompanies the indefinite noun and expresses notions such as non-specificity and indefiniteness. Sometimes these notions of non-specificity and indefiniteness are summed up in the term ‘identifiability’. A language does not necessarily have both a non-specific/indefinite and a specific/definite marker. These markers often stem from very different sources (numerals and demonstratives) and need not be similar in formal expression or position.
+
+The formal expression is irrelevant; articles can be free, bound, or marked by suprasegmental markers such as tone. Articles are different from demonstratives in that demonstratives occur in a paradigm of markers that have a clear spatial deictic function. As demonstratives can grammaticalize into definite or specific articles, they form a natural continuum, making it hard to define discrete categories. Articles are more grammaticalized, i.e. are often obligatory in certain contexts that require definite or specific reference. Definite or specific articles can also grammaticalize from pronouns meaning ‘a certain’. As articles necessarily accompany nouns, it is in these cases that it is necessary to investigate whether the marker can occur independently or not; if it can it is most likely a pronoun and not an article. Articles can be homophonous with pronouns and demonstratives, and also with classifiers.
+
+Procedure
+
+• Code 1 if indefinite NPs commonly occur with an indefinite/non-specific article. Three or more examples are sufficient.
+• Code 1 if there is evidence (three or more examples) of a demonstrative or numeral for 1 that has grammaticalized into an indefinite article. Look for explicit analysis from the author that they are indefinite articles or look at the environments in which they occur, for example, whether they occur in different positions depending on whether they are functioning as an indefinite article or not.
+• Code 0 if there are no indefinite articles.
+• Code 0 if there are less than three examples of indefinite/non-specific articles occurring with indefinite NPs and note this in the comments.
+• Code ? if it is unclear whether there are indefinite articles due to limited analysis from the author or because there are not enough examples.",36,4,http://grambank.clld.org/parameters/GB021,GB021-1
 54,Are there prenominal articles? YES (1),"This feature is about definite or specific articles (as in GB020) and about indefinite articles (as in GB021), and it asks whether any such articles may precede the noun in ""the pragmatically unmarked order"".",37,4,http://grambank.clld.org/parameters/GB022,GB022-1
 55,Are there postnominal articles? YES (1),"This feature is about definite or specific articles (as in GB020) and about indefinite articles (as in GB021), and it asks whether any such articles may follow the noun in ""the pragmatically unmarked order"".",38,4,http://grambank.clld.org/parameters/GB023,GB023-1
+56,Can adnominal property words occur discontinuously? YES,"This means that a restrictively interpreted adjective is separated from the noun by some element that is not part of the nominal. For example, can you say ""The man is running big"" and the like to mean ""The big man is running"". Typically a language which allows this has extensive agreement systems so that you can still work out what modifies what in the NP without them being adjacent (i.e. the ""Australian type""). NPs that are made up of several coordinated NPs that can be interpreted by the verb or other elements are not relevant here. This features aims to capture NPs where the head and modifiers can be separated. Examples of the type ""I painted the house red"" or ""I saw the boy big"" are not necessarily discontinuous, but most likely resultative or contrastive (""I saw the boy big [as opposed to before when he was small]"").",39,4,http://grambank.clld.org/parameters/GB026,GB026-1
+57,Marking of patient noun phrases: No marking of patient NPs,,40,1,http://apics-online.info/parameters/57,057-1
+58,Marking of patient noun phrases: Only definite patient NPs are marked,,42,1,http://apics-online.info/parameters/57,057-2
+59,Marking of patient noun phrases: Only animate patient NPs are marked,,43,1,http://apics-online.info/parameters/57,057-3
+60,Marking of patient noun phrases: Only definite and animate patient NPs are marked,,44,1,http://apics-online.info/parameters/57,057-4
+61,Marking of patient noun phrases: All patient NPs are marked,,41,8,http://apics-online.info/parameters/57,57-5
 62,Standard negation is a particle that precedes the verb,"The feature ""is set to yes if the negation marker has the following characteristics
 
 • It precedes the verb it negates (precedes to be understood broadly not as 'immediately' precedes).
 • It appears as a free form for the negation of a simple declarative clause.
 • It does not admit any morphological marking typically associated with verbs in the language.""",45,5,http://sswl.railsplayground.net/browse/properties/482,Neg01
+63,Standard negation is a particle that follows the verb,"The feature ""is set to ""Yes"" if the negation marker has the following characteristics:
+
+• It follows the verb or finite auxiliary. (""follows"" to be understood broadly, not as ""immediately"" follows)
+• It appears as a free form for the negation of a simple declarative clause.
+• It does not admit of any morphological marking typically associated with verbs in the language. .""",46,5,http://sswl.railsplayground.net/browse/properties/483,Neg02
+64,Standard negation is prefix,,48,5,http://sswl.railsplayground.net/browse/properties/476,Neg03
+65,Standard negation is suffix,,47,5,http://sswl.railsplayground.net/browse/properties/477,Neg03
+66,Is there a distinction between inclusive and exclusive for personal pronouns? – no,"SAILS gives no information on what kinds of ""personal pronouns"" are intended, so it is assumed here that the feature is about independent personal pronouns.",1,2,http://sails.clld.org/parameters/ICS9,ICS9-0
+67,Productive NN compounding,Noun compounds created from two noun phrases are common and systematically produced.,49,6,https://huntergatherer.la.utexas.edu/grammar/feature/22,22
+68,Is the case marking obligatory on the adjective? – 1,,50,7,https://diacl.ht.lu.se/TypoVariant/Details/263,CASE-ADJ
+69,Is the case marking realized on the article? – 1,,51,7,https://diacl.ht.lu.se/TypoVariant/Details/264,CASE-ART
+70,Is the case marking obligatorily realized on the noun?  – 1,,52,7,https://diacl.ht.lu.se/TypoVariant/Details/262,CASE-ADJ
+73,Gender Distinctions in Independent Personal Pronouns: No gender distinctions,,56,3,http://wals.info/feature/44A,044A-6
+74,Person syncretism in independent personal pronouns: No person syncretism,"In most languages, there are distinct forms for the three persons in both singular and plural (and in the dual as well, if there is one), e.g. French moi, toi, lui/elle, nous, vous, eux/elles. But in some languages, there is person syncretism, i.e. there is a form in the paradigm of independent personal pronouns that serves for more than one person. For instance, some languages have the same form in the 1st and 2nd person plural (e.g. Haitian Creole nou), and some languages have the same form in the 2nd and 3rd person plural (e.g. Seychelles Creole zot). Note that we are not concerned with pure number syncretism here (e.g. English you for 2sg/2pl).",59,1,http://apics-online.info/parameters/16,016-1
+75,Person syncretism in independent personal pronouns: Syncretism between 1st and 2nd person,"In most languages, there are distinct forms for the three persons in both singular and plural (and in the dual as well, if there is one), e.g. French moi, toi, lui/elle, nous, vous, eux/elles. But in some languages, there is person syncretism, i.e. there is a form in the paradigm of independent personal pronouns that serves for more than one person. For instance, some languages have the same form in the 1st and 2nd person plural (e.g. Haitian Creole nou), and some languages have the same form in the 2nd and 3rd person plural (e.g. Seychelles Creole zot). Note that we are not concerned with pure number syncretism here (e.g. English you for 2sg/2pl).",57,1,http://apics-online.info/parameters/16,016-2
+76,Person syncretism in independent personal pronouns: Syncretism between 2nd and 3rd person,"In most languages, there are distinct forms for the three persons in both singular and plural (and in the dual as well, if there is one), e.g. French moi, toi, lui/elle, nous, vous, eux/elles. But in some languages, there is person syncretism, i.e. there is a form in the paradigm of independent personal pronouns that serves for more than one person. For instance, some languages have the same form in the 1st and 2nd person plural (e.g. Haitian Creole nou), and some languages have the same form in the 2nd and 3rd person plural (e.g. Seychelles Creole zot). Note that we are not concerned with pure number syncretism here (e.g. English you for 2sg/2pl).",58,1,http://apics-online.info/parameters/16,016-3
+77,Special dependent person forms for subject and object: No dependent person forms,,60,1,,017-1
+78,Special dependent person forms for subject and object: Only dependent subject forms,,62,1,,017-2
+79,Special dependent person forms for subject and object: Only dependent object forms,,63,1,,017-3
+80,Special dependent person forms for subject and object: Dependent subject and object forms,,61,1,,017-4
+81,Politeness distinctions in second-person pronouns: No pronominal politeness distinction,,64,1,,018-1
+82,Politeness distinctions in second-person pronouns: Binary pronominal politeness distinction,,65,1,,018-2
+83,Politeness distinctions in second-person pronouns: Multiple pronominal politeness distinction,,66,1,,018-3
+84,Politeness distinctions in second-person pronouns: Titles used as second person forms,,67,1,,018-4
+85,Interrogative pronouns: All simple words,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+
+Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",68,1,http://apics-online.info/parameters/19,019-1
+86,Interrogative pronouns: One compound expression,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+
+Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",69,1,http://apics-online.info/parameters/19,019-2
+87,Interrogative pronouns: Two compound expressions,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+
+Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",70,1,http://apics-online.info/parameters/19,019-3
+88,Interrogative pronouns: Three compound expressions,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+
+Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",71,1,http://apics-online.info/parameters/19,019-4
+89,Interrogative pronouns: Four compound expressions,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+
+Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",72,1,http://apics-online.info/parameters/19,019-5
+90,Pronoun conjunction: Singular pronoun overtly conjoined with other conjunct,,73,1,apics-online.info/parameters/20,020-1
+91,Pronoun conjunction: Inclusory pronoun juxtaposed with subset NP,,74,1,apics-online.info/parameters/20,020-2
+92,Pronoun conjunction: Inclusory pronoun plus marker plus subset NP,,75,1,,020-3
+93,Pronoun conjunction: Inclusory pronoun plus numeral plus subset NP,,76,1,apics-online.info/parameters/20,020-4
+94,Pronoun conjunction: Singular pronoun juxtaposed with other conjunct,,77,1,apics-online.info/parameters/20,020-5
 96,Is there an instrumental applicative marker on the verb (including indexing)? YES,"This question concerns a bound verbal marker that signals that the verb has an instrumental argument. The marker could be analysed in the language-specific case as voice, agreement or a bound pronoun. The marker doesn't have to index the instrument.",78,4,http://grambank.clld.org/parameters/GB104,GB104-1
 97,Is there an instrumental applicative marker on the verb (including indexing)? NO,"This question concerns a bound verbal marker that signals that the verb has an instrumental argument. The marker could be analysed in the language-specific case as voice, agreement or a bound pronoun. The marker doesn't have to index the instrument.",79,4,http://grambank.clld.org/parameters/GB104,GB104-0
+98,Can the recipient in a ditransitive construction be marked like the monotransitive patient? YES (1),,80,4,http://grambank.clld.org/parameters/GB105,GB105-1
+99,Can the recipient in a ditransitive construction be marked like the monotransitive patient? NO (0),,81,4,http://grambank.clld.org/parameters/GB105,GB105-0
+100,Ditransitive Constructions: The Verb 'Give': Indirect-object construction,,81,3,http://wals.info/feature/105A,105A-1
+101,Ditransitive Constructions: The Verb 'Give': Double-object construction,,225,3,http://wals.info/feature/105A,105A-2
+102,Ditransitive Constructions: The Verb 'Give': Secondary-object construction,,,3,http://wals.info/feature/105A,105A-3
+105,Is there directional or locative morphological marking on verbs? Yes (1),,84,4,http://grambank.clld.org/parameters/GB108,GB108-1
+106,Is there directional or locative morphological marking on verbs? NO (0),,85,4,http://grambank.clld.org/parameters/GB108,GB108-0
+107,Is there verb suppletion for participant number? Yes (1),,86,4,http://grambank.clld.org/parameters/GB109,GB109-1
+108,Is there verb suppletion for participant number? NO (0),,87,4,http://grambank.clld.org/parameters/GB109,GB109-0
+109,Is there a copula for predicate nominals? Yes (1),,88,4,http://grambank.clld.org/parameters/GB117,GB117-1
+110,Is there a copula for predicate nominals? NO (0),,16,4,http://grambank.clld.org/parameters/GB117,GB117-0
+111,Is there verb suppletion for tense or aspect? Yes (1),,90,4,http://grambank.clld.org/parameters/GB110,GB110-1
+112,Is there verb suppletion for tense or aspect? NO (1),,91,4,http://grambank.clld.org/parameters/GB110,GB110-0
+113,Are there verbal affixes or clitics that turn intransitive verbs into transitive ones? Yes (1),,92,4,http://grambank.clld.org/parameters/GB113,GB113-1
+114,Are there verbal affixes or clitics that turn intransitive verbs into transitive ones? NO (0),,93,4,http://grambank.clld.org/parameters/GB113,GB113-0
+115,Is there a phonologically bound reflexive marker on the verb? Yes (1),,94,4,http://grambank.clld.org/parameters/GB114,GB114-1
+116,Is there a phonologically bound reflexive marker on the verb? NO (0),,95,4,http://grambank.clld.org/parameters/GB114,GB114-0
+117,Is there a phonologically bound reciprocal marker on the verb? Yes (1),,,4,http://grambank.clld.org/parameters/GB115,GB115-1
+118,Is there a phonologically bound reciprocal marker on the verb? NO (0),,,4,http://grambank.clld.org/parameters/GB115,GB115-0
+119,Are there serial verb constructions? Yes (1),,98,4,http://grambank.clld.org/parameters/GB118,GB118-1
+120,Are there serial verb constructions? NO (0),,99,4,http://grambank.clld.org/parameters/GB118,GB118-0
+121,The dominant constituent order in an intransitive clause is: SV,,100,2,http://sails.clld.org/parameters/ARGEX1-1,ARGEX1-1-2
+122,The dominant constituent order in an intransitive clause is: VS,,101,2,http://sails.clld.org/parameters/ARGEX1-1,ARGEX1-1-3
+123,The dominant constituent order in an intransitive clause is: non,-,102,2,http://sails.clld.org/parameters/ARGEX1-1,ARGEX1-1-4
+124,The dominant constituent order in a transitive clause is: APV,,104,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-2
+125,The dominant constituent order in a transitive clause is: AVP,,103,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-3
+126,The dominant constituent order in a transitive clause is: VPA,,106,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-4
+127,The dominant constituent order in a transitive clause is: VAP,,105,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-5
+128,The dominant constituent order in a transitive clause is: PVA,,108,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-6
+129,The dominant constituent order in a transitive clause is: PAV,,109,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-7
+130,The dominant constituent order in a transitive clause is: none,,110,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-8
+131,"Order of Subject, Object and Verb: SOV",,104,3,http://wals.info/feature/81A,081A-1
+132,"Order of Subject, Object and Verb: SVO",,103,3,http://wals.info/feature/81A,081A-2
+133,"Order of Subject, Object and Verb: VSO",,105,3,http://wals.info/feature/81A,081A-3
+134,"Order of Subject, Object and Verb: VOS",,106,3,http://wals.info/feature/81A,081A-4
+135,"Order of Subject, Object and Verb: OVS",,108,3,http://wals.info/feature/81A,081A-5
+136,"Order of Subject, Object and Verb: OSV",,109,3,http://wals.info/feature/81A,081A-6
+137,"Order of Subject, Object and Verb: No dominant order",,110,3,http://wals.info/feature/81A,081A-7
+138,Occurrence of nominal plural markers: No plural marking,,111,1,http://apics-online.info/parameters/22,022-1
+139,Occurrence of nominal plural markers: Variable plural marking of human nouns,,114,1,http://apics-online.info/parameters/22,022-2
+140,Occurrence of nominal plural markers: Variable plural marking of human or inanimate nouns,,113,1,http://apics-online.info/parameters/22,022-3
+141,Occurrence of nominal plural markers: Invariant plural marking,,112,1,http://apics-online.info/parameters/22,022-4
+142,Is there a class of patient-labile verbs? YES (1),,115,4,http://grambank.clld.org/parameters/GB401,GB401-1
+143,Is there a class of patient-labile verbs? NO (0),,116,4,http://grambank.clld.org/parameters/GB401,GB401-0
+144,Does the verb for 'see' have suppletive verb forms? NO (0),,118,4,http://grambank.clld.org/parameters/GB402,GB402-0
+145,Does the verb for 'see' have suppletive verb forms? YES (1),,118,4,http://grambank.clld.org/parameters/GB402,GB402-1
+146,Does the verb for 'come' have suppletive verb forms? NO (0),,120,4,http://grambank.clld.org/parameters/GB403,GB403-0
+147,Does the verb for 'come' have suppletive verb forms? YES (1),,121,4,http://grambank.clld.org/parameters/GB403,GB403-1
+148,Is there any accusative alignment of flagging? NO (0),,123,4,http://grambank.clld.org/parameters/GB408,GB408-0
+149,Is there any accusative alignment of flagging? YES (1),,122,4,http://grambank.clld.org/parameters/GB408,GB408-1
+150,Is there any ergative alignment of flagging? NO (0),,123,4,http://grambank.clld.org/parameters/GB409,GB409-0
+151,Is there any ergative alignment of flagging? YES (1),,122,4,http://grambank.clld.org/parameters/GB408,GB409-1
+152,Is there any neutral alignment of monotransitive flagging? NO (0),,127,4,http://grambank.clld.org/parameters/GB410,GB410-0
+153,Is there any neutral alignment of monotransitive flagging? YES (1),,126,4,http://grambank.clld.org/parameters/GB410,GB410-1
+154,Is there a politeness distinction in 2nd person forms? NO (0),,64,4,http://grambank.clld.org/parameters/GB415,GB415-0
+155,Is there a politeness distinction in 2nd person forms? YES (1),,128,4,http://grambank.clld.org/parameters/GB415,GB415-1
+156,Is there a preposed complementizer in complements of verbs of thinking and/or knowing? NO (0),,130,4,http://grambank.clld.org/parameters/GB421,GB421-0
+157,Is there a preposed complementizer in complements of verbs of thinking and/or knowing? YES (1),,259,4,http://grambank.clld.org/parameters/GB421,GB421-1
+158,Do indefinite nominals commonly have indefinite articles?- NO (0),This is the negative version of the binary feature GB021.,131,4,http://grambank.clld.org/parameters/GB021,GB021-0
+159,Are there prenominal articles? NO (0),This is the negative version of the binary feature GB022.,267,4,http://grambank.clld.org/parameters/GB022,GB022-0
+160,What is the pragmatically unmarked order of S and V in intransitive clauses? – SV,,132,4,http://grambank.clld.org/parameters/GB130,GB130-1
+161,What is the pragmatically unmarked order of S and V in intransitive clauses? – VS,,133,4,http://grambank.clld.org/parameters/GB130,GB130-2
+162,What is the pragmatically unmarked order of S and V in intransitive clauses? – both,,134,4,http://grambank.clld.org/parameters/GB130,GB130-3
+163,Is a pragmatically unmarked constituent order verb-initial for transitive clauses? NO,,136,4,http://grambank.clld.org/parameters/GB131,GB131-0
+164,Is a pragmatically unmarked constituent order verb-initial for transitive clauses? YES,,135,4,http://grambank.clld.org/parameters/GB131,GB131-1
+165,Is a pragmatically unmarked constituent order verb-final for transitive clauses? NO,,137,4,http://grambank.clld.org/parameters/GB133,GB133-0
+166,Is a pragmatically unmarked constituent order verb-final for transitive clauses? YES,,137,4,http://grambank.clld.org/parameters/GB133,GB133-1
+167,Is there a logophoric pronoun? YES,,139,4,http://grambank.clld.org/parameters/GB167,GB167-1
+168,Is there a logophoric pronoun? NO,,140,4,http://grambank.clld.org/parameters/GB167,GB167-0
+169,Can an adnominal property word agree with the noun in gender/noun class? YES,,141,4,http://grambank.clld.org/parameters/GB170,GB170-1
+170,Can an adnominal property word agree with the noun in gender/noun class? NO,,142,4,http://grambank.clld.org/parameters/GB170,GB170-0
+171,Can an adnominal demonstrative agree with the noun in gender/noun class? YES,,143,4,http://grambank.clld.org/parameters/GB171,GB171-1
+172,Can an adnominal demonstrative agree with the noun in gender/noun class? NO,,144,4,http://grambank.clld.org/parameters/GB171,GB171-0
+173,Can an article agree with the noun in gender/noun class? YES,,145,4,http://grambank.clld.org/parameters/GB172,GB172-1
+174,Can an article agree with the noun in gender/noun class? NO,,146,4,http://grambank.clld.org/parameters/GB172,GB172-0
+175,Can an adnominal property word agree with the noun in number? YES (1),,147,4,http://grambank.clld.org/parameters/GB184,GB184-1
+176,Can an adnominal property word agree with the noun in number? NO (0),,148,4,http://grambank.clld.org/parameters/GB184,GB184-0
+177,Can an adnominal demonstrative agree with the noun in number? YES,,149,4,http://grambank.clld.org/parameters/GB185,GB185-1
+178,Can an adnominal demonstrative agree with the noun in number? NO,,150,4,http://grambank.clld.org/parameters/GB185,GB185-0
+179,Is there any productive diminutive marking on the noun (exclude marking by system of nominal classification only)? YES,,151,4,http://grambank.clld.org/parameters/GB187,GB187-1
+180,Is there any productive diminutive marking on the noun (exclude marking by system of nominal classification only)? NO,,152,4,http://grambank.clld.org/parameters/GB187,GB187-0
+181,Is there any productive augmentative marking on the noun (exclude marking by system of nominal classification only)? NO,,154,4,http://grambank.clld.org/parameters/GB188,GB188-0
+182,Is there any productive augmentative marking on the noun (exclude marking by system of nominal classification only)? YES,,153,4,http://grambank.clld.org/parameters/GB188,GB188-1
+183,Is there a gender system where a noun's phonological properties are a factor in class assignment? YES,,156,4,http://grambank.clld.org/parameters/GB192,GB192-1
+184,Is there a gender system where a noun's phonological properties are a factor in class assignment? NO,,155,4,http://grambank.clld.org/parameters/GB192,GB192-0
+185,What is the order of adnominal property word and noun? A-N,,157,4,http://grambank.clld.org/parameters/GB193,GB193-1
+186,What is the order of adnominal property word and noun? N-A,,158,4,http://grambank.clld.org/parameters/GB193,GB193-2
+187,What is the order of adnominal property word and noun? N-A or A-N,,159,4,http://grambank.clld.org/parameters/GB193,GB193-3
+188,Is there a male/female distinction in 2nd person independent pronouns? YES,,160,4,http://grambank.clld.org/parameters/GB196,GB196-1
+189,Is there a male/female distinction in 2nd person independent pronouns? NO,,163,4,http://grambank.clld.org/parameters/GB196,GB196-0
+190,Is there a male/female distinction in 1st person independent pronouns? NO,,161,4,http://grambank.clld.org/parameters/GB197,GB197-0
+191,Is there a male/female distinction in 1st person independent pronouns? YES,,162,4,http://grambank.clld.org/parameters/GB197,GB197-1
+192,What is the order of the adnominal collective universal quantifier ('all') and the noun? UG-N,,165,4,http://grambank.clld.org/parameters/GB203,GB203-1
+193,What is the order of the adnominal collective universal quantifier ('all') and the noun? N-UQ,,164,4,http://grambank.clld.org/parameters/GB203,GB203-2
+194,What is the order of the adnominal collective universal quantifier ('all') and the noun? UQ-N or N-UQ,,166,4,http://grambank.clld.org/parameters/GB203,GB203-3
+195,Do collective ('all') and distributive ('every') universal quantifiers differ in their forms or their syntactic positions? YES,,167,4,http://grambank.clld.org/parameters/GB204,GB204-1
+196,Do collective ('all') and distributive ('every') universal quantifiers differ in their forms or their syntactic positions? NO,,168,4,http://grambank.clld.org/parameters/GB204,GB204-0
+197,Can predicative possession be expressed with a transitive 'habeo' verb? NO (0),,170,4,http://grambank.clld.org/parameters/GB250,GB250-0
+198,Can predicative possession be expressed with a transitive 'habeo' verb? YES (1),,169,4,http://grambank.clld.org/parameters/GB250,GB250-1
+199,Can predicative possession be expressed with an S-like possessum and a locative-coded possessor? NO (0),,172,4,http://grambank.clld.org/parameters/GB252,GB252-0
+200,Can predicative possession be expressed with an S-like possessum and a locative-coded possessor? YES (1),,171,4,http://grambank.clld.org/parameters/GB252,GB252-1
+201,Can polar interrogation be marked by intonation only? YES,,173,4,http://grambank.clld.org/parameters/GB257,GB257-1
+202,Can polar interrogation be marked by intonation only? NO,,174,4,http://grambank.clld.org/parameters/GB257,GB257-0
+203,Can polar interrogation be indicated by a special word order? NO,,176,4,http://grambank.clld.org/parameters/GB260,GB260-0
+204,Can polar interrogation be indicated by a special word order? YES,,175,4,http://grambank.clld.org/parameters/GB260,GB260-1
+205,Is there a clause-initial polar interrogative particle? YES,,177,4,http://grambank.clld.org/parameters/GB262,GB262-1
+206,Is there a clause-initial polar interrogative particle? NO,,178,4,http://grambank.clld.org/parameters/GB262,GB262-0
+207,Is there a clause-final polar interrogative particle? NO,,180,4,http://grambank.clld.org/parameters/GB263,GB263-0
+208,Is there a clause-final polar interrogative particle? YES,,179,4,http://grambank.clld.org/parameters/GB263,GB263-1
+209,Is there a polar interrogative particle that most commonly occurs neither clause-initially nor clause-finally? YES,,181,4,http://grambank.clld.org/parameters/GB264,GB264-1
+210,Is there a polar interrogative particle that most commonly occurs neither clause-initially nor clause-finally? NO,,182,4,http://grambank.clld.org/parameters/GB264,GB264-0
+211,"Is there a comparative construction that includes a form that elsewhere means 'surpass, exceed'? NO",,184,4,http://grambank.clld.org/parameters/GB265,GB265-0
+212,"Is there a comparative construction that includes a form that elsewhere means 'surpass, exceed'? YES",,183,4,http://grambank.clld.org/parameters/GB265,GB265-1
+213,Is there a comparative construction that employs a marker of the standard which elsewhere has a locational meaning? YES,,185,4,http://grambank.clld.org/parameters/GB266,GB266-1
+214,Is there a comparative construction that employs a marker of the standard which elsewhere has a locational meaning? NO,,186,4,http://grambank.clld.org/parameters/GB266,GB266-0
+215,Is there a comparative construction with a standard marker that elsewhere has neither a locational meaning nor a 'surpass/exceed' meaning? NO,,188,4,http://grambank.clld.org/parameters/GB273,GB273-0
+216,Is there a comparative construction with a standard marker that elsewhere has neither a locational meaning nor a 'surpass/exceed' meaning? YES,,187,4,http://grambank.clld.org/parameters/GB273,GB273-1
+217,Is there a bound comparative degree marker on the property word in a comparative construction? YES,,189,4,http://grambank.clld.org/parameters/GB275,GB275-1
+218,Is there a bound comparative degree marker on the property word in a comparative construction? NO,,190,4,http://grambank.clld.org/parameters/GB275,GB275-0
+219,Can polar interrogation be indicated by overt verbal morphology only? NO,,192,4,http://grambank.clld.org/parameters/GB286,GB286-0
+220,Can polar interrogation be indicated by overt verbal morphology only? YES,,191,4,http://grambank.clld.org/parameters/GB286,GB286-1
+221,Is there an inclusory construction? YES,,193,4,http://grambank.clld.org/parameters/GB301,GB301-1
+222,Is there an inclusory construction? NO,,194,4,http://grambank.clld.org/parameters/GB301,GB301-0
+223,Can the agent be expressed overtly in a passive clause? NO,,195,4,http://grambank.clld.org/parameters/GB304,GB304-0
+224,Can the agent be expressed overtly in a passive clause? YES,,119,4,http://grambank.clld.org/parameters/GB304,GB304-1
+225,Is there a phonologically independent reflexive pronoun? YES,,196,4,http://grambank.clld.org/parameters/GB305,GB305-1
+226,Is there a phonologically independent reflexive pronoun? NO,,197,4,http://grambank.clld.org/parameters/GB305,GB305-0
+227,Is there a phonologically independent non-bipartite reciprocal pronoun? YES,,199,4,http://grambank.clld.org/parameters/GB306,GB306-1
+228,Is there a phonologically independent non-bipartite reciprocal pronoun? NO,,198,4,http://grambank.clld.org/parameters/GB306,GB306-0
+229,Gender distinctions in personal pronouns: No gender distinctions,,56,1,http://apics-online.info/parameters/13,013-1
+230,Gender distinctions in personal pronouns: In 3rd person singular only,,202,1,http://apics-online.info/parameters/13,013-2
+231,Gender distinctions in personal pronouns: In 3rd person singular and plural only,,201,1,http://apics-online.info/parameters/13,013-3
+232,Gender distinctions in personal pronouns: In 2nd person but not in 3rd person,,203,1,http://apics-online.info/parameters/13,013-4
+233,Gender Distinctions in Independent Personal Pronouns: In 3rd person + 1st and/or 2nd person,,200,3,http://wals.info/feature/44A,044A-1
+234,"Gender Distinctions in Independent Personal Pronouns: 3rd person only, but also non-singular",,201,3,http://wals.info/feature/44A,044A-2
+235,Gender Distinctions in Independent Personal Pronouns: 3rd person singular only,,202,3,http://wals.info/feature/44A,044A-3
+236,Gender Distinctions in Independent Personal Pronouns: 1st or 2nd person but not 3rd,,203,3,http://wals.info/feature/44A,044A-4
+237,Gender Distinctions in Independent Personal Pronouns: 3rd person non-singular only,,204,3,http://wals.info/feature/44A,044A-5
+238,Dual in independent personal pronouns: No special dual form,,205,1,http://apics-online.info/parameters/14,014-1
+239,Dual in independent personal pronouns: Dual form in all three persons,,206,1,http://apics-online.info/parameters/14,014-2
+240,Dual in independent personal pronouns: Dual form only in first person,,207,1,http://apics-online.info/parameters/14,014-3
+241,Nominal plural marker and third-person-plural pronoun: No nominal plural word,,111,1,http://apics-online.info/parameters/25,025-1
+242,Nominal plural marker and third-person-plural pronoun: Identity,,208,1,http://apics-online.info/parameters/25,025-2
+243,Nominal plural marker and third-person-plural pronoun: Differentiation,,209,1,http://apics-online.info/parameters/25,025-3
+244,Nominal plural marker and third-person-plural pronoun: Overlap,,210,1,http://apics-online.info/parameters/25,025-4
+245,Functions of reduplication: No reduplication,,211,1,http://apics-online.info/parameters/26,026-1
+246,Functions of reduplication: Only iconic functions,,212,1,http://apics-online.info/parameters/26,026-2
+247,Functions of reduplication: Attenuating function,,213,1,http://apics-online.info/parameters/26,026-3
+248,Functions of reduplication: Word-class-changing function,,214,1,http://apics-online.info/parameters/26,026-4
+249,Functions of reduplication: Attenuating and word-class-changing function,,215,1,http://apics-online.info/parameters/26,026-5
+250,Definite articles: Definite article distinct from demonstratives,,216,1,http://apics-online.info/parameters/28,028-1
+251,Definite articles: Definite article identical to a demonstrative,,217,1,http://apics-online.info/parameters/28,028-2
+252,"Definite articles: No definite article, but indefinite article",,218,1,http://apics-online.info/parameters/28,028-3
+253,Definite articles: Neither definite nor indefinite article,,219,1,http://apics-online.info/parameters/28,028-4
+254,Indefinite articles: Indefinite article distinct from numeral ‘one’,"""Many pidgins and creoles are like English in that they have a special indefinite article that is distinct from the numeral ‘one’ ... This is the case in quite a few English-based and Dutch-based languages where the English (and similarly Dutch) distinction between a and one has survived."" – ""When a language has two different indefinite articles, one of which is identical to the numeral and one of which is distinct, it is classified as value 1 [distinct from numeral 'one'] (e.g. Nicaraguan Creole English, which has both a and wan).""",222,1,http://apics-online.info/parameters/29,029-1
+255,Indefinite articles: Indefinite article identical to numeral ‘one’,"""In the majority of our languages the indefinite article is identical to the numeral ‘one’ ... This is the case in many Romance-based languages, where the nondistinctness of indefinite article and numeral was inherited from French/Spanish un and Portuguese um.""",221,1,http://apics-online.info/parameters/29,029-2
+256,"Indefinite articles: No indefinite article, but definite article",,220,1,http://apics-online.info/parameters/29,029-3
+257,Indefinite articles: Neither indefinite nor definite article,,219,1,http://apics-online.info/parameters/29,029-4
+258,Are different posture verbs used obligatorily depending on an inanimate locatum's shape or position (e.g. 'to lie' vs. 'to stand')? YES,,223,4,https://grambank.clld.org/parameters/GB127,GB127-1
+259,Are different posture verbs used obligatorily depending on an inanimate locatum's shape or position (e.g. 'to lie' vs. 'to stand')? NO,,224,4,https://grambank.clld.org/parameters/GB127,GB127-0
+260,"Are there multiple past or multiple future tenses, distinguishing distance from Time of Reference? YES",,226,4,https://grambank.clld.org/parameters/GB309,GB309-1
+261,"Are there multiple past or multiple future tenses, distinguishing distance from Time of Reference? NO",,227,4,https://grambank.clld.org/parameters/GB309,GB309-0
+262,Is there an augmentative-marking construction that entails a special gender class? YES,,228,4,https://grambank.clld.org/parameters/GB314,GB314-1
+263,Is there an augmentative-marking construction that entails a special gender class? NO,,229,4,https://grambank.clld.org/parameters/GB314,GB314-0
+264,Is there a large class of nouns whose gender/noun class is not phonologically or semantically predictable? YES,,230,4,https://grambank.clld.org/parameters/GB321,GB321-1
+265,Is there a large class of nouns whose gender/noun class is not phonologically or semantically predictable? NO,,231,4,https://grambank.clld.org/parameters/GB321,GB321-0
+266,Is there grammatical marking of direct evidence (perceived with the senses)? YES,,232,4,https://grambank.clld.org/parameters/GB322,GB322-1
+267,Is there grammatical marking of direct evidence (perceived with the senses)? NO,,233,4,https://grambank.clld.org/parameters/GB322,GB322-0
+268,"Is there grammatical marking of indirect evidence (hearsay, inference, etc.)? YES",,234,4,https://grambank.clld.org/parameters/GB323,GB323-1
+269,"Is there grammatical marking of indirect evidence (hearsay, inference, etc.)? NO",,235,4,https://grambank.clld.org/parameters/GB323,GB323-0
+270,Is there a count/mass distinction in interrogative quantifiers? YES,,236,4,https://grambank.clld.org/parameters/GB325,GB325-1
+271,Is there a count/mass distinction in interrogative quantifiers? NO,,237,4,https://grambank.clld.org/parameters/GB325,GB325-0
+272,Do (nominal) content interrogatives normally or frequently occur in situ? YES,,238,4,https://grambank.clld.org/parameters/GB326,GB326-1
+273,Do (nominal) content interrogatives normally or frequently occur in situ? NO,,239,4,https://grambank.clld.org/parameters/GB326,GB326-0
+274,Can the relative clause follow the noun? YES,,240,4,https://grambank.clld.org/parameters/GB327,GB327-1
+275,Can the relative clause follow the noun? NO,,241,4,https://grambank.clld.org/parameters/GB327,GB327-0
+276,Can the relative clause precede the noun? YES,,242,4,https://grambank.clld.org/parameters/GB328,GB328-1
+277,Can the relative clause precede the noun? NO,,243,4,https://grambank.clld.org/parameters/GB328,GB328-0
+278,Are there internally-headed relative clauses? NO,,245,4,https://grambank.clld.org/parameters/GB329,GB329-0
+279,Are there internally-headed relative clauses? YES,,244,4,https://grambank.clld.org/parameters/GB329,GB329-1
+280,Are there correlative relative clauses? YES,,247,4,https://grambank.clld.org/parameters/GB330,GB330-1
+281,Are there correlative relative clauses? NO,,246,4,https://grambank.clld.org/parameters/GB330,GB330-0
+282,Are there non-adjacent relative clauses? NO,,249,4,https://grambank.clld.org/parameters/GB331,GB331-0
+283,Are there non-adjacent relative clauses? YES,,248,4,https://grambank.clld.org/parameters/GB331,GB331-1
+284,Is there a decimal numeral system? YES,,250,4,https://grambank.clld.org/parameters/GB333,GB333-1
+285,Is there a decimal numeral system? NO,,251,4,https://grambank.clld.org/parameters/GB333,GB333-1
+286,Is there synchronic evidence for any element of a quinary numeral system? YES,,252,4,https://grambank.clld.org/parameters/GB334,GB334-1
+287,Is there synchronic evidence for any element of a quinary numeral system? NO,,253,4,https://grambank.clld.org/parameters/GB334,GB334-0
+288,Is there synchronic evidence for any element of a vigesimal numeral system? NO,,255,4,https://grambank.clld.org/parameters/GB335,GB335-0
+289,Is there synchronic evidence for any element of a vigesimal numeral system? YES,,254,4,https://grambank.clld.org/parameters/GB335,GB335-1
+290,Is there a body-part tallying system? NO,,257,4,https://grambank.clld.org/parameters/GB336,GB336-0
+291,Is there a body-part tallying system? YES,,256,4,https://grambank.clld.org/parameters/GB336,GB336-1
+293,"Are all person categories neutralized in some voice, tense, aspect, mood and/or negation? YES",,258,4,http://grambank.clld.org/parameters/GB400,GB400-1
+294,Is there a postposed complementizer in complements of verbs of thinking and/or knowing? YES (1),,129,4,http://grambank.clld.org/parameters/GB422,GB422-1
+295,Is there a postposed complementizer in complements of verbs of thinking and/or knowing? NO (0),,260,4,http://grambank.clld.org/parameters/GB422,GB422-0
+296,Can adnominal possession be marked by a prefix on the possessor? YES (1),,261,4,http://grambank.clld.org/parameters/GB430,GB430-1
+297,Can adnominal possession be marked by a prefix on the possessor? NO (0),,262,4,http://grambank.clld.org/parameters/GB430,GB430-0
+298,Can adnominal possession be marked by a suffix on the possessor? NO (0),,263,4,http://grambank.clld.org/parameters/GB432,GB432-0
+299,Can adnominal possession be marked by a suffix on the possessor? YES (1),,264,4,http://grambank.clld.org/parameters/GB432,GB432-1
+300,"Can the S or A argument be omitted from a pragmatically unmarked clause when the referent is inferrable from context (""pro-drop"" or ""null anaphora"")? NO",,266,4,http://grambank.clld.org/parameters/GB522,GB522-0
+301,"Can the S or A argument be omitted from a pragmatically unmarked clause when the referent is inferrable from context (""pro-drop"" or ""null anaphora"")? YES",,265,4,http://grambank.clld.org/parameters/GB522,GB522-1
+304,Are there postnominal articles? NO (0),This is the negative version of the binary feature GB023.,267,4,http://grambank.clld.org/parameters/GB023,GB023-0
+305,Can adnominal property words occur discontinuously? NO,"This means that a restrictively interpreted adjective is separated from the noun by some element that is not part of the nominal. For example, can you say ""The man is running big"" and the like to mean ""The big man is running"". Typically a language which allows this has extensive agreement systems so that you can still work out what modifies what in the NP without them being adjacent (i.e. the ""Australian type""). NPs that are made up of several coordinated NPs that can be interpreted by the verb or other elements are not relevant here. This features aims to capture NPs where the head and modifiers can be separated. Examples of the type ""I painted the house red"" or ""I saw the boy big"" are not necessarily discontinuous, but most likely resultative or contrastive (""I saw the boy big [as opposed to before when he was small]"").",268,4,http://grambank.clld.org/parameters/GB026,GB026-0
+306,Are nominal conjunction and comitative expressed by different elements? NO (0),,270,4,http://grambank.clld.org/parameters/GB027,GB027-0
+307,Are nominal conjunction and comitative expressed by different elements? YES (1),,269,4,http://grambank.clld.org/parameters/GB027,GB027-1
+308,Is there a distinction between inclusive and exclusive? YES (1),,272,4,http://grambank.clld.org/parameters/GB028,GB028-1
+309,Is there a distinction between inclusive and exclusive? NO (0),,271,4,http://grambank.clld.org/parameters/GB028,GB028-0
+310,What is the order of numeral and noun in the NP? Num-N (1),,273,4,http://grambank.clld.org/parameters/GB024,GB024-1
+311,What is the order of numeral and noun in the NP? N-Num (2),,274,4,http://grambank.clld.org/parameters/GB024,GB024-2
+312,What is the order of numeral and noun in the NP? Both (3),,275,4,http://grambank.clld.org/parameters/GB024,GB024-3
+313,What is the order of adnominal demonstrative and noun? Dem-N (1),,276,4,http://grambank.clld.org/parameters/GB025,GB025-1
+314,What is the order of adnominal demonstrative and noun? N-Dem (2),,277,4,http://grambank.clld.org/parameters/GB025,GB025-2
+315,What is the order of adnominal demonstrative and noun? Both (3),,278,4,http://grambank.clld.org/parameters/GB025,GB025-3
+316,Is there a gender distinction in independent 3rd person pronouns? YES (1),,280,4,http://grambank.clld.org/parameters/GB030,GB030-1
+317,Is there a gender distinction in independent 3rd person pronouns? NO (0),,279,4,http://grambank.clld.org/parameters/GB030,GB030-0
+318,Is there a dual or unit augmented form (in addition to plural or augmented) for all person categories in the pronoun system? YES (1),,281,4,http://grambank.clld.org/parameters/GB031,GB031-1
+319,Is there a dual or unit augmented form (in addition to plural or augmented) for all person categories in the pronoun system? NO (0),,282,4,http://grambank.clld.org/parameters/GB031,GB031-0
+320,Are there three or more distance contrasts in demonstratives? YES (1),,283,4,http://grambank.clld.org/parameters/GB035,GB035-1
+321,Are there three or more distance contrasts in demonstratives? NO (0),,284,4,http://grambank.clld.org/parameters/GB035,GB035-0
+322,Do demonstratives show an elevation distinction? YES (1),,285,4,http://grambank.clld.org/parameters/GB036,GB036-1
+323,Do demonstratives show an elevation distinction? NO (0),,286,4,http://grambank.clld.org/parameters/GB036,GB036-0
+324,Do demonstratives show a visible-nonvisible distinction? YES (1),,287,4,http://grambank.clld.org/parameters/GB037,GB037-1
+325,Do demonstratives show a visible-nonvisible distinction? NO (0),,288,4,http://grambank.clld.org/parameters/GB037,GB037-0
+326,Is there nonphonological allomorphy of noun number markers? YES (1),,289,4,http://grambank.clld.org/parameters/GB039,GB039-1
+327,Is there nonphonological allomorphy of noun number markers? NO (0),,290,4,http://grambank.clld.org/parameters/GB039,GB039-0
+328,Are there several nouns (more than three) which are suppletive for number? YES (1),,291,4,http://grambank.clld.org/parameters/GB041,GB041-1
+329,Are there several nouns (more than three) which are suppletive for number? NO (0),,292,4,http://grambank.clld.org/parameters/GB041,GB041-0
+330,Is there productive overt morphological singular marking on nouns? YES (1),,293,4,http://grambank.clld.org/parameters/GB042,GB042-1
+331,Is there productive overt morphological singular marking on nouns? NO (0),,294,4,http://grambank.clld.org/parameters/GB042,GB042-0
+332,Is there productive morphological dual marking on nouns? YES (1),,295,4,http://grambank.clld.org/parameters/GB043,GB043-1
+333,Is there productive morphological dual marking on nouns? NO (0),,296,4,http://grambank.clld.org/parameters/GB043,GB043-0
+334,Is there productive morphological plural marking on nouns? YES (1),,297,4,http://grambank.clld.org/parameters/GB044,GB044-1
+335,Is there productive morphological plural marking on nouns? NO (0),,298,4,http://grambank.clld.org/parameters/GB044,GB044-0
+336,Is there a productive morphological pattern for deriving an action/state noun from a verb? YES (1),,301,4,http://grambank.clld.org/parameters/GB047,GB047-1
+337,Is there an associative plural marker for nouns? NO (0),,300,4,http://grambank.clld.org/parameters/GB046,GB046-0
+338,Is there an associative plural marker for nouns? YES (1),,299,4,http://grambank.clld.org/parameters/GB046,GB046-1
+339,Is there a productive morphological pattern for deriving an action/state noun from a verb? NO (0),,302,4,http://grambank.clld.org/parameters/GB047,GB047-0
+340,Is there a productive morphological pattern for deriving an agent noun from a verb? YES (1),,304,4,http://grambank.clld.org/parameters/GB048,GB048-1
+341,Is there a productive morphological pattern for deriving an agent noun from a verb? NO (0),,303,4,http://grambank.clld.org/parameters/GB048,GB048-0
+342,Is there a productive morphological pattern for deriving an object noun from a verb? YES (1),,305,4,http://grambank.clld.org/parameters/GB049,GB049-1
+343,Is there a productive morphological pattern for deriving an object noun from a verb? NO (0),,306,4,http://grambank.clld.org/parameters/GB049,GB049-0
+344,Is there a gender/noun class system where sex is a factor in class assignment? YES (1),,307,4,http://grambank.clld.org/parameters/GB051,GB051-1
+345,Is there a gender/noun class system where sex is a factor in class assignment? NO (0),,308,4,http://grambank.clld.org/parameters/GB051,GB051-0
+346,Is there a gender/noun class system where shape is a factor in class assignment? NO (0),,309,4,http://grambank.clld.org/parameters/GB052,GB052-0
+347,Is there a gender/noun class system where shape is a factor in class assignment? YES (1),,310,4,http://grambank.clld.org/parameters/GB052,GB052-1
+348,Is there a gender/noun class system where animacy is a factor in class assignment? NO (0),,312,4,http://grambank.clld.org/parameters/GB053,GB053-0
+349,Is there a gender/noun class system where animacy is a factor in class assignment? YES (1),,312,4,http://grambank.clld.org/parameters/GB053,GB053-1
+350,Are there numeral classifiers? NO (0),,313,4,http://grambank.clld.org/parameters/GB057,GB057-0
+351,Are there numeral classifiers? YES (1),,23,4,http://grambank.clld.org/parameters/GB057,GB057-1
+352,Is the adnominal possessive construction different for alienable and inalienable nouns? NO (0),,315,4,http://grambank.clld.org/parameters/GB059,GB059-0
+353,Is the adnominal possessive construction different for alienable and inalienable nouns? YES (1),,314,4,http://grambank.clld.org/parameters/GB059,GB059-1
+354,What is the pragmatically unmarked order of adnominal possessor noun and possessed noun? Possessor-Possessed (1),,317,4,http://grambank.clld.org/parameters/GB065,GB065-1
+355,What is the pragmatically unmarked order of adnominal possessor noun and possessed noun? Possessed-Possessor (2),,316,4,http://grambank.clld.org/parameters/GB065,GB065-2
+356,What is the pragmatically unmarked order of adnominal possessor noun and possessed noun? Both (3),,318,4,http://grambank.clld.org/parameters/GB065,GB065-3
+358,Are there morphological cases for non-pronominal core arguments (i.e. S/A/P)? YES (1),,319,4,http://grambank.clld.org/parameters/GB070,GB070-1
+359,Are there morphological cases for non-pronominal core arguments (i.e. S/A/P)? NO (0),,320,4,http://grambank.clld.org/parameters/GB070,GB070-0
+360,Are there morphological cases for pronominal core arguments (i.e. S/A/P)? NO (0),,322,4,http://grambank.clld.org/parameters/GB071,GB071-0
+361,Are there morphological cases for pronominal core arguments (i.e. S/A/P)? YES (1),,321,4,http://grambank.clld.org/parameters/GB071,GB071-1
+362,,,,,,
+363,Are there morphological cases for oblique non-pronominal NPs (i.e. not S/A/P)? YES (1),,323,4,http://grambank.clld.org/parameters/GB072,GB072-1
+364,Are there morphological cases for oblique non-pronominal NPs (i.e. not S/A/P)? NO (0),,324,4,http://grambank.clld.org/parameters/GB072,GB072-0
+365,Are there prepositions? NO (0),,326,4,http://grambank.clld.org/parameters/GB074,GB074-0
+366,Are there prepositions? YES (1),,325,4,http://grambank.clld.org/parameters/GB074,GB074-1
+367,Are there postpositions? NO (0),,327,4,http://grambank.clld.org/parameters/GB075,GB075-0
+368,Are there postpositions? YES (1),,328,4,http://grambank.clld.org/parameters/GB075,GB075-1
+369,Is there productive infixation in verbs? YES (1),,329,4,http://grambank.clld.org/parameters/GB081,GB081-1
+370,Is there productive infixation in verbs? NO (0),,330,4,http://grambank.clld.org/parameters/GB081,GB081-0
+371,Is there overt morphological marking of present tense on verbs? NO (0),,332,4,http://grambank.clld.org/parameters/GB082,GB082-0
+372,Is there overt morphological marking of present tense on verbs? YES (1),,331,4,http://grambank.clld.org/parameters/GB082,GB082-1
+373,Is there overt morphological marking on the verb dedicated to past tense? NO (0),,334,4,http://grambank.clld.org/parameters/GB083,GB083-0
+374,Is there overt morphological marking on the verb dedicated to past tense? YES (1),,334,4,http://grambank.clld.org/parameters/GB083,GB083-1
+375,Is there overt morphological marking on the verb dedicated to future tense? YES (1),,335,4,http://grambank.clld.org/parameters/GB084,GB084-1
+376,Is there overt morphological marking on the verb dedicated to future tense? NO (0),,336,4,http://grambank.clld.org/parameters/GB084,GB084-0
+377,Is a morphological distinction between perfective and imperfective aspect available on verbs? NO (0),,337,4,http://grambank.clld.org/parameters/GB086,GB086-0
+378,Is a morphological distinction between perfective and imperfective aspect available on verbs? YES (1),,337,4,http://grambank.clld.org/parameters/GB086,GB086-1
+379,Can the S argument be indexed by a suffix/enclitic on the verb in the simple main clause? YES (1),,339,4,http://grambank.clld.org/parameters/GB089,GB089-1
+380,Can the S argument be indexed by a suffix/enclitic on the verb in the simple main clause? NO (0),,340,4,http://grambank.clld.org/parameters/GB089,GB089-0
+381,Can the S argument be indexed by a prefix/proclitic on the verb in the simple main clause? NO (0),,342,4,http://grambank.clld.org/parameters/GB090,GB090-0
+382,Can the S argument be indexed by a prefix/proclitic on the verb in the simple main clause? YES (1),,341,4,http://grambank.clld.org/parameters/GB090,GB090-1
+383,Can the A argument be indexed by a suffix/enclitic on the verb in the simple main clause? NO (0),,343,4,http://grambank.clld.org/parameters/GB091,GB091-0
+384,Can the A argument be indexed by a suffix/enclitic on the verb in the simple main clause? YES (1),,344,4,http://grambank.clld.org/parameters/GB091,GB091-1
+385,Can the A argument be indexed by a prefix/proclitic on the verb in the simple main clause? YES (1),,346,4,http://grambank.clld.org/parameters/GB092,GB092-1
+386,Can the A argument be indexed by a prefix/proclitic on the verb in the simple main clause? NO (0),,345,4,http://grambank.clld.org/parameters/GB092,GB092-0
+387,Can the P argument be indexed by a suffix/enclitic on the verb in the simple main clause? YES (1),,347,4,http://grambank.clld.org/parameters/GB093,GB093-1
+388,Can the P argument be indexed by a suffix/enclitic on the verb in the simple main clause? NO (0),,348,4,http://grambank.clld.org/parameters/GB093,GB093-0
+389,Can the P argument be indexed by a prefix/proclitic on the verb in the simple main clause? NO (0),,349,4,http://grambank.clld.org/parameters/GB094,GB094-0
+390,Can the P argument be indexed by a prefix/proclitic on the verb in the simple main clause? YES (1),,350,4,http://grambank.clld.org/parameters/GB094,GB094-1
+391,Do clausal objects usually occur in the same position as nominal objects? NO (0),,352,4,http://grambank.clld.org/parameters/GB135,GB135-0
+392,Do clausal objects usually occur in the same position as nominal objects? YES (1),,351,4,http://grambank.clld.org/parameters/GB135,GB135-1
+393,Is the order of core argument (i.e. S/A/P) constituents fixed? NO (0),,354,4,http://grambank.clld.org/parameters/GB136,GB136-0
+394,Is the order of core argument (i.e. S/A/P) constituents fixed? YES (1),,353,4,http://grambank.clld.org/parameters/GB136,GB136-1
+395,Is there a difference between imperative (prohibitive) and declarative negation constructions? YES (1),,356,4,http://grambank.clld.org/parameters/GB139,GB139-1
+396,Is there a difference between imperative (prohibitive) and declarative negation constructions? NO (0),,355,4,http://grambank.clld.org/parameters/GB139,GB139-0
+397,"Is verbal predication marked by the same negator as all of the following types of predication: locational, existential and nominal? YES (1)",,358,4,http://grambank.clld.org/parameters/GB140,GB140-1
+398,"Is verbal predication marked by the same negator as all of the following types of predication: locational, existential and nominal? NO (0)",,357,4,http://grambank.clld.org/parameters/GB140,GB140-0
+399,Is there a morphological passive marked on the lexical verb? NO (0),,360,4,http://grambank.clld.org/parameters/GB147,GB147-0
+400,Is there a morphological passive marked on the lexical verb? YES (1),,362,4,http://grambank.clld.org/parameters/GB147,GB147-1
+401,Is there a morphological antipassive marked on the lexical verb? YES (1),,359,4,http://grambank.clld.org/parameters/GB148,GB148-1
+402,Is there a morphological antipassive marked on the lexical verb? NO (0),,361,4,http://grambank.clld.org/parameters/GB148,GB148-0
+403,Are causatives formed by affixes or clitics on verbs? NO (0),,363,4,http://grambank.clld.org/parameters/GB155,GB155-0
+404,Are causatives formed by affixes or clitics on verbs? YES (1),,364,4,http://grambank.clld.org/parameters/GB155,GB155-1
+405,Does the verb for 'give' have suppletive verb forms? YES (1),,365,4,http://grambank.clld.org/parameters/GB300,GB300-1
+406,Does the verb for 'give' have suppletive verb forms? NO (0),,366,4,http://grambank.clld.org/parameters/GB300,GB300-0
+407,Is there productive morphological trial marking on nouns? YES (1),,367,4,http://grambank.clld.org/parameters/GB165,GB165-1
+408,Is there productive morphological paucal marking on nouns? YES (1),,368,4,http://grambank.clld.org/parameters/GB166,GB166-1
+409,Can predicative possession be expressed with an S-like possessum and a dative-coded possessor? YES (1),,370,4,http://grambank.clld.org/parameters/GB252,GB253-1
+410,Can predicative possession be expressed with an S-like possessum and a dative-coded possessor? NO (0),,369,4,http://grambank.clld.org/parameters/GB252,GB253-0
+411,Can predicative possession be expressed with an S-like possessum and a possessor that is coded like an adnominal possessor? NO (0),,371,4,http://grambank.clld.org/parameters/GB254,GB254-0
+412,Can predicative possession be expressed with an S-like possessum and a possessor that is coded like an adnominal possessor? YES (1),,372,4,http://grambank.clld.org/parameters/GB254,GB254-1
+413,Can predicative possession be expressed with an S-like possessor and a possessum that is coded like a comitative argument? YES (1),,373,4,http://grambank.clld.org/parameters/GB256,GB256-1
+414,Can predicative possession be expressed with an S-like possessor and a possessum that is coded like a comitative argument? NO (0),,374,4,http://grambank.clld.org/parameters/GB256,GB256-0
+417,Exponence of Tense-Aspect-Mood Inflection: TAM+agreement,,375,3,https://wals.info/feature/21B,021B-2
+418,Female and male animals: Preposed sex-denoting word,,225,1,https://apics-online.info/parameters/117,117-1
+419,Female and male animals: Postposed sex-denoting word,,225,1,https://apics-online.info/parameters/117,117-2
+420,Female and male animals: Sex-denoting suffix,,225,1,https://apics-online.info/parameters/117,117-4
+421,GUIDELINES,"GENERAL:
+– I ignore lexical features (e.g. 'hand and arm')
+– I ignore genealogical features (e.g. 'pikinini')
+
+APiCS: 
+– I ignore ""not applicable"" and ""other"", because they are not informative
+– I include only values that have at least 3 languages; 
+– [for multi-choice features, I propose that shared values should be ignored, even though this leads to including fewer languages]",,,,
+436,Order of Subject and Verb: SV,,376,3,http://wals.info/feature/82A,082A-1
+437,Order of Subject and Verb: VS,,377,3,http://wals.info/feature/82A,082A-2
+438,Order of Subject and Verb: No dominant order,,378,3,http://wals.info/feature/82A,082A-3
+440,Gender distinctions in personal pronouns,,379,1,http://apics-online.info/parameters/13,013
+441,Dual in independent personal pronouns,,380,1,http://apics-online.info/parameters/14,014
