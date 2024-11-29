@@ -58,7 +58,6 @@ Procedure
 58,Marking of patient noun phrases: Only definite patient NPs are marked,,42,1,http://apics-online.info/parameters/57,057-2
 59,Marking of patient noun phrases: Only animate patient NPs are marked,,43,1,http://apics-online.info/parameters/57,057-3
 60,Marking of patient noun phrases: Only definite and animate patient NPs are marked,,44,1,http://apics-online.info/parameters/57,057-4
-61,Marking of patient noun phrases: All patient NPs are marked,,41,8,http://apics-online.info/parameters/57,57-5
 62,Standard negation is a particle that precedes the verb,"The feature ""is set to yes if the negation marker has the following characteristics
 
 • It precedes the verb it negates (precedes to be understood broadly not as 'immediately' precedes).
@@ -114,7 +113,6 @@ Compound interrogatives translate literally as 'which person', 'what place', 'wh
 99,Can the recipient in a ditransitive construction be marked like the monotransitive patient? NO (0),,81,4,http://grambank.clld.org/parameters/GB105,GB105-0
 100,Ditransitive Constructions: The Verb 'Give': Indirect-object construction,,81,3,http://wals.info/feature/105A,105A-1
 101,Ditransitive Constructions: The Verb 'Give': Double-object construction,,225,3,http://wals.info/feature/105A,105A-2
-102,Ditransitive Constructions: The Verb 'Give': Secondary-object construction,,,3,http://wals.info/feature/105A,105A-3
 105,Is there directional or locative morphological marking on verbs? Yes (1),,84,4,http://grambank.clld.org/parameters/GB108,GB108-1
 106,Is there directional or locative morphological marking on verbs? NO (0),,85,4,http://grambank.clld.org/parameters/GB108,GB108-0
 107,Is there verb suppletion for participant number? Yes (1),,86,4,http://grambank.clld.org/parameters/GB109,GB109-1
@@ -127,8 +125,6 @@ Compound interrogatives translate literally as 'which person', 'what place', 'wh
 114,Are there verbal affixes or clitics that turn intransitive verbs into transitive ones? NO (0),,93,4,http://grambank.clld.org/parameters/GB113,GB113-0
 115,Is there a phonologically bound reflexive marker on the verb? Yes (1),,94,4,http://grambank.clld.org/parameters/GB114,GB114-1
 116,Is there a phonologically bound reflexive marker on the verb? NO (0),,95,4,http://grambank.clld.org/parameters/GB114,GB114-0
-117,Is there a phonologically bound reciprocal marker on the verb? Yes (1),,,4,http://grambank.clld.org/parameters/GB115,GB115-1
-118,Is there a phonologically bound reciprocal marker on the verb? NO (0),,,4,http://grambank.clld.org/parameters/GB115,GB115-0
 119,Are there serial verb constructions? Yes (1),,98,4,http://grambank.clld.org/parameters/GB118,GB118-1
 120,Are there serial verb constructions? NO (0),,99,4,http://grambank.clld.org/parameters/GB118,GB118-0
 121,The dominant constituent order in an intransitive clause is: SV,,100,2,http://sails.clld.org/parameters/ARGEX1-1,ARGEX1-1-2
@@ -368,7 +364,6 @@ Compound interrogatives translate literally as 'which person', 'what place', 'wh
 359,Are there morphological cases for non-pronominal core arguments (i.e. S/A/P)? NO (0),,320,4,http://grambank.clld.org/parameters/GB070,GB070-0
 360,Are there morphological cases for pronominal core arguments (i.e. S/A/P)? NO (0),,322,4,http://grambank.clld.org/parameters/GB071,GB071-0
 361,Are there morphological cases for pronominal core arguments (i.e. S/A/P)? YES (1),,321,4,http://grambank.clld.org/parameters/GB071,GB071-1
-362,,,,,,
 363,Are there morphological cases for oblique non-pronominal NPs (i.e. not S/A/P)? YES (1),,323,4,http://grambank.clld.org/parameters/GB072,GB072-1
 364,Are there morphological cases for oblique non-pronominal NPs (i.e. not S/A/P)? NO (0),,324,4,http://grambank.clld.org/parameters/GB072,GB072-0
 365,Are there prepositions? NO (0),,326,4,http://grambank.clld.org/parameters/GB074,GB074-0
@@ -425,14 +420,6 @@ Compound interrogatives translate literally as 'which person', 'what place', 'wh
 418,Female and male animals: Preposed sex-denoting word,,225,1,https://apics-online.info/parameters/117,117-1
 419,Female and male animals: Postposed sex-denoting word,,225,1,https://apics-online.info/parameters/117,117-2
 420,Female and male animals: Sex-denoting suffix,,225,1,https://apics-online.info/parameters/117,117-4
-421,GUIDELINES,"GENERAL:
-– I ignore lexical features (e.g. 'hand and arm')
-– I ignore genealogical features (e.g. 'pikinini')
-
-APiCS: 
-– I ignore ""not applicable"" and ""other"", because they are not informative
-– I include only values that have at least 3 languages; 
-– [for multi-choice features, I propose that shared values should be ignored, even though this leads to including fewer languages]",,,,
 436,Order of Subject and Verb: SV,,376,3,http://wals.info/feature/82A,082A-1
 437,Order of Subject and Verb: VS,,377,3,http://wals.info/feature/82A,082A-2
 438,Order of Subject and Verb: No dominant order,,378,3,http://wals.info/feature/82A,082A-3
