@@ -30,20 +30,16 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Quotation"
-                    },
-                    {
-                        "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
                         "name": "Comment"
                     },
                     {
                         "datatype": "string",
-                        "name": "Croft_Counterpart"
+                        "name": "SIL_Counterpart"
                     },
                     {
                         "datatype": "string",
-                        "name": "Croft_Definition"
+                        "name": "SIL_URL"
                     },
                     {
                         "datatype": "string",
