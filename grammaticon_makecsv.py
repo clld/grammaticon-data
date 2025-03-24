@@ -6,7 +6,6 @@ from pathlib import Path
 
 from csvw.metadata import Column, Table, TableGroup
 
-
 RAW_TO_CSWV_MAP = {
     'Concepts.csv': {
         'name': 'concepts.csv',
@@ -129,11 +128,12 @@ RAW_TO_CSWV_MAP = {
             'Metafeature_ID': 'metafeatures.csv'}}}
 
 
-def simplified_concept_hierarchy(original_hierarchy, concept_ids):
-    CONCEPT_ID_COL = 'x_concepthierarchy::concept_id'
-    CHILD_COL = 'x_concepthierarchy::concept_child_id'
-    PARENT_COL = 'x_concepthierarchy::concept_parent_id'
+CONCEPT_ID_COL = 'x_concepthierarchy::concept_id'
+CHILD_COL = 'x_concepthierarchy::concept_child_id'
+PARENT_COL = 'x_concepthierarchy::concept_parent_id'
 
+
+def simplified_concept_hierarchy(original_hierarchy, concept_ids):
     # The table looks like rows only have *either* a child_id *or* a parent id.
     # Check this assumption:
     conflicting = [
@@ -154,21 +154,19 @@ def simplified_concept_hierarchy(original_hierarchy, concept_ids):
         (row[CONCEPT_ID_COL], row[PARENT_COL])
         for row in original_hierarchy
         if row.get(PARENT_COL) in concept_ids}
-    assert children == parents, f'I expect all pairs to be reflexive'
+    assert children == parents, 'I expect all pairs to be reflexive'
 
     def valid_hierarchy_path(child_id, parent_id):
         if child_id not in concept_ids:
             msg = (
                 'concept-hierarchy.csv:'
-                " unknown child id '{}' for parent {}".format(
-                    child_id, parent_id))
+                f" unknown child id '{child_id}' for parent {parent_id}")
             print(msg, file=sys.stderr)
             return False
         elif parent_id not in concept_ids:
             msg = (
                 'concept-hierarchy.csv:'
-                " unknown parent id '{}' for child {}".format(
-                    parent_id, child_id))
+                f" unknown parent id '{parent_id}' for child {child_id}")
             print(msg, file=sys.stderr)
             return False
         else:
@@ -209,7 +207,7 @@ def main():
         "context": [
             "http://www.w3.org/ns/csvw",
             {"@language": "en"},
-        ]
+        ],
     })
 
     # load data
