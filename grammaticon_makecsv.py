@@ -179,6 +179,62 @@ def simplified_concept_hierarchy(original_hierarchy, concept_ids):
         if valid_hierarchy_path(child_id, parent_id)]
 
 
+def is_concept_valid(row):
+    if 'Name' not in row:
+        msg = (
+            'concepts.csv:'
+            ' missing name for concept {}'.format(row['ID']))
+        print(msg, file=sys.stderr)
+        return False
+    else:
+        return True
+
+
+def is_concept_metafeature_valid(row, metafeature_ids):
+    if 'Metafeature_ID' not in row:
+        msg = (
+            'concepts-metafeatures.csv:'
+            ' missing metafeature id for concept {}'.format(
+                row['Concept_ID']))
+        print(msg, file=sys.stderr)
+        return False
+    elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
+        msg = (
+            'concepts-metafeatures.csv:'
+            ' invalid metafeature id for concept {}: {}'.format(
+                row['Concept_ID'], mfid))
+        print(msg, file=sys.stderr)
+        return False
+    else:
+        return True
+
+
+def is_feature_valid(row, metafeature_ids, feature_list_ids):
+    if 'Metafeature_ID' not in row or 'Feature_List_ID' not in row:
+        msg = (
+            'features.csv:'
+            ' missing metafeature id or missing feature list id'
+            ' for feature {}'.format(row['ID']))
+        print(msg, file=sys.stderr)
+        return False
+    elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
+        msg = (
+            'features.csv:'
+            ' invalid metafeature id for feature {}: {}'.format(
+                mfid, row['ID']))
+        print(msg, file=sys.stderr)
+        return False
+    elif (flid := row['Feature_List_ID']) not in feature_list_ids:
+        msg = (
+            'features.csv:'
+            ' invalid feature list id for feature {}: {}'.format(
+                flid, row['ID']))
+        print(msg, file=sys.stderr)
+        return False
+    else:
+        return True
+
+
 def main():
     here = Path(__file__).parent
     src_dir = here / 'raw' / 'csv-export'
@@ -289,73 +345,18 @@ def main():
     assert '' not in feature_list_ids
     assert None not in feature_list_ids
 
-    def correct_concept(row):
-        if 'Name' not in row:
-            msg = (
-                'concepts.csv:'
-                ' missing name for concept {}'.format(row['ID']))
-            print(msg, file=sys.stderr)
-            return False
-        else:
-            return True
-
     table_data['concepts.csv'] = [
         row
         for row in table_data['concepts.csv']
-        if correct_concept(row)]
-
-    def correct_concept_metadata(row):
-        if 'Metafeature_ID' not in row:
-            msg = (
-                'concepts-metafeatures.csv:'
-                ' missing metafeature id for concept {}'.format(
-                    row['Concept_ID']))
-            print(msg, file=sys.stderr)
-            return False
-        elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
-            msg = (
-                'concepts-metafeatures.csv:'
-                ' invalid metafeature id for concept {}: {}'.format(
-                    row['Concept_ID'], mfid))
-            print(msg, file=sys.stderr)
-            return False
-        else:
-            return True
-
+        if is_concept_valid(row)]
     table_data['concepts-metafeatures.csv'] = [
         row
         for row in table_data['concepts-metafeatures.csv']
-        if correct_concept_metadata(row)]
-
-    def correct_feature(row):
-        if 'Metafeature_ID' not in row or 'Feature_List_ID' not in row:
-            msg = (
-                'features.csv:'
-                ' missing metafeature id or missing feature list id'
-                ' for feature {}'.format(row['ID']))
-            print(msg, file=sys.stderr)
-            return False
-        elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
-            msg = (
-                'features.csv:'
-                ' invalid metafeature id for feature {}: {}'.format(
-                    mfid, row['ID']))
-            print(msg, file=sys.stderr)
-            return False
-        elif (flid := row['Feature_List_ID']) not in feature_list_ids:
-            msg = (
-                'features.csv:'
-                ' invalid feature list id for feature {}: {}'.format(
-                    flid, row['ID']))
-            print(msg, file=sys.stderr)
-            return False
-        else:
-            return True
-
+        if is_concept_metafeature_valid(row, metafeature_ids)]
     table_data['features.csv'] = [
         row
         for row in table_data['features.csv']
-        if correct_feature(row)]
+        if is_feature_valid(row, metafeature_ids, feature_list_ids)]
 
     # write data
 
