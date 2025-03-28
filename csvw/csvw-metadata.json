@@ -48,6 +48,38 @@
                     {
                         "datatype": "string",
                         "name": "Wikipedia_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Croft_counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Croft_definition"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "GOLD_comment"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ISOCAT_comments"
                     }
                 ]
             },
