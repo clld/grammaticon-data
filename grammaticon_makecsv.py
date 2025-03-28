@@ -40,6 +40,30 @@ RAW_TO_CSWV_MAP = {
                 'datatype': 'string'},
             'Wikipedia URL': {
                 'name': 'Wikipedia_URL',
+                'datatype': 'string'},
+            'Croft counterpart': {
+                'name': 'Croft_counterpart',
+                'datatype': 'string'},
+            'Croft definition': {
+                'name': 'Croft_definition',
+                'datatype': 'string'},
+            'GOLD counterpart': {
+                'name': 'GOLD_counterpart',
+                'datatype': 'string'},
+            'GOLD URL': {
+                'name': 'GOLD_URL',
+                'datatype': 'string'},
+            'GOLD comment': {
+                'name': 'GOLD_comment',
+                'datatype': 'string'},
+            'ISOCAT counterpart': {
+                'name': 'ISOCAT_counterpart',
+                'datatype': 'string'},
+            'ISOCAT URL': {
+                'name': 'ISOCAT_URL',
+                'datatype': 'string'},
+            'ISOCAT comments': {
+                'name': 'ISOCAT_comments',
                 'datatype': 'string'}}},
 
     'Metafeatures.csv': {
@@ -117,10 +141,10 @@ RAW_TO_CSWV_MAP = {
     'Concepts_metafeatures.csv': {
         'name': 'concepts-metafeatures.csv',
         'columns': {
-            'x_Concepts_Metafeatures::concept_id': {
+            'concept_id': {
                 'name': 'Concept_ID',
                 'datatype': 'string'},
-            'x_Concepts_Metafeatures::meta_feature__id': {
+            'meta_feature__id': {
                 'name': 'Metafeature_ID',
                 'datatype': 'string'}},
         'foreign-keys': {
@@ -128,9 +152,9 @@ RAW_TO_CSWV_MAP = {
             'Metafeature_ID': 'metafeatures.csv'}}}
 
 
-CONCEPT_ID_COL = 'x_concepthierarchy::concept_id'
-CHILD_COL = 'x_concepthierarchy::concept_child_id'
-PARENT_COL = 'x_concepthierarchy::concept_parent_id'
+CONCEPT_ID_COL = 'concept_id'
+CHILD_COL = 'concept_child_id'
+PARENT_COL = 'concept_parent_id'
 
 
 def simplified_concept_hierarchy(original_hierarchy, concept_ids):
@@ -149,11 +173,13 @@ def simplified_concept_hierarchy(original_hierarchy, concept_ids):
     children = {
         (row[CHILD_COL], row[CONCEPT_ID_COL])
         for row in original_hierarchy
-        if row.get(CHILD_COL) in concept_ids}
+        if row.get(CHILD_COL) in concept_ids
+        and row.get(CONCEPT_ID_COL) in concept_ids}
     parents = {
         (row[CONCEPT_ID_COL], row[PARENT_COL])
         for row in original_hierarchy
-        if row.get(PARENT_COL) in concept_ids}
+        if row.get(PARENT_COL) in concept_ids
+        and row.get(CONCEPT_ID_COL) in concept_ids}
     assert children == parents, 'I expect all pairs to be reflexive'
 
     def valid_hierarchy_path(child_id, parent_id):
@@ -190,7 +216,7 @@ def is_concept_valid(row):
         return True
 
 
-def is_concept_metafeature_valid(row, metafeature_ids):
+def is_concept_metafeature_valid(row, concept_ids, metafeature_ids):
     if 'Metafeature_ID' not in row:
         msg = (
             'concepts-metafeatures.csv:'
@@ -203,6 +229,13 @@ def is_concept_metafeature_valid(row, metafeature_ids):
             'concepts-metafeatures.csv:'
             ' invalid metafeature id for concept {}: {}'.format(
                 row['Concept_ID'], mfid))
+        print(msg, file=sys.stderr)
+        return False
+    elif (cid := row['Concept_ID']) not in concept_ids:
+        msg = (
+            'concepts-metafeatures.csv:'
+            ' invalid concept id for metafeature {}: {}'.format(
+                row['Metafeature_ID'], cid))
         print(msg, file=sys.stderr)
         return False
     else:
@@ -324,9 +357,9 @@ def main():
             {k: v for k, v in zip(header, row) if v}
             for row in reader]
 
+    concept_ids = {row['ID'] for row in table_data['concepts.csv']}
     table_data['concept-hierarchy.csv'] = simplified_concept_hierarchy(
-        original_hierarchy,
-        {row['ID'] for row in table_data['concepts.csv']})
+        original_hierarchy, concept_ids)
 
     table = Table(url='concept-hierarchy.csv')
     table.tableSchema.columns = [
@@ -352,7 +385,7 @@ def main():
     table_data['concepts-metafeatures.csv'] = [
         row
         for row in table_data['concepts-metafeatures.csv']
-        if is_concept_metafeature_valid(row, metafeature_ids)]
+        if is_concept_metafeature_valid(row, concept_ids, metafeature_ids)]
     table_data['features.csv'] = [
         row
         for row in table_data['features.csv']
