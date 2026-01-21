@@ -5,6 +5,23 @@
             "@language": "en"
         }
     ],
+    "dc:title": "Grammaticon",
+    "dcat:accessURL": "https://github.com/clld/grammaticon-data",
+    "prov:wasDerivedFrom": [
+        {
+            "dc:title": "Repository",
+            "rdf:type": "prov:Entity",
+            "rdf:about": "https://github.com/clld/grammaticon-data",
+            "dc:created": "69a71d6"
+        }
+    ],
+    "prov:wasGeneratedBy": [
+        {
+            "dc:title": "python",
+            "dc:description": "3.10.19"
+        }
+    ],
+    "rdf:ID": "grammaticon",
     "tables": [
         {
             "tableSchema": {
@@ -63,23 +80,7 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "GOLD_URL"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "GOLD_comment"
-                    },
-                    {
-                        "datatype": "string",
                         "name": "ISOCAT_counterpart"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ISOCAT_URL"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ISOCAT_comments"
                     }
                 ]
             },
