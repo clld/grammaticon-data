@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
 import csv
+import platform
+import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -269,23 +273,57 @@ def main():
         src_dir / 'Concepts_metafeatures.csv',
     ]
 
-    table_data = {}
-    # TODO: add more metadata
-    # excerpt from tseltal:
-    #   {"rdf:ID": "tseltal",
-    #    "dc:title": "Tseltal-Spanish multidialectal dictionary",
-    #    "dcat:accessURL": "https://github.com/dictionaria/tseltal",
-    #    "prov:wasGeneratedBy": [
-    #      {"dc:title": "python",
-    #       "dc:description": "3.8.10"},
-    #      {"dc:title": "python-packages",
-    #       "dc:relation": "requirements.txt"}]}
-    table_meta_data = TableGroup(at_props={
-        "context": [
-            "http://www.w3.org/ns/csvw",
-            {"@language": "en"},
+    table_props = {
+        "rdf:ID": "grammaticon",
+        "dc:title": "Grammaticon",
+        "dcat:accessURL": "https://github.com/clld/grammaticon-data",
+        "prov:wasGeneratedBy": [
+            {"dc:title": "python",
+             "dc:description": platform.python_version()},
+             # TODO: do a pip freeze on the venv
+             # {"dc:title": "python-packages",
+             #  "dc:relation": "requirements.txt"},
         ],
-    })
+    }
+
+    if here.joinpath('.git').is_dir():
+        git_remote = None
+        with open(here / '.git' / 'config', encoding='utf-8') as f:
+            for line in f:
+                if re.fullmatch(r'\s*\[\s*remote\s+"origin"\s*\]\s*', line):
+                    break
+            for line in f:
+                if (m := re.fullmatch(r'\s*url\s*=\s*(\S+)\s*', line)):
+                    git_remote = m.group(1)
+                    break
+                elif re.match(r'\s*\[', line):
+                    break
+        if git_remote:
+            git_exe = shutil.which('git')
+            assert git_exe is not None
+            procresult = subprocess.run(
+                [git_exe, '-C', str(here), 'describe', '--always', '--tags'],
+                stdout=subprocess.PIPE, check=True, encoding='utf-8')
+            git_description = procresult.stdout.strip()
+            table_props["prov:wasDerivedFrom"] = [
+                {
+                    'dc:title': 'Repository',
+                    'rdf:type': 'prov:Entity',
+                    'rdf:about': git_remote,
+                    'dc:created': git_description,
+                },
+            ]
+
+    table_data = {}
+    table_meta_data = TableGroup(
+        at_props={
+            "context": [
+                "http://www.w3.org/ns/csvw",
+                {"@language": "en"},
+            ],
+        },
+        common_props=table_props,
+    )
 
     # load data
 
