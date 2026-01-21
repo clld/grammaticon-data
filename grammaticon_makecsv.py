@@ -50,20 +50,8 @@ RAW_TO_CSWV_MAP = {
             'GOLD counterpart': {
                 'name': 'GOLD_counterpart',
                 'datatype': 'string'},
-            'GOLD URL': {
-                'name': 'GOLD_URL',
-                'datatype': 'string'},
-            'GOLD comment': {
-                'name': 'GOLD_comment',
-                'datatype': 'string'},
             'ISOCAT counterpart': {
                 'name': 'ISOCAT_counterpart',
-                'datatype': 'string'},
-            'ISOCAT URL': {
-                'name': 'ISOCAT_URL',
-                'datatype': 'string'},
-            'ISOCAT comments': {
-                'name': 'ISOCAT_comments',
                 'datatype': 'string'}}},
 
     'Metafeatures.csv': {
