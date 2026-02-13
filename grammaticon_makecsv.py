@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 
 from csvw.metadata import Column, Table, TableGroup
+from simplepybtex.database import BibliographyData, parse_file
 
 RAW_TO_CSWV_MAP = {
     'Concepts.csv': {
@@ -56,7 +57,15 @@ RAW_TO_CSWV_MAP = {
                 'datatype': 'string'},
             'ISOCAT counterpart': {
                 'name': 'ISOCAT_counterpart',
-                'datatype': 'string'}}},
+                'datatype': 'string'},
+            'quotation': {
+                'name': 'Quotation',
+                'datatype': 'string'},
+            'Bibsources': {
+                'name': 'Source',
+                'datatype': 'string',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#source',
+                'separator': ';'}}},
 
     'Metafeatures.csv': {
         'name': 'metafeatures.csv',
@@ -87,13 +96,10 @@ RAW_TO_CSWV_MAP = {
             'URL': {
                 'name': 'URL',
                 'datatype': 'string'},
-            # TODO: split authors?
-            'authors': {
-                'name': 'Authors',
-                'datatype': 'string'},
-            'number of features': {
-                'name': 'Number_of_Features',
-                'datatype': 'integer'},
+            'description': {
+                'name': 'Description',
+                'datatype': 'string',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#description'},
             'year': {
                 'name': 'Year',
                 'datatype': 'string'}}},
@@ -262,27 +268,29 @@ def is_feature_valid(row, metafeature_ids, feature_list_ids):
 
 def main():
     here = Path(__file__).parent
-    src_dir = here / 'raw' / 'csv-export'
+    raw_dir = here / 'raw'
+    csv_dir = raw_dir / 'csv-export'
     dest_dir = here / 'csvw'
 
     raw_tables = [
-        src_dir / 'Concepts.csv',
-        src_dir / 'Metafeatures.csv',
-        src_dir / 'Feature_lists.csv',
-        src_dir / 'Features.csv',
-        src_dir / 'Concepts_metafeatures.csv',
+        csv_dir / 'Concepts.csv',
+        csv_dir / 'Metafeatures.csv',
+        csv_dir / 'Feature_lists.csv',
+        csv_dir / 'Features.csv',
+        csv_dir / 'Concepts_metafeatures.csv',
     ]
 
     table_props = {
-        "rdf:ID": "grammaticon",
-        "dc:title": "Grammaticon",
-        "dcat:accessURL": "https://github.com/clld/grammaticon-data",
-        "prov:wasGeneratedBy": [
-            {"dc:title": "python",
-             "dc:description": platform.python_version()},
+        'rdf:ID': 'grammaticon',
+        'dc:title': 'Grammaticon',
+        'dc:source': 'sources.bib',
+        'dcat:accessURL': 'https://github.com/clld/grammaticon-data',
+        'prov:wasGeneratedBy': [
+            {'dc:title': 'python',
+             'dc:description': platform.python_version()},
              # TODO: do a pip freeze on the venv
-             # {"dc:title": "python-packages",
-             #  "dc:relation": "requirements.txt"},
+             # {'dc:title': 'python-packages',
+             #  'dc:relation': 'requirements.txt'},
         ],
     }
 
@@ -376,12 +384,19 @@ def main():
 
     # deal with the concept hierarchy separately
 
-    with open(src_dir / 'Concepthierarchy.csv', encoding='utf-8') as f:
+    with open(csv_dir / 'Concepthierarchy.csv', encoding='utf-8') as f:
         reader = csv.reader(f)
         header = list(next(reader))
         original_hierarchy = [
             {k: v for k, v in zip(header, row) if v}
             for row in reader]
+
+    sources = parse_file(raw_dir / 'sources.bib')
+
+    # split the references
+    for concept in table_data['concepts.csv']:
+        if (source := concept.get('Source')):
+            concept['Source'] = re.split(r'\s*;\s*', source)
 
     concept_ids = {row['ID'] for row in table_data['concepts.csv']}
     table_data['concept-hierarchy.csv'] = simplified_concept_hierarchy(
@@ -404,6 +419,18 @@ def main():
     assert '' not in feature_list_ids
     assert None not in feature_list_ids
 
+    bibkeys = {
+        re.fullmatch(r'([^[]+)(?:\[[^\]]*\])?', citation).group(1).lower()
+        for row in table_data['concepts.csv']
+        for citation in row.get('Source') or ()}
+    for bibkey in bibkeys:
+        assert bibkey in sources.entries, bibkey
+    sources = BibliographyData(
+        entries=sources.entries.__class__(
+            (k, b)
+            for k, b in sources.entries.items()
+            if k.lower() in bibkeys))
+
     table_data['concepts.csv'] = [
         row
         for row in table_data['concepts.csv']
@@ -421,6 +448,7 @@ def main():
 
     dest_dir.mkdir(parents=True, exist_ok=True)
     table_meta_data.write(dest_dir / 'csvw-metadata.json', **table_data)
+    sources.to_file(str(dest_dir / 'sources.bib'), 'bibtex')
 
 
 if __name__ == '__main__':

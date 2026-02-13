@@ -1,8 +1,9 @@
-id,name,URL,authors,number of features,year
-2,SAILS,,,,
-3,WALS,http://wals.info,"Matthew Dryer, Martin Haspelmath, David Gil, Bernard Comrie",192,2013
-4,Grambank,http://grambank.clld.org/,"Harald Hammarström, Hedvig Skirgård, et al.",195,2015
-5,SSWL,http://sswl.railsplayground.net,,,
-6,HG,https://huntergatherer.la.utexas.edu/,"Claire Bowern, Patience Epps, Jane Hill, Keth Hunley",304,0
-7,DiACL,https://diacl.ht.lu.se/,Ger Carling et al.,,2017
-1,APiCS,https://apics-online.info,"Susanne Michaelis, Philippe Maurer, Martin Haspelmath, Magnus Huber",,2013
+id,name,URL,description,year
+2,SAILS,https://sails.clld.org/,"Pieter Muysken, Harald Hammarström, Olga Krasnoukhova, Neele Müller, Joshua Birchall, Simon van de Kerke, Loretta O'Connor, Swintha Danielsen, Rik van Gijn & George Saad",2016
+3,WALS,http://wals.info,"Matthew Dryer, Martin Haspelmath, David Gil, Bernard Comrie",2013
+4,Grambank,http://grambank.clld.org/,Hedvig Skirgård et al.,2023
+5,SSWL,http://sswl.railsplayground.net,,
+6,HG,https://huntergatherer.la.utexas.edu/,"Claire Bowern, Patience Epps, Jane Hill, Keth Hunley",0
+7,DiACL,https://diacl.ht.lu.se/,Ger Carling et al.,2017
+1,APiCS,https://apics-online.info,"Susanne Michaelis, Philippe Maurer, Martin Haspelmath, Magnus Huber",2013
+9,ATLAs Zurich,https://atlas.evolvinglanguage.ch,David Inman et al.,2025
