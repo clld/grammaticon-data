@@ -5,6 +5,7 @@
             "@language": "en"
         }
     ],
+    "dc:source": "sources.bib",
     "dc:title": "Grammaticon",
     "dcat:accessURL": "https://github.com/clld/grammaticon-data",
     "prov:wasDerivedFrom": [
@@ -12,7 +13,7 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "69a71d6"
+            "dc:created": "c763847"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -81,6 +82,16 @@
                     {
                         "datatype": "string",
                         "name": "ISOCAT_counterpart"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Quotation"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "separator": ";",
+                        "name": "Source"
                     }
                 ]
             },
@@ -126,11 +137,8 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Authors"
-                    },
-                    {
-                        "datatype": "integer",
-                        "name": "Number_of_Features"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "name": "Description"
                     },
                     {
                         "datatype": "string",
