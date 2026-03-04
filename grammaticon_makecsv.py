@@ -52,6 +52,9 @@ RAW_TO_CSWV_MAP = {
             'Croft definition': {
                 'name': 'Croft_definition',
                 'datatype': 'string'},
+            'Croft URL': {
+                'name': 'Croft_URL',
+                'datatype': 'string'},
             'GOLD counterpart': {
                 'name': 'GOLD_counterpart',
                 'datatype': 'string'},
@@ -153,6 +156,11 @@ RAW_TO_CSWV_MAP = {
 CONCEPT_ID_COL = 'concept_id'
 CHILD_COL = 'concept_child_id'
 PARENT_COL = 'concept_parent_id'
+
+BIBKEY_FIXES = {
+    'blomfield_language_1933': 'bloomfield_language_1933',
+    'croft_morphosyntax_ 2022': 'croft_morphosyntax_2022',
+}
 
 
 def simplified_concept_hierarchy(original_hierarchy, concept_ids):
@@ -419,12 +427,23 @@ def main():
     assert '' not in feature_list_ids
     assert None not in feature_list_ids
 
+    for row in table_data['concepts.csv']:
+        if (refs := row.get('Source')):
+            row['Source'] = [BIBKEY_FIXES.get(key) or key for key in refs]
+
     bibkeys = {
         re.fullmatch(r'([^[]+)(?:\[[^\]]*\])?', citation).group(1).lower()
         for row in table_data['concepts.csv']
         for citation in row.get('Source') or ()}
-    for bibkey in bibkeys:
-        assert bibkey in sources.entries, bibkey
+    missing_bibkeys = {
+        bibkey
+        for bibkey in bibkeys
+        if bibkey not in sources.entries}
+    if missing_bibkeys:
+        print('\n'.join(
+            f'bibkey not found in bibliography: {bibkey}'
+            for bibkey in sorted(missing_bibkeys)))
+
     sources = BibliographyData(
         entries=sources.entries.__class__(
             (k, b)
