@@ -1,43 +1,38 @@
 ID,Name,Description,Metafeature_ID,Feature_List_ID,Feature_List_URL,Feature_List_Numbers
 13,Is sex a relevant category in the noun class/gender system?,,4,2,http://sails.clld.org/parameters/ARW2-5-02,
-14,Does the language have the same TAM marking in negated clauses?,,6,1,,050
-15,Gender agreement of adnominal adjectives,,7,1,,040
-19,Predicative adjectives,,11,1,,074
-20,Predicative adjectives,,12,3,,118A
-22,Predicative noun phrases,,14,1,,073
-25,Zero copula for predicate nominals,,16,3,,120A
+14,"Negation and tense, aspect, and mood marking",,225,1,https://apics-online.info/parameters/50,050
+15,Gender agreement of adnominal adjectives,,225,1,https://apics-online.info/parameters/40,040
+20,Predicative adjectives,,12,3,https://wals.info/feature/118A,118A
+22,Predicative noun phrases,,225,1,http://apics-online.info/parameters/73,073
+25,Zero copula for predicate nominals,,16,3,https://wals.info/feature/120A,120A
 26,Is there an inclusive/exclusive distinction in personal pronouns? – no,"SAILS gives no information on what kinds of ""personal pronouns"" are intended, so it is assumed here that the deature is about independent personal pronouns.",1,2,http://sails.clld.org/parameters/NP7,NP7-1
 27,Is there an inclusive/exclusive distinction in personal pronouns? (V) yes,,17,2,,
-28,Inclusive/exclusive distinction in independent pronouns,"For speakers of English (or any other European language), both the inclusive and the exclusive pronouns are to be translated as we. The difference between the two depends on the intended meaning. An inclusive pronoun necessarily includes reference to the addressee. For example, the Mandarin inclusive pronoun zámen means ‘we, I and you’; others can optionally be included. An exclusive pronoun, like the Mandarin pronoun wŏmen, excludes the addressee from the reference, resulting in a meaning like ‘I and some others, but not you’.",1,3,,039A
+28,Inclusive/exclusive distinction in independent pronouns,"For speakers of English (or any other European language), both the inclusive and the exclusive pronouns are to be translated as we. The difference between the two depends on the intended meaning. An inclusive pronoun necessarily includes reference to the addressee. For example, the Mandarin inclusive pronoun zámen means ‘we, I and you’; others can optionally be included. An exclusive pronoun, like the Mandarin pronoun wŏmen, excludes the addressee from the reference, resulting in a meaning like ‘I and some others, but not you’.",1,3,http://wals.info/feature/39A,039A
 30,Inclusive/exclusive distinction in independent personal pronouns,"In this feature (based on WALS feature 39, by Michael Cysouw), we ask whether a language has an inclusive/exclusive distinction in independent personal pronouns. An inclusive pronouns means 'we including the hearer', and an exclusive pronoun means 'we excluding the hearer'.",1,1,http://apics-online.info/parameters/15,015
 32,Complementizer Clause (V: Yes),"The property Complementizer Clause has the value ""yes"" when there is at least one complementizer that precedes its clause. As with all word order properties, we restrict our attention to productive word order patterns.",2,5,http://sswl.railsplayground.net/browse/properties/455,C 01
 33,Clause Complementizer (V: Yes),"The property Clause Complementizer has the value ""yes"" when there is at least one complementizer that follows its clause. As with all word order properties, we restrict our attention to productive word order patterns.",3,5,http://sswl.railsplayground.net/browse/properties/456,C 02
 34,Distinct negation of location (V: Yes),Distinct Negation of Location is set to yes when the strategy used for the negation of predications of location differs from Standard Negation.,19,5,http://sswl.railsplayground.net/browse/properties/488,Neg 14
-35,Numeral classifiers,"Gil (2005): Gil (2005): ""in many ... languages, nouns in construction with numerals may occur with an additional grammatical element even when such nouns are of high countability... Such elements are typically referred to as sortal numeral classifiers. This term makes reference to one of the most salient functions of such forms, which is to divide the inventory of count nouns into semantic classes, each of which is associated with a different classifier.""",20,3,http://wals.info/feature/55A,055A
+35,Numeral classifiers,"Gil (2005): Gil (2005): ""in many ... languages, nouns in construction with numerals may occur with an additional grammatical element even when such nouns are of high countability... Such elements are typically referred to as sortal numeral classifiers. This term makes reference to one of the most salient functions of such forms, which is to divide the inventory of count nouns into semantic classes, each of which is associated with a different classifier.""",20,3,https://wals.info/feature/55A,055A
 36,Number of genders,,21,3,http://wals.info/feature/30A,030A
-37,The language has no numeral classifiers,,20,1,http://apics-online.info/parameters/36,036
-40,Position of pronominal possessive affixes,,25,3,http://wals.info/feature/57A,057A
-44,Obligatory possessive inflection,,28,3,http://wals.info/feature/58A,058A
-48,Number of possessive nouns,"Bickel & Nichols (2005): ""The head noun 'chicken' is grammatically non-possessible, though as the example indicates its referent can be owned, showing that non-possessibility is a grammatical rather than a purely semantic property. The formally possessed generic noun 'pet' is a more or less conventional choice in this construction.  Such nouns will be called possessive nouns here. ... In most languages with possessive nouns, there is a small and closed set of nouns grammaticalized for such usage, and their semantics amounts to classification of possessive relations (so that possessive nouns are also referred to as possessive classifiers).""",31,3,http://wals.info/feature/58B,058B
-51,Are there definite or specific articles?,"An article is defined as ""a marker that accompanies the noun and expresses notions such as (non-)specificity and (in)definiteness (""identifiability"")"", but suprasegmental marking also counts. Definite articles often arise from demonstratives and form a continuum with them; to qualify as an article, a marker should be used in some cases to express definiteness without also expressing a spatial deictic meaning.",33,4,http://grambank.clld.org/parameters/GB020,GB020
-52,Definite article,,35,3,http://wals.info/feature/37A,037A
-53,Do indefinite nominals commonly have indefinite articles?,"For this feature, we need explicit support that indefinite/non-specific NPs commonly occur with an indefinite/non-specific article. Three or more examples of indefinite/non-specific nominals occurring with an indefinite/non-specific article is sufficient to code 1.
+37,Sortal numeral classifiers,,225,1,http://apics-online.info/parameters/36,036
+40,Position of pronominal possessive affixes,,25,3,https://wals.info/feature/57A,057A
+44,Obligatory possessive inflection,,28,3,https://wals.info/feature/58A,058A
+48,Number of possessive nouns,"(By Bickel & Nichols 2005/2013, WALS 58B): ""The head noun 'chicken' is grammatically non-possessible, though as the example indicates its referent can be owned, showing that non-possessibility is a grammatical rather than a purely semantic property. The formally possessed generic noun 'pet' is a more or less conventional choice in this construction.  Such nouns will be called possessive nouns here. ... In most languages with possessive nouns, there is a small and closed set of nouns grammaticalized for such usage, and their semantics amounts to classification of possessive relations (so that possessive nouns are also referred to as possessive classifiers).""",31,3,https://wals.info/feature/58B,058B
+51,Are there definite or specific articles?,"(By Jeremy Collins and Jay Latarche): ""An article is a marker that accompanies the noun and expresses notions such as (non-)specificity and (in)definiteness. Sometimes these notions of specificity and definiteness are summed up in the term 'identifiability'. The formal expression is irrelevant; articles can be free, bound, or marked by suprasegmental markers such as tone. Articles are different from demonstratives in that demonstratives occur in a paradigm of markers that have a clear spatial deictic function. As demonstratives can grammaticalize into definite or specific articles, they form a natural continuum, making it hard to define discrete categories, but to qualify as an article a marker should be used in some cases to express definiteness without also expressing a spatial deictic meaning.""",33,4,http://grambank.clld.org/parameters/GB020,GB020
+52,Definite articles,,225,3,http://wals.info/feature/37A,037A
+53,Do indefinite nominals commonly have indefinite articles?,"(By Jeremy Collins and Jay Latarche): ""For this feature, we need explicit support that indefinite/non-specific NPs commonly occur with an indefinite/non-specific article. Three or more examples of indefinite/non-specific nominals occurring with an indefinite/non-specific article is sufficient to code 1. ///
 
-An indefinite article is a marker that accompanies the indefinite noun and expresses notions such as non-specificity and indefiniteness. Sometimes these notions of non-specificity and indefiniteness are summed up in the term ‘identifiability’. A language does not necessarily have both a non-specific/indefinite and a specific/definite marker. These markers often stem from very different sources (numerals and demonstratives) and need not be similar in formal expression or position.
+An indefinite article is a marker that accompanies the indefinite noun and expresses notions such as non-specificity and indefiniteness. Sometimes these notions of non-specificity and indefiniteness are summed up in the term ‘identifiability’. A language does not necessarily have both a non-specific/indefinite and a specific/definite marker. These markers often stem from very different sources (numerals and demonstratives) and need not be similar in formal expression or position. ///
 
-The formal expression is irrelevant; articles can be free, bound, or marked by suprasegmental markers such as tone. Articles are different from demonstratives in that demonstratives occur in a paradigm of markers that have a clear spatial deictic function. As demonstratives can grammaticalize into definite or specific articles, they form a natural continuum, making it hard to define discrete categories. Articles are more grammaticalized, i.e. are often obligatory in certain contexts that require definite or specific reference. Definite or specific articles can also grammaticalize from pronouns meaning ‘a certain’. As articles necessarily accompany nouns, it is in these cases that it is necessary to investigate whether the marker can occur independently or not; if it can it is most likely a pronoun and not an article. Articles can be homophonous with pronouns and demonstratives, and also with classifiers.
+The formal expression is irrelevant; articles can be free, bound, or marked by suprasegmental markers such as tone. Articles are different from demonstratives in that demonstratives occur in a paradigm of markers that have a clear spatial deictic function. As demonstratives can grammaticalize into definite or specific articles, they form a natural continuum, making it hard to define discrete categories. Articles are more grammaticalized, i.e. are often obligatory in certain contexts that require definite or specific reference. Definite or specific articles can also grammaticalize from pronouns meaning ‘a certain’. As articles necessarily accompany nouns, it is in these cases that it is necessary to investigate whether the marker can occur independently or not; if it can it is most likely a pronoun and not an article. Articles can be homophonous with pronouns and demonstratives, and also with classifiers.""",225,4,http://grambank.clld.org/parameters/GB021,GB021
+54,Are there prenominal articles?,"(By Jeremy Collins and Jay Latarche): ""All questions concerning the order of elements aim to capture a pragmatically unmarked order. If both GB022 and GB023 are coded 1, please write a comment. Articles cover both definite or indefinite articles as defined in GB020 and GB021 respectively. In order to answer 1 for this feature, the markers' functions need to meet one of those definitions, so 1 should also have been answered for GB020 or GB021.""",37,4,http://grambank.clld.org/parameters/GB022,GB022
+55,Are there postnominal articles?,"(By Jeremy Collins and Jay Latarche): ""All questions concerning the order of elements aim to capture a pragmatically unmarked order.If both GB022 and GB023 are coded 1, please write a comment. Articles cover both definite or indefinite articles as defined in GB020 and GB021 respectively. In order to answer 1 for this feature, the markers' functions need to meet one of those definitions, so 1 should also have been answered for GB020 or GB021.""",38,4,http://grambank.clld.org/parameters/GB023,GB023
+56,Can adnominal property words occur discontinuously?,"(By Hannah J. Haynie): ""This feature describes an adnominal property word denoting core adjectival concepts such as shape, value, dimension, age, color (at a minimum -- many other meanings are possible) which can be separated from the noun it modifies by some element that is not part of the nominal phrase. For example, can you say the man* is running big to mean ‘*the big man is running’? ///
 
-Procedure
+Typically a language which allows this has extensive agreement systems so that you can still work out what modifies what in the NP without them being adjacent (e.g. the ‘Australian type’). NPs that are made up of several coordinated NPs that can be interpreted by the verb or other elements are not relevant here. This features aims specifically to capture the phenomenon of a single NP whose property words can occur outside of and not immediately adjacent to the portion of the NP that contains the head. Examples of the type I painted the house red or I saw the boy big are not necessarily discontinuous, but most likely resultative or contrastive (I saw the boy big [as opposed to before when he was small]). These should be disregarded for the purposes of this feature. ///
 
-• Code 1 if indefinite NPs commonly occur with an indefinite/non-specific article. Three or more examples are sufficient.
-• Code 1 if there is evidence (three or more examples) of a demonstrative or numeral for 1 that has grammaticalized into an indefinite article. Look for explicit analysis from the author that they are indefinite articles or look at the environments in which they occur, for example, whether they occur in different positions depending on whether they are functioning as an indefinite article or not.
-• Code 0 if there are no indefinite articles.
-• Code 0 if there are less than three examples of indefinite/non-specific articles occurring with indefinite NPs and note this in the comments.
-• Code ? if it is unclear whether there are indefinite articles due to limited analysis from the author or because there are not enough examples.",36,4,http://grambank.clld.org/parameters/GB021,GB021
-54,Are there prenominal articles?,"This feature is about definite or specific articles (as in GB020) and about indefinite articles (as in GB021), and it asks whether any such articles may precede the noun in ""the pragmatically unmarked order"".",37,4,http://grambank.clld.org/parameters/GB022,GB022
-55,Are there postnominal articles?,"This feature is about definite or specific articles (as in GB020) and about indefinite articles (as in GB021), and it asks whether any such articles may follow the noun in ""the pragmatically unmarked order"".",38,4,http://grambank.clld.org/parameters/GB023,GB023
-56,Can adnominal property words occur discontinuously?,"This means that a restrictively interpreted adjective is separated from the noun by some element that is not part of the nominal. For example, can you say ""The man is running big"" and the like to mean ""The big man is running"". Typically a language which allows this has extensive agreement systems so that you can still work out what modifies what in the NP without them being adjacent (i.e. the ""Australian type""). NPs that are made up of several coordinated NPs that can be interpreted by the verb or other elements are not relevant here. This features aims to capture NPs where the head and modifiers can be separated. Examples of the type ""I painted the house red"" or ""I saw the boy big"" are not necessarily discontinuous, but most likely resultative or contrastive (""I saw the boy big [as opposed to before when he was small]"").",39,4,http://grambank.clld.org/parameters/GB026,GB026
-57,Marking of patient noun phrases,,40,1,http://apics-online.info/parameters/57,057
+Note that for the purposes of this feature only property words (e.g. tall, red, friendly) should be considered. Any other elements described as 'adjectives' or 'adjectival' in the grammatical description (e.g. quantifiers, demonstratives) should be disregarded in coding this feature.""",39,4,http://grambank.clld.org/parameters/GB026,GB026
+57,Marking of patient noun phrases,,225,1,http://apics-online.info/parameters/57,057
 62,Standard negation is a particle that precedes the verb,"The feature ""is set to yes if the negation marker has the following characteristics
 
 • It precedes the verb it negates (precedes to be understood broadly not as 'immediately' precedes).
@@ -53,15 +48,17 @@ Procedure
 66,Is there a distinction between inclusive and exclusive for personal pronouns? – no,"SAILS gives no information on what kinds of ""personal pronouns"" are intended, so it is assumed here that the feature is about independent personal pronouns.",1,2,http://sails.clld.org/parameters/ICS9,ICS9-0
 67,Productive NN compounding,Noun compounds created from two noun phrases are common and systematically produced.,49,6,https://huntergatherer.la.utexas.edu/grammar/feature/22,22
 74,Person syncretism in independent personal pronouns,"In most languages, there are distinct forms for the three persons in both singular and plural (and in the dual as well, if there is one), e.g. French moi, toi, lui/elle, nous, vous, eux/elles. But in some languages, there is person syncretism, i.e. there is a form in the paradigm of independent personal pronouns that serves for more than one person. For instance, some languages have the same form in the 1st and 2nd person plural (e.g. Haitian Creole nou), and some languages have the same form in the 2nd and 3rd person plural (e.g. Seychelles Creole zot). Note that we are not concerned with pure number syncretism here (e.g. English you for 2sg/2pl).",59,1,http://apics-online.info/parameters/16,016
-77,Special dependent person forms for subject and object,,60,1,,017
-81,Politeness distinctions in second-person pronouns,,64,1,,018
-85,Interrogative pronouns,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word.
+77,Special dependent person forms for subject and object,"(By Martin Haspelmath and the APiCS Consortium: ""All languages have independent personal pronouns (words like 'I', 'you, 'he', 'we', etc.) that can occur on their own or in constructions in which they are singled out (focus constructions, coordination constructions). ///
 
-Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",68,1,http://apics-online.info/parameters/19,019
-90,Pronoun conjunction,,73,1,apics-online.info/parameters/20,020
-96,Is there an instrumental applicative marker on the verb (including indexing)?,"This question concerns a bound verbal marker that signals that the verb has an instrumental argument. The marker could be analysed in the language-specific case as voice, agreement or a bound pronoun. The marker doesn't have to index the instrument.",78,4,http://grambank.clld.org/parameters/GB104,GB104
+In addition, some languages have a special set of dependent person forms, which only occur together with a verb. They may be clitics or affixes, but the crucial characteristic is that they cannot be focused, coordinated or occur as an independent utterance. Thus, the weak French subject pronouns (_je, tu, il_, etc.), the Spanish clitic object pronouns (_me, te, lo, nos_, etc.), and also the Spanish subject person markers or verbs (_quiér-o_ 'I want', _quiér-es_ 'you want') count as dependent person forms. ///
+
+Not uncommonly, a distinction between independent and dependent pronouns is made only in some forms of the paradigm (e.g. in Kriol, only the 1SG and the 3PL have distinct dependent and independent subject forms). Such partially differentiated paradigms are lumped together with fully differentiated paradigms here.""",60,1,http://apics-online.info/parameters/17,017
+81,Politeness distinctions in second-person pronouns,"(By Martin Haspelmath and the APiCS Consortium): ""This feature (based on WALS feature 45, by Johannes Helmbrecht) is concerned with second-person pronouns, which in some languages make a politeness distinction. A binary politeness distinction is a contrast such as _tu/vous_ in French or _tú/Usted_ in Spanish. Some languages even distinguish more than two degrees of politeness, by having distinct forms for intimate address, for neutral address, and for polite address. Finally, some languages use titles (as well as similar expressions such as kinship terms or names) as second-person forms. Although this option is in principle compatible with the other three values, it is distinguished as a fourth value here.""",64,1,http://apics-online.info/parameters/18,018
+85,Interrogative pronouns,"Here we look at the four interrogative pronouns ‘who’, ‘where’, ‘when’, and ‘how’ and ask whether they are expressed as simple, monomorphemic words as in the European lexifiers, or as compound expressions consisting of a generic noun and an adnominal interrogative word. –– Compound interrogatives translate literally as 'which person', 'what place', 'what hour', 'what manner' or similar. From the first through the last value, languages show an increasing amount of compound expressions, and thus an increasing degree of distance from the European lexifiers.",68,1,http://apics-online.info/parameters/19,019
+90,Pronoun conjunction,"""Here we ask how a language treats notional conjunction of singular personal pronoun and full noun phrase, as in 'Mary and I', or 'you and your brother'. Most commonly, languages use a singular pronoun that is overtly conjoined (by an 'and' word) with the full noun phrase. But they may also use an inclusory pronoun which denotes the entire set and that is combined with a subset NP that denotes a proper subset, e.g. ""we # Mary"" means 'we including Mary', i.e. 'Mary and I'. The inclusory pronoun can be simply juxtaposed, or combined with the subset NP by a marker, or or followed by a numeral. Finally, the singular pronoun may be simply juxtaposed with the other conjunct.""",73,1,http://apics-online.info/parameters/20,020
+96,Is there an instrumental applicative marker on the verb (including indexing)?,"(By Jakob Lesage): ""This question concerns a phonologically bound verbal marker that signals that the verb has an instrument. In some languages, applicative markers may be used to topicalize, focalize or background the instrument. This type of marking also counts for this feature. The marker could be analyzed in the language-specific case as voice, indexing or a ‘bound pronoun’. The marker does not have to index the instrument.""",78,4,http://grambank.clld.org/parameters/GB104,GB104
 98,Can the recipient in a ditransitive construction be marked like the monotransitive patient?,,80,4,http://grambank.clld.org/parameters/GB105,GB105
-100,Ditransitive Constructions: The Verb 'Give',,81,3,http://wals.info/feature/105A,105A
+100,Ditransitive constructions: The verb 'give',,81,3,https://wals.info/feature/105A,105A
 105,Is there directional or locative morphological marking on verbs?,,84,4,http://grambank.clld.org/parameters/GB108,GB108
 107,Is there verb suppletion for participant number?,,86,4,http://grambank.clld.org/parameters/GB109,GB109
 109,Is there a copula for predicate nominals?,,88,4,http://grambank.clld.org/parameters/GB117,GB117
@@ -79,8 +76,8 @@ Compound interrogatives translate literally as 'which person', 'what place', 'wh
 128,The dominant constituent order in a transitive clause is: PVA,,108,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-6
 129,The dominant constituent order in a transitive clause is: PAV,,109,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-7
 130,The dominant constituent order in a transitive clause is: none,,110,2,http://sails.clld.org/parameters/ARGEX1-2,ARGEX1-2-8
-131,"Order of Subject, Object and Verb",,104,3,http://wals.info/feature/81A,081A
-138,Occurrence of nominal plural markers,,111,1,http://apics-online.info/parameters/22,022
+131,"Order of subject, object and verb",,104,3,https://wals.info/feature/81A,081A
+138,Occurrence of nominal plural markers,"(By Martin Haspelmath and the APiCS Consortium): ""Here we look at the variable occurrence of nominal plural forms (as in WALS feature 34, by Martin Haspelmath). Some languages plurals entirely, but those languages that have plural forms often use them optionally, or under certain conditions (such as animacy and definiteness). Especially human nouns tend to show plural marking when plural marking is not invariant in the language. Languages with the second value have optional plural marking but restrict it to human nouns. Languages with the third value have optional plural marking of all nouns. Finally, some languages are like the European lexifiers in requiring invariant plural marking.""",111,1,http://apics-online.info/parameters/22,022
 142,Is there a class of patient-labile verbs?,"The term ‘labileʼ is the most commonly used label for verbs which can be used transitively or intransitively without any formal change. A distinction is made between patient lability, more commonly referred to as P-lability, and agent lability or A-lability. P-lability stands for patient-preserving lability, that is, the P argument is preserved in the intransitive construction, as in I broke the stick[P] / The stick broke. A-lability stands for agent-preserving lability, that is the A argument is preserved in the intransitive construction, as in John[A] drinks tea / John drinks.
 
 This question asks only about P-labile verbs. Semantically, two things can happen with P-labile verbs. In case of (a) argument structure modifying P-lability, an otherwise transitive verb is used in the intransitive construction encoding an argument structure from which the A argument of the transitive construction is absent. In case of (b) less common argument structure preserving P-lability, the verb in its intransitive use implies the same participants with the same roles as in its transitive use, but in the intransitive use, the A argument is not expressed and is interpreted as non-specific.",115,4,http://grambank.clld.org/parameters/GB401,GB401
@@ -128,11 +125,11 @@ This feature specifically targets sentences with verbs of thinking and knowing, 
 224,Can the agent be expressed overtly in a passive clause?,,119,4,http://grambank.clld.org/parameters/GB304,GB304
 225,Is there a phonologically independent reflexive pronoun?,,196,4,http://grambank.clld.org/parameters/GB305,GB305
 227,Is there a phonologically independent non-bipartite reciprocal pronoun?,,199,4,http://grambank.clld.org/parameters/GB306,GB306
-233,Gender Distinctions in Independent Personal Pronouns,,200,3,http://wals.info/feature/44A,044A
+233,Gender distinctions in independent personal pronouns,,200,3,http://wals.info/feature/44A,044A
 241,Nominal plural marker and third-person-plural pronoun,,111,1,http://apics-online.info/parameters/25,025
-245,Functions of reduplication,,211,1,http://apics-online.info/parameters/26,026
+245,Functions of reduplication,,225,1,http://apics-online.info/parameters/26,026
 250,Definite articles,,216,1,http://apics-online.info/parameters/28,028
-254,Indefinite articles,"""Many pidgins and creoles are like English in that they have a special indefinite article that is distinct from the numeral ‘one’ ... This is the case in quite a few English-based and Dutch-based languages where the English (and similarly Dutch) distinction between a and one has survived."" – ""When a language has two different indefinite articles, one of which is identical to the numeral and one of which is distinct, it is classified as value 1 [distinct from numeral 'one'] (e.g. Nicaraguan Creole English, which has both a and wan).""",222,1,http://apics-online.info/parameters/29,029
+254,Indefinite articles,"""Many pidgins and creoles are like English in that they have a special indefinite article that is distinct from the numeral ‘one’ ... This is the case in quite a few English-based and Dutch-based languages where the English (and similarly Dutch) distinction between a and one has survived."" – ""When a language has two different indefinite articles, one of which is identical to the numeral and one of which is distinct, it is classified as value 1 [distinct from numeral 'one'] (e.g. Nicaraguan Creole English, which has both a and wan).""",225,1,http://apics-online.info/parameters/29,029
 258,Are different posture verbs used obligatorily depending on an inanimate locatum's shape or position (e.g. 'to lie' vs. 'to stand')?,,223,4,https://grambank.clld.org/parameters/GB127,GB127
 260,"Are there multiple past or multiple future tenses, distinguishing distance from Time of Reference?",,226,4,https://grambank.clld.org/parameters/GB309,GB309
 262,Is there an augmentative-marking construction that entails a special gender class?,,228,4,https://grambank.clld.org/parameters/GB314,GB314
@@ -163,8 +160,8 @@ Here ‘omitted’ means phonologically unexpressed (we do not intend for this f
 Pro-drop is not mutually exclusive with indexing of the S or A argument on the verb. If, in the absence of an independent pronoun or nominal S or A, there is indexing of this argument on the verb, you may still code 1.",265,4,http://grambank.clld.org/parameters/GB522,GB522
 307,Are nominal conjunction and comitative expressed by different elements?,,269,4,http://grambank.clld.org/parameters/GB027,GB027
 308,Is there a distinction between inclusive and exclusive?,,272,4,http://grambank.clld.org/parameters/GB028,GB028
-310,What is the order of numeral and noun in the NP?,,273,4,http://grambank.clld.org/parameters/GB024,GB024
-313,What is the order of adnominal demonstrative and noun?,,276,4,http://grambank.clld.org/parameters/GB025,GB025
+310,What is the order of numeral and noun in the NP?,"(By Hannah J. Haynie): ""This feature focuses on the order of cardinal numerals (not ordinal numerals) and nouns in quantified noun phrases. In some languages only one order (Numeral-Noun or Noun-Numeral) is possible. In other languages both orders may be possible. This can take the form of free variation (where Numeral-Noun and Noun-Numeral order can occur interchangeably). The order may also depend on some other grammatical category which is neutral with respect to pragmaticality (e.g. definiteness). If the order depends on the noun, consider only the orders that apply to an open class of nouns and disregard orders that are restricted to a specific closed class of nouns.""",273,4,http://grambank.clld.org/parameters/GB024,GB024
+313,What is the order of adnominal demonstrative and noun?,"(By Jeremy Collins and Jay Latarche): ""This feature is concerned with the order of the noun and adnominal demonstratives (i.e. demonstratives that modify the noun). There are three possible values to code: 1, before the noun, 2, after the noun, or 3, both orders are possible. Like all questions concerning the order of elements, only the pragmatically unmarked orders are targeted.""",276,4,http://grambank.clld.org/parameters/GB025,GB025
 316,Is there a gender distinction in independent 3rd person pronouns?,,280,4,http://grambank.clld.org/parameters/GB030,GB030
 318,Is there a dual or unit augmented form (in addition to plural or augmented) for all person categories in the pronoun system?,,281,4,http://grambank.clld.org/parameters/GB031,GB031
 320,Are there three or more distance contrasts in demonstratives?,,283,4,http://grambank.clld.org/parameters/GB035,GB035
@@ -214,10 +211,204 @@ Pro-drop is not mutually exclusive with indexing of the S or A argument on the v
 413,Can predicative possession be expressed with an S-like possessor and a possessum that is coded like a comitative argument?,,373,4,http://grambank.clld.org/parameters/GB256,GB256
 417,Exponence of Tense-Aspect-Mood Inflection,,375,3,https://wals.info/feature/21B,021B
 418,Female and male animals,,225,1,https://apics-online.info/parameters/117,117
-436,Order of Subject and Verb,,376,3,http://wals.info/feature/82A,082A
-440,Gender distinctions in personal pronouns,,379,1,http://apics-online.info/parameters/13,013
-441,Dual in independent personal pronouns,,380,1,http://apics-online.info/parameters/14,014
+436,Order of subject and verb,,376,3,https://wals.info/feature/82A,082A
+440,Gender distinctions in personal pronouns,"(By Philippe Maurer and the APiCS Consortium): ""In this feature (based on WALS feature 44, by Anna Siewierska), we look at gender distinctions in independent personal pronouns. Although most European languages (and others) display such gender distinctions, many APiCS languages lexically based on these languages do not, whether they are dependent (i.e. bound to the verb, as in Papiamentu Mi ta traha. ‘I am working’) or independent (i.e. potentially standing alone as, for instance, in elliptical answers; e.g. Papiamentu Ken ta traha? – Ami. ‘Who is working? – Me.’).""",379,1,http://apics-online.info/parameters/13,013
+441,Dual in independent personal pronouns,"(By Martin Haspelmath and the APiCS Consortium: ""This feature asks whether a language has a grammaticalized dual-plural distinction, e.g. Tok Pisin _yu_ 'you (SG)', _yupela_ 'you (PL)', _yutupela_ 'you (DU)'. In some languages, such a special form occurs in all three persons, and in one language, it occurs only in the first person.""",380,1,http://apics-online.info/parameters/14,014
 442,Are there numeral classifiers?,,314,4,http://grambank.clld.org/parameters/GB057,GB057
-451,"Order of subject, object, and verb",,225,1,http://apics-online.info/parameters/1,001
-452,Order of possessor and possessum,,225,1,http://apics-online.info/parameters/2,002
-453,Order of adjective and noun,"""In this feature (based on WALS feature 87, by Matthew S. Dryer) we consider the two possible orders of attributive (or modifying) adjective and noun: adjective-noun, with the adjective preceding the noun, as in English stupid question, and noun-adjective, with the adjective following the noun, as in French _la maison rouge_ [the house red] 'the red house'. The feature is not concerned with predicative adjectives (in clauses where the noun is the subject and the adjective is the predicate), as in English _The man is stupid._ – The term adjective is used here in a semantic sense, as a word with a lexical meaning such as 'hot', 'old', or 'blue'. We thus disregard demonstratives, numerals, or words meaning 'other'. In languages like French, or English, adjectives belong to a distinct class of words, while in other languages they are a subclass of nouns or verbs. We treat a word as an adjective as long as it denotes a property or quality, irrespective of its word class in the language.""",225,1,http://apics-online.info/parameters/3,003
+451,"Order of subject, object, and verb","(By Magnus Huber and the APiCS Consortium): ""This feature (based on WALS feature 81, by Matthew S. Dryer) concerns the ordering of subject, object and verb in non-contrastive, non-focussed transitive clauses without special topicalization, more specifically declarative clauses with both the subject and object realized as full nouns (not as pronouns). ///
+
+We use subject and object in a semantic sense, to refer to the agent-like and patient-like constituents in a monotransitive clause, as in e.g. French _[Les souris] mangent [le fromage]_ 'The mice eat the cheese'. As can be seen from this example, French has SVO order (Subject-Verb-Object), because the subject les souris 'the mice' precedes the verb and the object _le fromage_ 'the cheese' follows it. Since we only consider non-contrastive, non-focussed, non-topicalized clauses, cases like English It is the cheese that the mice eat (=OSV) are disregarded here. ///
+
+There are six logically possible orders of subject, object and verb, as shown in the list of feature values. Languages can have several word orders (e.g. German is SVO and VSO in main clauses and SOV in subordinate clauses), so several values can be true for this feature.""",225,1,http://apics-online.info/parameters/1,001
+452,Order of possessor and possessum,"(By Magnus Huber and the APiCS Consortium): ""This feature (based on WALS feature 86, by Matthew S. Dryer) concerns the word order within attributive possessive constructions, i.e. the order of the possessor noun phrase with respect to the head noun (or possessum). ///
+
+We restrict ourselves to the position of possessive noun phrases containing (full) nouns, rather than those involving only a pronominal word or affix. This is because in some languages pronominal possessors occur in different positions than nominal ones. ///
+
+Whether or not the construction involves other words or affixes on the head or the possessor noun is irrelevant for this feature. For example, in a number of pidgins and creoles a third person possessive pronoun is placed between the possessor and the possessum (cf. Feature 38 “Marking of possessor noun phrases”). ///
+
+The term possession is used in this context in a broad sense, including of course ownership like the old lady’s dog but also (a) kinship relations and possession of body parts, as in Mary’s mother and Mary’s foot, and (b) the subjective and objective genitive with action nominals, where the possessor would be the subject or object in a sentential paraphrase, e.g. the teacher’s efforts or the pupil’s detention.""",225,1,http://apics-online.info/parameters/2,002
+453,Order of adjective and noun,"(By Magnus Huber and the APiCS Consortium): ""In this feature (based on WALS feature 87, by Matthew S. Dryer) we consider the two possible orders of attributive (or modifying) adjective and noun: adjective-noun, with the adjective preceding the noun, as in English stupid question, and noun-adjective, with the adjective following the noun, as in French _la maison rouge_ [the house red] 'the red house'. The feature is not concerned with predicative adjectives (in clauses where the noun is the subject and the adjective is the predicate), as in English _The man is stupid._ /// The term adjective is used here in a semantic sense, as a word with a lexical meaning such as 'hot', 'old', or 'blue'. We thus disregard demonstratives, numerals, or words meaning 'other'. In languages like French, or English, adjectives belong to a distinct class of words, while in other languages they are a subclass of nouns or verbs. We treat a word as an adjective as long as it denotes a property or quality, irrespective of its word class in the language.""",225,1,http://apics-online.info/parameters/3,003
+454,Locus of marking in the clause,,12,3,https://wals.info/feature/23A,023A
+455,Order of adposition and noun phrase,"(By Magnus Huber and the APiCS Consortium): ""For this feature (based on WALS feature 85, by Matthew S. Dryer), an adposition is defined as a separate free word that stands before, inside or after a noun phrase and establishes a grammatical or semantic relationship between the noun phrase and a verb in the same clause. Three types of adpositions occur in our languages: prepositions stand before, postpositions after, circumpositions both before and after a noun phrase. Since our criterion is that an adposition indicates some kind of relationship between a noun phrase and a verb, as in speak of the devil, attributive possessive constructions like the tail of the dog are disregarded here because they only establish a relationship between the nouns tail and dog, but not between either of them and a verb. Note that we also disregard case affixes on nouns, which in some languages have functions that are similar to adpositions in European languages. On the other hand, cliticized relation markers, which are phonologically integrated into the noun but whose position depends on syntax do count as adpositions for the purposes of this feature.""",225,1,http://apics-online.info/parameters/4,004
+456,Order of demonstrative and noun,"(By Philippe Maurer and the APiCS Consortium): ""This feature (based on WALS feature 88, by Matthew S. Dryer) considers the order of adnominal demonstrative and noun. ///
+
+Demonstratives are deictic expressions such as English _this_ and _that_ which are used to point to referents and which typically indicate the relative distance of a referent in the speech situation in relation to the speaker’s location.""",225,1,http://apics-online.info/parameters/5,005
+457,Order of cardinal numeral and noun,"(By Martin Haspelmath, Susanne Maria Michaelis and the APiCS Consortium): ""In this feature (based on WALS feature 89, by Matthew S. Dryer), we look at the order of the cardinal numeral with respect to the noun that it modifies, whether it precedes the noun ('five houses') or follows the noun ('houses five'). Cardinal numerals are words that denote the number of things that are referred to by the noun phrase, and they contrast with ordinal numerals, which specify the rank in some order of objects, as in 'fifth chair' (see Feature 35).""",225,1,http://apics-online.info/parameters/6,006
+458,Order of relative clause and noun,"(By Martin Haspelmath, Susanne Maria Michaelis and the APiCS Consortium): ""As in WALS feature 90 (by Matthew S. Dryer), we define a relative clause as a clause that helps narrow the reference of a noun (the head) and in which the referent of the noun head has a semantic role. This feature is concerned with the order of ordinary attributive relative clauses, and with some special subtypes of relative clauses: ///
+
+Internally headed relative clauses are not adjacent to the notional head, but contain it inside them. ///
+
+The head of a correlative relative clause occurs inside the relative clause together with a relative marker and is taken up by a resumptive demonstrative-like element in the main clause. ///
+
+An adjoined relative clause is one which does not occur adjacent to the head noun and is not specially marked as relative clause.""",225,1,http://apics-online.info/parameters/7,007
+459,Order of degree word and adjective,"(By Martin Haspelmath and the APiCS Consortium): ""In this feature (based on WALS feature 91, by Matthew S. Dryer), we look at the order of degree words (adverbial modifiers) such as 'very', 'a little' and 'more', with respect to an attributive or predicative adjective. A language may have multiple values if different degree words occur in different positions. One language has a degree modifier that simultaneously precedes and follows the adjective.""",225,1,http://apics-online.info/parameters/8,008
+460,Position of definite article in the noun phrase,"(By Martin Haspelmath and the APiCS Consortium): ""A definite article is an element which accompanies nouns and which codes definiteness, like the in English. Definite articles need not be obligatory. Definite NPs are NPs whose referent can be uniquely identified by the hearer, as in anaphoric situations, to refer back to something mentioned in the preceding discourse (e.g. I bought a new bicycle... My husband likes the bicycle), or in associative contexts, to refer to something that is not mentioned in the preceding discourse but that is identifiable because of an associative relationship (e.g. I bought a new bicycle. The saddle is very comfortable).""",225,1,http://apics-online.info/parameters/9,009
+461,Position of indefinite article in the noun phrase,"(By Martin Haspelmath and the APiCS Consortium): ""An element is considered an indefinite article if it occurs commonly with indefinite noun phrases and signals that the noun phrase is indefinite (not definite, not uniquely not identifiable by the hearer). Indefinite articles are often identical to the numeral 'one'.""",225,1,http://apics-online.info/parameters/10,010
+462,"Order of frequency adverb, verb, and object","(By Martin Haspelmath and the APiCS Consortium): ""A word order parameter that has been prominent in generative grammar is the order of frequency adverbs and the verb in a transitive sentence. Here we limit ourselves to adverbs that translate ‘often’ (or ‘usually’, ‘mostly’, ‘a lot’, ‘many times’, ‘all the time’, ‘always’). In the values, the order of the subject is ignored, and we only consider full-NP direct objects (not pronominal direct objects). Moreover, we only consider the position of the main verb, ignoring any auxiliary verbs. ///
+
+By adverb we mean any fixed expression for frequency that is not clearly an argument noun phrase or a verb (phrase). Thus, we include not only single word expressions like often and always, but also fixed phrasal expressions like all the time. However, freely created phrasal expressions (e.g. with high frequency) do not count as adverbs.""",225,1,http://apics-online.info/parameters/11,011
+463,Position of interrogative phrases in content questions,"(By Martin Haspelmath and the APiCS Consortium): ""This feature (based on WALS feature 93, by Matthew S. Dryer) concerns the position of interrogative phrases (or ""wh-phrases"") in the clause. In many languages, the interrogative phrase is normally or obligatorily fronted in content questions, i.e. occurs initially in the clause. This is normal in English (e.g. What did you see?) and most other European languages. But in other languages, the interrogative phrase can occur in the position in which it would occur in the corresponding declarative (”in situ”), or in another special position (e.g. a preverbal focus position). Here we only distinguish two possibilities: initial and non-initial (i.e. in situ or in some other non-initial position).""",225,1,http://apics-online.info/parameters/12,012
+464,Indefinite pronouns,"""In the feature (based on WALS feature 46, by Martin Haspelmath, we look at the form of indefinite pronouns, i.e. expressions rendering 'something' and 'somebody'. These can be expressed by special pronoun forms such as Papiamentu or Spanish algo 'something', or by interrogative-based forms such as Chinuk Wawa íkta 'what; something', or by generic-noun-based forms such as Guinea-Bissau Kriyol un kusa 'a thing, something', or by old generic-noun-based indefinites that continue the English forms something and somebody (e.g. Kriol jamjing, sambadi) but are no longer synchronically analyzable. Finally, languages may use a special existential construction instead of an indefinite pronoun in argument position ('There is who came' for 'Someone came').""",73,1,http://apics-online.info/parameters/21,021
+465,Expression of nominal plural meaning,"(By Martin Haspelmath and the APiCS Consortium): ""This feature (based on WALS feature 33, by Matthew S. Dryer) considers the way in which the plural is marked if a language has overt plural marking: by a prefix, a suffix, a stem change, a tone or stress change, reduplication, or a plural word, which may precede or follow the noun (or noun phrase). The first value means that the language has no nominal plural marking.""",111,1,http://apics-online.info/parameters/23,023
+466,The associative plural,"(Susanne Maria Michaelis, Martin Haspelmath and the APiCS Consortium): ""An associative plural construction consists of a noun N (typically denoting a human) plus a marker, with the meaning 'N and others associated with N'. The others can be family, friends or simply people in N's company. Associative plurals are thus referentially heterogenous, and they contrast with additive plurals, which are referentially homogeneous: While N + additive plural means 'several people of type N', N + associative plural has the meaning 'several people who are associated with N, including N'.""",111,1,http://apics-online.info/parameters/24,024
+467,Antidual of paired body-part terms,,225,1,http://apics-online.info/parameters/27,027
+470,Generic noun phrases in subject function,,225,1,http://apics-online.info/parameters/30,030
+471,Co-occurrence of demonstrative and definite article,,225,1,http://apics-online.info/parameters/31,031
+472,Pronominal and adnominal demonstratives,,225,1,http://apics-online.info/parameters/32,032
+473,Distance contrasts in demonstratives,,225,1,http://apics-online.info/parameters/33,033
+474,Adnominal distributive numerals,,225,1,http://apics-online.info/parameters/34,034
+475,Ordinal numerals,,225,1,http://apics-online.info/parameters/35,035
+476,Marking of pronominal possessors,,225,1,http://apics-online.info/parameters/37,037
+477,Marking of possessor noun phrases,,225,1,http://apics-online.info/parameters/38,038
+478,Independent pronominal possessors,,225,1,http://apics-online.info/parameters/39,039
+479,Comparative adjective marking,,225,1,https://apics-online.info/parameters/41,041
+480,Comparative standard marking,,225,1,https://apics-online.info/parameters/42,042
+481,"Position of tense, aspect, and mood markers in relation to the verb",,225,1,https://apics-online.info/parameters/43,043
+482,"Internal order of tense, aspect, and mood markers",,225,1,https://apics-online.info/parameters/44,044
+483,Tightness of the link between the past marker and the verb,,225,1,https://apics-online.info/parameters/45,045
+484,Tightness of the link between the progressive marker and the verb,,225,1,https://apics-online.info/parameters/46,046
+485,Uses of the progressive marker,,225,1,https://apics-online.info/parameters/47,047
+486,Uses of the habitual marker,,225,1,https://apics-online.info/parameters/48,048
+487,Tense-aspect systems,,225,1,https://apics-online.info/parameters/49,049
+488,Present reference of stative verbs and past perfective reference of dynamic verbs,,225,1,https://apics-online.info/parameters/51,051
+489,Aspect markers and inchoative meaning,,225,1,https://apics-online.info/parameters/52,052
+490,Aspect change in verb chains,,225,1,https://apics-online.info/parameters/53,053
+491,Suppletion according to tense and aspect,,225,1,https://apics-online.info/parameters/54,054
+492,Ability verb and epistemic possibility,,225,1,https://apics-online.info/parameters/55,055
+493,The prohibitive,,225,1,https://apics-online.info/parameters/56,056
+494,Alignment of case marking of full noun phrases,,225,1,http://apics-online.info/parameters/58,058
+495,Alignment of case marking of personal pronouns,,225,1,http://apics-online.info/parameters/59,059
+496,Ditransitive constructions with ‘give’,,225,1,http://apics-online.info/parameters/60,060
+497,Order of recipient and theme in ditransitive constructions,,225,1,http://apics-online.info/parameters/61,061
+498,Expression of pronominal subjects,,225,1,http://apics-online.info/parameters/62,062
+499,Expletive subject in ‘seem’ constructions,,225,1,http://apics-online.info/parameters/63,063
+500,Expletive subject of existential verb,,225,1,http://apics-online.info/parameters/64,064
+501,Raining constructions,,225,1,http://apics-online.info/parameters/65,065
+502,Experiencer constructions with ‘headache’,,225,1,http://apics-online.info/parameters/66,066
+503,Experiencer constructions with ‘like’,,225,1,http://apics-online.info/parameters/67,067
+504,Experiencer constructions with ‘fear’,,225,1,http://apics-online.info/parameters/68,068
+505,Instrumental expressions,,225,1,http://apics-online.info/parameters/69,069
+506,Comitatives and instrumentals,,225,1,http://apics-online.info/parameters/70,070
+507,Noun phrase conjunction and comitative,,225,1,http://apics-online.info/parameters/71,071
+508,Nominal and verbal conjunction,,225,1,http://apics-online.info/parameters/72,072
+509,Predicative adjectives,,225,1,http://apics-online.info/parameters/74,074
+510,Predicative locative phrases,,225,1,http://apics-online.info/parameters/75,075
+511,Predicative noun phrases and predicative locative phrases,,225,1,http://apics-online.info/parameters/76,076
+512,Existential verb and transitive possession verb,,225,1,http://apics-online.info/parameters/78,078
+513,Coming from named places,,225,1,http://apics-online.info/parameters/80,080
+514,Going to named places,,225,1,http://apics-online.info/parameters/79,079
+515,Predicative possession,,225,1,http://apics-online.info/parameters/77,077
+516,Locus of marking in possessive noun phrases,,225,3,https://wals.info/feature/24A,024A
+517,Locus of marking: Whole-language typology,,225,3,https://wals.info/feature/25A,025A
+518,Prefixing vs. suffixing in inflectional morphology,,225,3,https://wals.info/feature/26A,026A
+519,Zero marking of A and P arguments,,225,3,https://wals.info/feature/25B,025B
+520,Reduplication,,225,3,https://wals.info/feature/27A,027A
+521,Case syncretism,,225,3,https://wals.info/feature/28A,028A
+522,Syncretism in verbal person/number marking,,225,3,https://wals.info/feature/29A,029A
+523,Sex-based and non-sex-based gender systems,,225,3,https://wals.info/feature/31A,031A
+524,Systems of gender assignment,,225,3,https://wals.info/feature/32A,032A
+525,Coding of nominal plurality,,225,3,https://wals.info/feature/33A,033A
+526,Occurrence of nominal plurality,,225,3,https://wals.info/feature/34A,034A
+527,Plurality in independent personal pronouns,,225,3,https://wals.info/feature/35A,035A
+528,The associative plural,,225,3,https://wals.info/feature/36A,036A
+529,Indefinite articles,,225,3,http://wals.info/feature/38A,038A
+530,Inclusive/exclusive distinction in verbal inflection,"For speakers of English (or any other European language), both the inclusive and the exclusive pronouns are to be translated as we. The difference between the two depends on the intended meaning. An inclusive pronoun necessarily includes reference to the addressee. For example, the Mandarin inclusive pronoun zámen means ‘we, I and you’; others can optionally be included. An exclusive pronoun, like the Mandarin pronoun wŏmen, excludes the addressee from the reference, resulting in a meaning like ‘I and some others, but not you’.",225,3,http://wals.info/feature/40A,040A
+531,Distance contrasts in demonstratives,,225,3,http://wals.info/feature/41A,041A
+532,Pronominal and adnominal demonstratives,,225,3,http://wals.info/feature/42A,042A
+533,Third person pronouns and demonstratives,,225,3,http://wals.info/feature/43A,043A
+534,Politeness distinctions in pronouns,,225,3,http://wals.info/feature/45A,045A
+535,Motion-to and motion-from,,225,1,http://apics-online.info/parameters/81,081
+536,Transitive motion verbs: ‘push’,,225,1,http://apics-online.info/parameters/82,082
+537,Transitive motion verbs: ‘pull’,,225,1,http://apics-online.info/parameters/83,083
+538,Directional serial verb constructions with 'come' and 'go',,225,1,http://apics-online.info/parameters/84,084
+539,‘Take’ serial verb constructions,,225,1,http://apics-online.info/parameters/85,085
+540,'Give' serial verb constructions,,225,1,http://apics-online.info/parameters/86,086
+541,Reflexive constructions,,225,1,http://apics-online.info/parameters/87,087
+542,Intensifiers and reflexive pronouns,,225,1,http://apics-online.info/parameters/88,088
+543,Reciprocal constructions,,225,1,http://apics-online.info/parameters/89,089
+544,Passive constructions,,225,1,http://apics-online.info/parameters/90,090
+545,Applicative constructions,,225,1,http://apics-online.info/parameters/91,091
+546,Subject relative clauses,,225,1,http://apics-online.info/parameters/92,092
+547,Object relative clauses,,225,1,http://apics-online.info/parameters/93,093
+548,Instrument relative clauses,,225,1,http://apics-online.info/parameters/94,094
+549,Complementizer with verbs of speaking,,225,1,http://apics-online.info/parameters/95,095
+550,Complementizer with verbs of knowing,,225,1,http://apics-online.info/parameters/96,096
+551,‘Want’ complement subjects,,225,1,http://apics-online.info/parameters/97,097
+552,Complements of 'think' and 'want',,225,1,http://apics-online.info/parameters/98,098
+553,Negative morpheme types,,225,1,http://apics-online.info/parameters/100,100
+554,Indefinite pronouns,,225,3,http://wals.info/feature/46A,046A
+555,Intensifiers and reflexive pronouns,,225,3,http://wals.info/feature/47A,047A
+556,Person marking on adpositions,,225,3,http://wals.info/feature/48A,048A
+557,Number of cases,,225,3,http://wals.info/feature/49A,049A
+558,Asymmetrical case-marking,,225,3,http://wals.info/feature/50A,050A
+559,Position of standard negation,,225,1,https://apics-online.info/parameters/101,101
+560,Negation and indefinite pronouns,,225,1,https://apics-online.info/parameters/102,102
+561,Polar questions,,225,1,https://apics-online.info/parameters/103,103
+562,Focusing of the noun phrase,,225,1,https://apics-online.info/parameters/104,104
+563,Verb doubling and focus,"(By Philippe Maurer and the APiCS Consortium): ""This feature is about the possibility of doubling the verb in order to focus on the situation referred to by the verb. ///
+
+There are two main kinds of verb doubling constructions: the fronting of the verb with a copy of the verb left in the background clause, and the reduplication of the verb within the matrix clause. The first is illustrated by Trinidad English Creole Iz walk he walkin. ‘He really is walking (and not taking the bus).’ The second is illustrated by Sango A-zo a-vo gi vo-ngo. ‘People just buy it (without subscribing to the newspaper).’ """,225,1,https://apics-online.info/parameters/105,105
+564,Focus particle ‘also’,,225,1,https://apics-online.info/parameters/106,106
+565,Vocative markers,,225,1,https://apics-online.info/parameters/107,107
+566,Para-linguistic usages of clicks,,225,1,https://apics-online.info/parameters/108,108
+567,Para-linguistic usages of clicks,,225,1,https://apics-online.info/parameters/109,109
+568,Position of case affixes,,225,3,https://wals.info/feature/51A,051A
+569,Comitatives and instrumentals,,225,3,https://wals.info/feature/52A,052A
+570,Ordinal numerals,,225,3,https://wals.info/feature/53A,053A
+571,Distributive numerals,,225,3,https://wals.info/feature/54A,054A
+572,Conjunctions and universal quantifiers,,20,3,https://wals.info/feature/56A,056A
+573,Possessive classification,,28,3,https://wals.info/feature/59A,059A
+574,"Genitives, adjectives and relative clauses",,28,3,https://wals.info/feature/60A,060A
+575,Adjectives without nouns,,28,3,https://wals.info/feature/61A,061A
+576,Action nominal constructions,,28,3,https://wals.info/feature/62A,062A
+577,Noun phrase conjunction,,28,3,https://wals.info/feature/63A,063A
+578,Nominal and verbal conjunction,,28,3,https://wals.info/feature/64A,064A
+579,Perfective/imperfective aspect,,28,3,https://wals.info/feature/65A,065A
+580,The past tense,,28,3,https://wals.info/feature/66A,066A
+581,The future tense,,28,3,https://wals.info/feature/67A,067A
+582,The perfect,,28,3,https://wals.info/feature/68A,068A
+583,Position of tense-aspect affixes,,28,3,https://wals.info/feature/69A,069A
+584,The morphological imperative,,28,3,https://wals.info/feature/70A,070A
+585,The prohibitive,,28,3,https://wals.info/feature/71A,071A
+586,Imperative-hortative systems,,28,3,https://wals.info/feature/72A,072A
+587,The optative,,28,3,https://wals.info/feature/73A,073A
+588,Situational possibility,,28,3,https://wals.info/feature/74A,074A
+589,Epistemic possibility,,28,3,https://wals.info/feature/75A,075A
+590,Overlap between situational and epistemic modal marking,,28,3,https://wals.info/feature/76A,076A
+591,Semantic distinctions of evidentiality,,28,3,https://wals.info/feature/77A,077A
+592,Coding of evidentiality,,28,3,https://wals.info/feature/78A,078A
+593,Suppletion according to tense and aspect,,28,3,https://wals.info/feature/79A,079A
+594,Verbal number and suppletion,,28,3,https://wals.info/feature/80A,080A
+595,Order of object and verb,,376,3,https://wals.info/feature/83A,083A
+596,"Order of object, oblique, and verb",,376,3,https://wals.info/feature/84A,084A
+597,Order of adposition and noun phrase,,376,1,https://wals.info/feature/85A,085A
+598,Order of adposition and noun phrase,,376,3,https://wals.info/feature/85A,085A
+599,Order of genitive and noun,,376,3,https://wals.info/feature/86A,086A
+600,Order of adjective and noun,,376,3,https://wals.info/feature/87A,087A
+601,Order of demonstrative and noun,,376,3,https://wals.info/feature/88A,088A
+602,Order of numeral and noun,,376,3,https://wals.info/feature/89A,089A
+603,Order of relative clause and noun,,376,3,https://wals.info/feature/90A,090A
+604,Order of degree word and adjective,,376,3,https://wals.info/feature/91A,091A
+605,Position of polar question particles,,376,3,https://wals.info/feature/92A,092A
+606,Position of interrogative phrases in content questions,,376,3,https://wals.info/feature/93A,093A
+607,Order of adverbial subordinator and clause,,376,3,https://wals.info/feature/94A,094A
+609,Alignment of case marking of full noun phrases,,376,3,https://wals.info/feature/98A,098A
+610,Alignment of case marking of pronouns,,376,3,https://wals.info/feature/99A,099A
+611,Alignment of verbal person marking,,376,3,https://wals.info/feature/100A,100A
+612,Expression of pronominal subjects,,376,3,https://wals.info/feature/101A,101A
+613,Verbal person marking,,376,3,https://wals.info/feature/102A,102A
+614,Third person zero of verbal person marking,,376,3,https://wals.info/feature/103A,103A
+615,Order of person markers on the verb,,376,3,https://wals.info/feature/104A,104A
+616,Reciprocal constructions,,81,3,https://wals.info/feature/106A,106A
+617,Passive constructions,,81,3,https://wals.info/feature/107A,107A
+618,Antipassive constructions,,81,3,https://wals.info/feature/108A,108A
+619,Applicative constructions,,81,3,https://wals.info/feature/109A,109A
+620,Periphrastic causative constructions,,81,3,https://wals.info/feature/110A,110A
+621,Nonperiphrastic causative constructions,,81,3,https://wals.info/feature/111A,111A
+622,Negative morphemes,,81,3,https://wals.info/feature/112A,112A
+623,Subtypes of asymmetric standard negation,,81,3,https://wals.info/feature/114A,114A
+624,Symmetric and asymmetric standard negation,,81,3,https://wals.info/feature/113A,113A
+625,Negative indefinite pronouns and predicate negation,,81,3,https://wals.info/feature/115A,115A
+626,Polar questions,,81,3,https://wals.info/feature/116A,116A
+627,Predicative possession,,81,3,https://wals.info/feature/117A,117A
+628,Nominal and locational predication,,12,3,https://wals.info/feature/119A,119A
