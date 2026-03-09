@@ -70,21 +70,6 @@ RAW_TO_CSWV_MAP = {
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#source',
                 'separator': ';'}}},
 
-    'Metafeatures.csv': {
-        'name': 'metafeatures.csv',
-        'columns': {
-            'id': {
-                'name': 'ID',
-                'datatype': 'string',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id'},
-            'name': {
-                'name': 'Name',
-                'datatype': 'string',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name'},
-            'feature_area': {
-                'name': 'Feature_Area',
-                'datatype': 'string'}}},
-
     'Feature_lists.csv': {
         'name': 'feature-lists.csv',
         'columns': {
@@ -136,21 +121,23 @@ RAW_TO_CSWV_MAP = {
                 'name': 'Feature_List_Numbers',
                 'datatype': 'string'}},
         'foreign-keys': {
-            'Metafeature_ID': 'metafeatures.csv',
             'Feature_List_ID': 'feature-lists.csv'}},
 
-    'Concepts_metafeatures.csv': {
-        'name': 'concepts-metafeatures.csv',
+    'Concepts_features.csv': {
+        'name': 'concepts-features.csv',
         'columns': {
             'concept_id': {
                 'name': 'Concept_ID',
                 'datatype': 'string'},
-            'meta_feature__id': {
-                'name': 'Metafeature_ID',
+            'feature_id': {
+                'name': 'Feature_ID',
+                'datatype': 'string'},
+            'Comment': {
+                'name': 'Comment',
                 'datatype': 'string'}},
         'foreign-keys': {
             'Concept_ID': 'concepts.csv',
-            'Metafeature_ID': 'metafeatures.csv'}}}
+            'Feature_ID': 'features.csv'}}}
 
 
 CONCEPT_ID_COL = 'concept_id'
@@ -222,45 +209,36 @@ def is_concept_valid(row):
         return True
 
 
-def is_concept_metafeature_valid(row, concept_ids, metafeature_ids):
-    if 'Metafeature_ID' not in row:
+def is_concept_feature_valid(row, concept_ids, feature_ids):
+    if 'Feature_ID' not in row:
         msg = (
-            'concepts-metafeatures.csv:'
-            ' missing metafeature id for concept {}'.format(
+            'concepts-features.csv:'
+            ' missing feature id for concept {}'.format(
                 row['Concept_ID']))
         print(msg, file=sys.stderr)
         return False
-    elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
+    elif (mfid := row['Feature_ID']) not in feature_ids:
         msg = (
-            'concepts-metafeatures.csv:'
-            ' invalid metafeature id for concept {}: {}'.format(
+            'concepts-features.csv:'
+            ' invalid feature id for concept {}: {}'.format(
                 row['Concept_ID'], mfid))
         print(msg, file=sys.stderr)
         return False
     elif (cid := row['Concept_ID']) not in concept_ids:
         msg = (
-            'concepts-metafeatures.csv:'
-            ' invalid concept id for metafeature {}: {}'.format(
-                row['Metafeature_ID'], cid))
+            'concepts-features.csv:'
+            ' invalid concept id for feature {}: {}'.format(
+                row['Feature_ID'], cid))
         print(msg, file=sys.stderr)
         return False
     else:
         return True
 
 
-def is_feature_valid(row, metafeature_ids, feature_list_ids):
-    if 'Metafeature_ID' not in row or 'Feature_List_ID' not in row:
-        msg = (
-            'features.csv:'
-            ' missing metafeature id or missing feature list id'
-            ' for feature {}'.format(row['ID']))
-        print(msg, file=sys.stderr)
-        return False
-    elif (mfid := row['Metafeature_ID']) not in metafeature_ids:
-        msg = (
-            'features.csv:'
-            ' invalid metafeature id for feature {}: {}'.format(
-                mfid, row['ID']))
+def is_feature_valid(row, feature_list_ids):
+    if 'Feature_List_ID' not in row:
+        msg = 'features.csv: missing feature list id for feature {}'.format(
+            row['ID'])
         print(msg, file=sys.stderr)
         return False
     elif (flid := row['Feature_List_ID']) not in feature_list_ids:
@@ -282,10 +260,9 @@ def main():
 
     raw_tables = [
         csv_dir / 'Concepts.csv',
-        csv_dir / 'Metafeatures.csv',
         csv_dir / 'Feature_lists.csv',
         csv_dir / 'Features.csv',
-        csv_dir / 'Concepts_metafeatures.csv',
+        csv_dir / 'Concepts_features.csv',
     ]
 
     table_props = {
@@ -343,28 +320,6 @@ def main():
 
     # load data
 
-    # FIXME: meta feature names are not unique
-    # So far the webapp has just collapsed them and mapped all the references
-    # in other tables to the first occurence:
-    #
-    #     | ID | Name   | Area         |   | Bla | Metafeature_ID |
-    #     |----+--------+--------------|   |-----+----------------|
-    #     |  1 | name 1 | an area      |   | ... |              1 |
-    #     |  2 | name 2 | another area |   | ... |              2 |
-    #     |  3 | name 1 | an area      |   | ... |              3 |
-    #     |  4 | name 4 |              |   | ... |              4 |
-    #
-    #                 vvvv                           vvvv
-    #
-    #     | ID | Name   | Area         |   | Bla | Metafeature_ID |
-    #     |----+--------+--------------|   |-----+----------------|
-    #     |  1 | name 1 | an area      |   | ... |              1 |
-    #     |  2 | name 2 | another area |   | ... |              2 |
-    #     |  4 | name 4 |              |   | ... |              1 |
-    #                                      | ... |              4 |
-    #
-    # It does not do that anymore because this should be handled at the data
-    # curation level.
     for raw_path in raw_tables:
         table_spec = RAW_TO_CSWV_MAP[raw_path.name]
         table_name = table_spec['name']
@@ -420,9 +375,9 @@ def main():
 
     # ensure valid data
 
-    metafeature_ids = {row['ID'] for row in table_data['metafeatures.csv']}
-    assert '' not in metafeature_ids
-    assert None not in metafeature_ids
+    feature_ids = {row['ID'] for row in table_data['features.csv']}
+    assert '' not in feature_ids
+    assert None not in feature_ids
     feature_list_ids = {r['ID'] for r in table_data['feature-lists.csv']}
     assert '' not in feature_list_ids
     assert None not in feature_list_ids
@@ -454,18 +409,21 @@ def main():
         row
         for row in table_data['concepts.csv']
         if is_concept_valid(row)]
-    table_data['concepts-metafeatures.csv'] = [
+    table_data['concepts-features.csv'] = [
         row
-        for row in table_data['concepts-metafeatures.csv']
-        if is_concept_metafeature_valid(row, concept_ids, metafeature_ids)]
+        for row in table_data['concepts-features.csv']
+        if is_concept_feature_valid(row, concept_ids, feature_ids)]
     table_data['features.csv'] = [
         row
         for row in table_data['features.csv']
-        if is_feature_valid(row, metafeature_ids, feature_list_ids)]
+        if is_feature_valid(row, feature_list_ids)]
 
     # write data
 
     dest_dir.mkdir(parents=True, exist_ok=True)
+    # clear out csvw folder
+    for p in dest_dir.iterdir():
+        p.unlink()
     table_meta_data.write(dest_dir / 'csvw-metadata.json', **table_data)
     sources.to_file(str(dest_dir / 'sources.bib'), 'bibtex')
 
