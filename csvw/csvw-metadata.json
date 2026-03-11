@@ -13,7 +13,7 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "eea9493"
+            "dc:created": "d832dfa"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -102,6 +102,7 @@
             "url": "concepts.csv"
         },
         {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -126,10 +127,14 @@
                     {
                         "datatype": "string",
                         "name": "Year"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Contributors"
                     }
                 ]
             },
-            "url": "feature-lists.csv"
+            "url": "collections.csv"
         },
         {
             "tableSchema": {
@@ -155,24 +160,29 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Feature_List_ID"
+                        "name": "Collection_ID"
                     },
                     {
                         "datatype": "string",
-                        "name": "Feature_List_URL"
+                        "name": "Collection_URL"
                     },
                     {
                         "datatype": "string",
-                        "name": "Feature_List_Numbers"
+                        "name": "Collection_Numbers"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Comment"
                     }
                 ],
                 "foreignKeys": [
                     {
                         "columnReference": [
-                            "Feature_List_ID"
+                            "Collection_ID"
                         ],
                         "reference": {
-                            "resource": "feature-lists.csv",
+                            "resource": "collections.csv",
                             "columnReference": [
                                 "ID"
                             ]
