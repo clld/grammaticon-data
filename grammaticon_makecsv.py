@@ -90,6 +90,9 @@ RAW_TO_CSWV_MAP = {
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#description'},
             'year': {
                 'name': 'Year',
+                'datatype': 'string'},
+            'Collection contributors':  {
+                'name': 'Contributors',
                 'datatype': 'string'}}},
 
     'Features.csv': {
@@ -119,7 +122,11 @@ RAW_TO_CSWV_MAP = {
             # TODO: should this be a list?
             'collection numbers': {
                 'name': 'Feature_List_Numbers',
-                'datatype': 'string'}},
+                'datatype': 'string'},
+            'comments': {
+                'name': 'Comment',
+                'datatype': 'string',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#comment'}},
         'foreign-keys': {
             'Feature_List_ID': 'feature-lists.csv'}},
 
@@ -243,9 +250,9 @@ def is_feature_valid(row, feature_list_ids):
         return False
     elif (flid := row['Feature_List_ID']) not in feature_list_ids:
         msg = (
-            'features.csv:'
+            'Features.csv:'
             ' invalid feature list id for feature {}: {}'.format(
-                flid, row['ID']))
+                row['ID'], flid))
         print(msg, file=sys.stderr)
         return False
     else:
