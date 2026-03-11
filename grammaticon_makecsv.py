@@ -71,7 +71,10 @@ RAW_TO_CSWV_MAP = {
                 'separator': ';'}}},
 
     'Feature_lists.csv': {
-        'name': 'feature-lists.csv',
+        'name': 'collections.csv',
+        'properties': {
+            'dc:conformsTo': 'http://cldf.clld.org/v1.0/terms.rdf#ContributionTable',
+        },
         'columns': {
             'id': {
                 'name': 'ID',
@@ -114,21 +117,21 @@ RAW_TO_CSWV_MAP = {
                 'name': 'Metafeature_ID',
                 'datatype': 'string'},
             'collection_id': {
-                'name': 'Feature_List_ID',
+                'name': 'Collection_ID',
                 'datatype': 'string'},
             'collection URL': {
-                'name': 'Feature_List_URL',
+                'name': 'Collection_URL',
                 'datatype': 'string'},
             # TODO: should this be a list?
             'collection numbers': {
-                'name': 'Feature_List_Numbers',
+                'name': 'Collection_Numbers',
                 'datatype': 'string'},
             'comments': {
                 'name': 'Comment',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#comment'}},
         'foreign-keys': {
-            'Feature_List_ID': 'feature-lists.csv'}},
+            'Collection_ID': 'collections.csv'}},
 
     'Concepts_features.csv': {
         'name': 'concepts-features.csv',
@@ -220,13 +223,13 @@ def only_valid_concepts(concepts):
     return list(filter(is_concept_valid, concepts))
 
 
-def is_feature_valid(row, feature_list_ids):
-    if 'Feature_List_ID' not in row:
+def is_feature_valid(row, collection_ids):
+    if 'Collection_ID' not in row:
         msg = 'features.csv: missing feature list id for feature {}'.format(
             row['ID'])
         print(msg, file=sys.stderr)
         return False
-    elif (flid := row['Feature_List_ID']) not in feature_list_ids:
+    elif (flid := row['Collection_ID']) not in collection_ids:
         msg = (
             'Features.csv:'
             ' invalid feature list id for feature {}: {}'.format(
@@ -237,11 +240,11 @@ def is_feature_valid(row, feature_list_ids):
         return True
 
 
-def only_valid_features(features, feature_list_ids):
+def only_valid_features(features, collection_ids):
     return [
         row
         for row in features
-        if is_feature_valid(row, feature_list_ids)]
+        if is_feature_valid(row, collection_ids)]
 
 
 def is_concept_feature_valid(row, concept_ids, feature_ids):
@@ -363,7 +366,9 @@ def main():
                 {k: v for k, v in zip(mapped_colnames, row) if v}
                 for row in reader]
 
-        table = Table(url=table_name)
+        table = Table(
+            url=table_name,
+            common_props=table_spec.get('properties') or {})
         table.tableSchema.columns = list(
             map(Column.fromvalue, columns.values()))
         for col, target_table in table_spec.get('foreign-keys', {}).items():
@@ -420,12 +425,12 @@ def main():
             for k, b in sources.entries.items()
             if k.lower() in bibkeys))
 
-    feature_list_ids = {r['ID'] for r in table_data['feature-lists.csv']}
+    collection_ids = {r['ID'] for r in table_data['collections.csv']}
 
     table_data['concepts.csv'] = only_valid_concepts(
         table_data['concepts.csv'])
     table_data['features.csv'] = only_valid_features(
-        table_data['features.csv'], feature_list_ids)
+        table_data['features.csv'], collection_ids)
 
     concept_ids = {row['ID'] for row in table_data['concepts.csv']}
     feature_ids = {row['ID'] for row in table_data['features.csv']}
