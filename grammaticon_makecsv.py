@@ -216,6 +216,34 @@ def is_concept_valid(row):
         return True
 
 
+def only_valid_concepts(concepts):
+    return list(filter(is_concept_valid, concepts))
+
+
+def is_feature_valid(row, feature_list_ids):
+    if 'Feature_List_ID' not in row:
+        msg = 'features.csv: missing feature list id for feature {}'.format(
+            row['ID'])
+        print(msg, file=sys.stderr)
+        return False
+    elif (flid := row['Feature_List_ID']) not in feature_list_ids:
+        msg = (
+            'Features.csv:'
+            ' invalid feature list id for feature {}: {}'.format(
+                row['ID'], flid))
+        print(msg, file=sys.stderr)
+        return False
+    else:
+        return True
+
+
+def only_valid_features(features, feature_list_ids):
+    return [
+        row
+        for row in features
+        if is_feature_valid(row, feature_list_ids)]
+
+
 def is_concept_feature_valid(row, concept_ids, feature_ids):
     if 'Feature_ID' not in row:
         msg = (
@@ -242,21 +270,11 @@ def is_concept_feature_valid(row, concept_ids, feature_ids):
         return True
 
 
-def is_feature_valid(row, feature_list_ids):
-    if 'Feature_List_ID' not in row:
-        msg = 'features.csv: missing feature list id for feature {}'.format(
-            row['ID'])
-        print(msg, file=sys.stderr)
-        return False
-    elif (flid := row['Feature_List_ID']) not in feature_list_ids:
-        msg = (
-            'Features.csv:'
-            ' invalid feature list id for feature {}: {}'.format(
-                row['ID'], flid))
-        print(msg, file=sys.stderr)
-        return False
-    else:
-        return True
+def only_valid_concept_features(concept_features, concept_ids, feature_ids):
+    return [
+        row
+        for row in concept_features
+        if is_concept_feature_valid(row, concept_ids, feature_ids)]
 
 
 def main():
@@ -368,9 +386,6 @@ def main():
         if (source := concept.get('Source')):
             concept['Source'] = re.split(r'\s*;\s*', source)
 
-    concept_ids = {row['ID'] for row in table_data['concepts.csv']}
-    table_data['concept-hierarchy.csv'] = simplified_concept_hierarchy(
-        original_hierarchy, concept_ids)
 
     table = Table(url='concept-hierarchy.csv')
     table.tableSchema.columns = [
@@ -381,13 +396,6 @@ def main():
     table_meta_data.tables.append(table)
 
     # ensure valid data
-
-    feature_ids = {row['ID'] for row in table_data['features.csv']}
-    assert '' not in feature_ids
-    assert None not in feature_ids
-    feature_list_ids = {r['ID'] for r in table_data['feature-lists.csv']}
-    assert '' not in feature_list_ids
-    assert None not in feature_list_ids
 
     for row in table_data['concepts.csv']:
         if (refs := row.get('Source')):
@@ -412,18 +420,21 @@ def main():
             for k, b in sources.entries.items()
             if k.lower() in bibkeys))
 
-    table_data['concepts.csv'] = [
-        row
-        for row in table_data['concepts.csv']
-        if is_concept_valid(row)]
-    table_data['concepts-features.csv'] = [
-        row
-        for row in table_data['concepts-features.csv']
-        if is_concept_feature_valid(row, concept_ids, feature_ids)]
-    table_data['features.csv'] = [
-        row
-        for row in table_data['features.csv']
-        if is_feature_valid(row, feature_list_ids)]
+    feature_list_ids = {r['ID'] for r in table_data['feature-lists.csv']}
+
+    table_data['concepts.csv'] = only_valid_concepts(
+        table_data['concepts.csv'])
+    table_data['features.csv'] = only_valid_features(
+        table_data['features.csv'], feature_list_ids)
+
+    concept_ids = {row['ID'] for row in table_data['concepts.csv']}
+    feature_ids = {row['ID'] for row in table_data['features.csv']}
+
+    table_data['concepts-features.csv'] = only_valid_concept_features(
+        table_data['concepts-features.csv'], concept_ids, feature_ids)
+
+    table_data['concept-hierarchy.csv'] = simplified_concept_hierarchy(
+        original_hierarchy, concept_ids)
 
     # write data
 
