@@ -13,7 +13,7 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "d832dfa"
+            "dc:created": "ea05034"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -164,11 +164,15 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Collection_URL"
+                        "name": "Feature_URL"
                     },
                     {
                         "datatype": "string",
-                        "name": "Collection_Numbers"
+                        "name": "ID_in_Collection"
+                    },
+                    {
+                        "datatype": "integer",
+                        "name": "Language_Count"
                     },
                     {
                         "datatype": "string",
