@@ -119,13 +119,15 @@ RAW_TO_CSWV_MAP = {
             'collection_id': {
                 'name': 'Collection_ID',
                 'datatype': 'string'},
-            'collection URL': {
-                'name': 'Collection_URL',
+            'feature URL': {
+                'name': 'Feature_URL',
                 'datatype': 'string'},
-            # TODO: should this be a list?
-            'collection numbers': {
-                'name': 'Collection_Numbers',
+            'ID_in_collection': {
+                'name': 'ID_in_Collection',
                 'datatype': 'string'},
+            'number of languages': {
+                'name': 'Language_Count',
+                'datatype': 'integer'},
             'comments': {
                 'name': 'Comment',
                 'datatype': 'string',
