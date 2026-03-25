@@ -8,11 +8,11 @@ mimics that of a [cldfbench](https://pypi.org/project/cldfbench/).
 
 Convert the excel sheets to csv:
 
-    $ python3 raw/xlsx2csv.py
+    $ python3 grammaticon.py xlsx-to-csv
 
 Recreate the data set:
 
-    $ python3 grammaticon_makecsv.py
+    $ python3 grammaticon.py make-csvw
 
 Check data well-formedness:
 

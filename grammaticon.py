@@ -6,10 +6,93 @@ import re
 import shutil
 import subprocess
 import sys
+from itertools import chain, repeat
 from pathlib import Path
 
-from csvw.metadata import Column, Table, TableGroup
-from simplepybtex.database import BibliographyData, parse_file
+# dependencies for xlsx-to-csv
+try:
+    XLSX_TO_CSV_DEPS = ['openpyxl']
+    from openpyxl import load_workbook
+    xlsx_to_csv_deps_okay = True
+except ModuleNotFoundError:
+    xlsx_to_csv_deps_okay = False
+
+# dependencies for make-csvw
+try:
+    MAKE_CSVW_DEPS = ['csvw', 'simplepybtex']
+    from csvw.metadata import Column, Table, TableGroup
+    from simplepybtex.database import BibliographyData, parse_file
+    make_csvw_deps_okay = True
+except ModuleNotFoundError:
+    make_csvw_deps_okay = False
+
+# TODO: download command
+# \tdownload-cldf
+# \t\tdownload cldf versions of the collections into raw/download/
+
+USAGE = """usage: {progname} command [options]
+
+supported commands
+
+\txlsx-to-csv
+\t\tconvert excel spread sheets in raw/ to csv files in raw/csv-export/
+\tmake-csvw
+\t\tcreate CSVW dataset in csvw/
+\t-h, --help
+\t\tprint this message"""
+
+HERE = Path(__file__).parent
+RAW_DIR = HERE / 'raw'
+CSV_DIR = RAW_DIR / 'csv-export'
+DEST_DIR = HERE / 'csvw'
+
+# Conversion from Excel to CSV
+
+def normalise_excel_cell(value):
+    if value is None:
+        return ''
+    else:
+        return str(value).strip()
+
+
+def pad_list(ls, width):
+    if len(ls) == width:
+        return ls
+    elif len(ls) < width:
+        return list(chain(ls, repeat('', width - len(ls))))
+    else:
+        raise ValueError(f'too long: {ls}')
+
+
+def xlsx_file_to_csv_file(excel_path, outdir):
+    wb = load_workbook(filename=str(excel_path), read_only=True, data_only=True)
+    worksheets = wb.worksheets
+    assert len(worksheets) == 1, f'{excel_path}: not exactly 1 worksheet'
+    sheet = worksheets[0]
+    rows = [
+        row_norm
+        for row in sheet.iter_rows()
+        if any(row_norm := [normalise_excel_cell(cell.value) for cell in row])]
+
+    dest = outdir.joinpath(excel_path.name).with_suffix('.csv')
+    table_width = max(len(row) for row in rows)
+    if not outdir.is_dir():
+        outdir.mkdir()
+    with open(dest, 'w', encoding='utf-8') as f:
+        wtr = csv.writer(f)
+        wtr.writerows(pad_list(row, table_width) for row in rows)
+
+
+def xlsx_to_csv():
+    if not xlsx_to_csv_deps_okay:
+        print('the make-csvw command requires following python packages:', file=sys.stderr)
+        print('\n'.join(f'\t{dep}' for dep in XLSX_TO_CSV_DEPS), file=sys.stderr)
+        sys.exit(72)
+    for p in RAW_DIR.glob('*.xlsx'):
+        xlsx_file_to_csv_file(p, CSV_DIR)
+
+
+# CSVW creation
 
 RAW_TO_CSWV_MAP = {
     'Concepts.csv': {
@@ -282,17 +365,17 @@ def only_valid_concept_features(concept_features, concept_ids, feature_ids):
         if is_concept_feature_valid(row, concept_ids, feature_ids)]
 
 
-def main():
-    here = Path(__file__).parent
-    raw_dir = here / 'raw'
-    csv_dir = raw_dir / 'csv-export'
-    dest_dir = here / 'csvw'
+def make_csvw():
+    if not make_csvw_deps_okay:
+        print('the make-csvw command requires following python packages:', file=sys.stderr)
+        print('\n'.join(f'\t{dep}' for dep in MAKE_CSVW_DEPS), file=sys.stderr)
+        sys.exit(72)
 
     raw_tables = [
-        csv_dir / 'Concepts.csv',
-        csv_dir / 'Feature_lists.csv',
-        csv_dir / 'Features.csv',
-        csv_dir / 'Concepts_features.csv',
+        CSV_DIR / 'Concepts.csv',
+        CSV_DIR / 'Feature_lists.csv',
+        CSV_DIR / 'Features.csv',
+        CSV_DIR / 'Concepts_features.csv',
     ]
 
     table_props = {
@@ -309,9 +392,9 @@ def main():
         ],
     }
 
-    if here.joinpath('.git').is_dir():
+    if HERE.joinpath('.git').is_dir():
         git_remote = None
-        with open(here / '.git' / 'config', encoding='utf-8') as f:
+        with open(HERE / '.git' / 'config', encoding='utf-8') as f:
             for line in f:
                 if re.fullmatch(r'\s*\[\s*remote\s+"origin"\s*\]\s*', line):
                     break
@@ -325,7 +408,7 @@ def main():
             git_exe = shutil.which('git')
             assert git_exe is not None
             procresult = subprocess.run(
-                [git_exe, '-C', str(here), 'describe', '--always', '--tags'],
+                [git_exe, '-C', str(HERE), 'describe', '--always', '--tags'],
                 stdout=subprocess.PIPE, check=True, encoding='utf-8')
             git_description = procresult.stdout.strip()
             table_props["prov:wasDerivedFrom"] = [
@@ -379,14 +462,14 @@ def main():
 
     # deal with the concept hierarchy separately
 
-    with open(csv_dir / 'Concepthierarchy.csv', encoding='utf-8') as f:
+    with open(CSV_DIR / 'Concepthierarchy.csv', encoding='utf-8') as f:
         reader = csv.reader(f)
         header = list(next(reader))
         original_hierarchy = [
             {k: v for k, v in zip(header, row) if v}
             for row in reader]
 
-    sources = parse_file(raw_dir / 'sources.bib')
+    sources = parse_file(RAW_DIR / 'sources.bib')
 
     # split the references
     for concept in table_data['concepts.csv']:
@@ -417,9 +500,10 @@ def main():
         for bibkey in bibkeys
         if bibkey not in sources.entries}
     if missing_bibkeys:
-        print('\n'.join(
+        msg = '\n'.join(
             f'bibkey not found in bibliography: {bibkey}'
-            for bibkey in sorted(missing_bibkeys)))
+            for bibkey in sorted(missing_bibkeys))
+        print(msg, file=sys.stderr)
 
     sources = BibliographyData(
         entries=sources.entries.__class__(
@@ -445,12 +529,30 @@ def main():
 
     # write data
 
-    dest_dir.mkdir(parents=True, exist_ok=True)
+    DEST_DIR.mkdir(parents=True, exist_ok=True)
     # clear out csvw folder
-    for p in dest_dir.iterdir():
+    for p in DEST_DIR.iterdir():
         p.unlink()
-    table_meta_data.write(dest_dir / 'csvw-metadata.json', **table_data)
-    sources.to_file(str(dest_dir / 'sources.bib'), 'bibtex')
+    table_meta_data.write(DEST_DIR / 'csvw-metadata.json', **table_data)
+    sources.to_file(str(DEST_DIR / 'sources.bib'), 'bibtex')
+
+
+def main():
+    args = sys.argv
+    if len(args) < 2:
+        print(USAGE.format(progname=args[0]), file=sys.stderr)
+        sys.exit(64)
+    elif args[1] == 'xlsx-to-csv':
+        xlsx_to_csv()
+    elif args[1] == 'make-csvw':
+        make_csvw()
+    elif args[1] in {'-h', '--help'}:
+        print(USAGE.format(progname=args[0]), file=sys.stderr)
+        sys.exit(64)
+    else:
+        print('Invalid command:', args[1], file=sys.stderr)
+        print(USAGE.format(progname=args[0]), file=sys.stderr)
+        sys.exit(64)
 
 
 if __name__ == '__main__':
