@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 
 import csv
+import io
+import json
 import platform
 import re
 import shutil
 import subprocess
 import sys
+import zipfile
+from collections import defaultdict
+from contextlib import ExitStack
 from itertools import chain, repeat
 from pathlib import Path
+from urllib.request import Request, urlopen
+from urllib.parse import quote
 
 # dependencies for xlsx-to-csv
 try:
@@ -26,16 +33,14 @@ try:
 except ModuleNotFoundError:
     make_csvw_deps_okay = False
 
-# TODO: download command
-# \tdownload-cldf
-# \t\tdownload cldf versions of the collections into raw/download/
-
 USAGE = """usage: {progname} command [options]
 
 supported commands
 
 \txlsx-to-csv
 \t\tconvert excel spread sheets in raw/ to csv files in raw/csv-export/
+\tdownload-collections
+\t\tdownload cldf versions of the collections into raw/download/
 \tmake-csvw
 \t\tcreate CSVW dataset in csvw/
 \t-h, --help
@@ -44,6 +49,7 @@ supported commands
 HERE = Path(__file__).parent
 RAW_DIR = HERE / 'raw'
 CSV_DIR = RAW_DIR / 'csv-export'
+DOWNLOAD_DIR = RAW_DIR / 'download'
 DEST_DIR = HERE / 'csvw'
 
 # Conversion from Excel to CSV
@@ -92,7 +98,78 @@ def xlsx_to_csv():
         xlsx_file_to_csv_file(p, CSV_DIR)
 
 
+# Downloading the collections
+
+def read_csv(f):
+    rdr = csv.reader(f)
+    header = next(rdr)
+    for row in rdr:
+        yield {k: v.strip() for k, v in zip(header, row) if v.strip()}
+
+
+def get_zenodo_no(doi):
+    if (m := re.fullmatch(r'10\.5281/zenodo\.(\d+)', doi)):
+        return int(m.group(1))
+    else:
+        msg = 'doi looks funky: {}'.format(doi)
+        raise AssertionError(msg)
+
+
+def get_zip_path(record_no):
+    return DOWNLOAD_DIR / f'{record_no}.zip'
+
+
+def download_collections():
+    with open(RAW_DIR / 'dois.csv', encoding='utf-8') as f:
+        collections = list(read_csv(f))
+    for coll in collections:
+        coll['ID'] = get_zenodo_no(coll['DOI'])
+        coll['Zip_Path'] = get_zip_path(coll['ID'])
+    collections = {coll['ID']: coll for coll in collections}
+
+    missing_records = [
+        record_no
+        for record_no, coll in collections.items()
+        if not coll['Zip_Path'].exists()]
+    if not missing_records:
+        print('Nothing to do.', file=sys.stderr)
+        return
+
+    query = 'OR'.join(
+        '(id:{})'.format(record_no) for record_no in missing_records)
+    zenodo_url = f'https://zenodo.org/api/records?q={quote(query)}'
+    assert zenodo_url.startswith('https://')
+    req = Request(zenodo_url, headers={'Content-Type': 'application/json'})
+    with urlopen(req) as resp:
+        record_metadata = json.load(resp)
+    # TODO: worry about pagination later
+    assert len(record_metadata['hits']['hits']) == len(missing_records), "it's time to worry about pagination"
+
+    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    for zenodo_record in record_metadata['hits']['hits']:
+        record_no = zenodo_record['id']
+        assert len(zenodo_record['files']) == 1, record_no
+        out_path = collections[record_no]['Zip_Path']
+        print(f'downloading {out_path}...', file=sys.stderr)
+        zip_url = zenodo_record['files'][0]['links']['self']
+        assert zip_url.startswith('https://')
+        with urlopen(zip_url) as resp, open(out_path, 'wb') as f:
+            while (chunk := resp.read(4096)):
+                f.write(chunk)
+
+
 # CSVW creation
+
+PROP_STRUCTURE_DATASET = 'http://cldf.clld.org/v1.0/terms.rdf#StructureDataset'
+
+PROP_PARAMETER_TABLE = 'http://cldf.clld.org/v1.0/terms.rdf#ParameterTable'
+PROP_VALUE_TABLE = 'http://cldf.clld.org/v1.0/terms.rdf#ValueTable'
+
+PROP_ID = 'http://cldf.clld.org/v1.0/terms.rdf#id'
+PROP_NAME = 'http://cldf.clld.org/v1.0/terms.rdf#name'
+PROP_DESCRIPTION = 'http://cldf.clld.org/v1.0/terms.rdf#description'
+PROP_PARAMETER_ID = 'http://cldf.clld.org/v1.0/terms.rdf#parameterReference'
+PROP_LANGUAGE_ID = 'http://cldf.clld.org/v1.0/terms.rdf#languageReference'
 
 RAW_TO_CSWV_MAP = {
     'Concepts.csv': {
@@ -243,6 +320,72 @@ BIBKEY_FIXES = {
     'blomfield_language_1933': 'bloomfield_language_1933',
     'croft_morphosyntax_ 2022': 'croft_morphosyntax_2022',
 }
+
+
+def get_collection_parameters_from_zip(path):
+    parameters = {}
+    with ExitStack() as stack:
+        zf = stack.enter_context(zipfile.ZipFile(path))
+        json_files = [
+            info for info in zf.infolist() if info.filename.endswith('.json')]
+        json_metadata = [
+            (info, md)
+            for info in json_files
+            if (md := json.load(stack.enter_context(zf.open(info))))
+            and isinstance(md, dict)
+            and md.get('dc:conformsTo') == PROP_STRUCTURE_DATASET]
+        for info, md in json_metadata:
+            parameter_table_name = None
+            parameter_id_col = None
+            parameter_name_col = None
+            parameter_desc_col = None
+            value_table_name = None
+            value_parameter_col = None
+            value_language_col = None
+            for table in md['tables']:
+                if table.get('dc:conformsTo') == PROP_PARAMETER_TABLE:
+                    parameter_table_name = table.get('url')
+                    for colspec in table['tableSchema']['columns']:
+                        if colspec.get('propertyUrl') == PROP_ID:
+                            parameter_id_col = colspec['name']
+                        elif colspec.get('propertyUrl') == PROP_NAME:
+                            parameter_name_col = colspec['name']
+                        elif colspec.get('propertyUrl') == PROP_DESCRIPTION:
+                            parameter_desc_col = colspec['name']
+                elif table.get('dc:conformsTo') == PROP_VALUE_TABLE:
+                    value_table_name = table.get('url')
+                    for colspec in table['tableSchema']['columns']:
+                        if colspec.get('propertyUrl') == PROP_PARAMETER_ID:
+                            value_parameter_col = colspec['name']
+                        elif colspec.get('propertyUrl') == PROP_LANGUAGE_ID:
+                            value_language_col = colspec['name']
+            if parameter_table_name is None:
+                continue
+
+            cldf_path = Path(info.filename).parent
+
+            languages_per_parameter_id = defaultdict(set)
+            if value_table_name:
+                vf = stack.enter_context(zf.open(str(cldf_path / parameter_table_name)))
+                vf_unicode = io.TextIOWrapper(vf, encoding='utf-8')
+                for row in read_csv(vf_unicode):
+                    parameter_id = row.get(value_parameter_col)
+                    language_id = row.get(value_language_col)
+                    if parameter_id and language_id:
+                        languages_per_parameter_id[parameter_id].add(language_id)
+            language_counts = {id_: len(lgs) for id_, lgs in languages_per_parameter_id.items()}
+
+            pf = stack.enter_context(zf.open(str(cldf_path / parameter_table_name)))
+            pf_unicode = io.TextIOWrapper(pf, encoding='utf-8')
+            parameters.update(
+                (parameter_id,
+                 {'ID': parameter_id,
+                  'Name': row.get(parameter_name_col) or '',
+                  'Description': row.get(parameter_desc_col) or '',
+                  'Language_Count': language_counts.get(parameter_id) or 0})
+                for row in read_csv(pf_unicode)
+                if (parameter_id := row.get(parameter_id_col)))
+    return parameters
 
 
 def simplified_concept_hierarchy(original_hierarchy, concept_ids):
@@ -444,9 +587,7 @@ def make_csvw():
             assert not missing, f'{raw_path}: missing fields: {missing}'
             unknown_fields = [col for col in header if col not in columns]
             assert not unknown_fields, f'{raw_path}: unknown fields: {unknown_fields}'
-            mapped_colnames = [
-                columns[colname]['name']
-                for colname in header]
+            mapped_colnames = [columns[colname]['name'] for colname in header]
             table_data[table_name] = [
                 {k: v for k, v in zip(mapped_colnames, row) if v}
                 for row in reader]
@@ -459,6 +600,25 @@ def make_csvw():
         for col, target_table in table_spec.get('foreign-keys', {}).items():
             table.add_foreign_key(col, target_table, 'ID')
         table_meta_data.tables.append(table)
+
+    collection_ids_by_name = {row['Name']: row['ID'] for row in table_data['collections.csv']}
+    with open(RAW_DIR / 'dois.csv') as f:
+        zenodo_ids = {
+            collection_ids_by_name[row['Name']]: get_zenodo_no(row['DOI'])
+            for row in read_csv(f)}
+
+    collection_archives = {
+        collection_id: get_zip_path(zenodo_no)
+        for collection_id, zenodo_no in zenodo_ids.items()}
+    if (missing_archives := [p for p in collection_archives.values() if not p.exists()]):
+        print('collections missing in download folder:', file=sys.stderr)
+        print('\n'.join(f' * {p}' for p in missing_archives), file=sys.stderr)
+        print('run `python3', sys.argv[0], 'download-collections` to download them', file=sys.stderr)
+        sys.exit(66)
+
+    collection_parameters = {
+        collection_id: get_collection_parameters_from_zip(path)
+        for collection_id, path in collection_archives.items()}
 
     # deal with the concept hierarchy separately
 
@@ -476,6 +636,15 @@ def make_csvw():
         if (source := concept.get('Source')):
             concept['Source'] = re.split(r'\s*;\s*', source)
 
+    # add the data from the cldf datasets
+    for feature in table_data['features.csv']:
+        collection_id = feature.get('Collection_ID')
+        id_in_collection = feature.get('ID_in_Collection')
+        if collection_id and id_in_collection:
+            collparams = collection_parameters[collection_id]
+            collparam = collparams.get(id_in_collection) or {}
+            feature['Language_Count'] = collparam.get('Language_Count') or 0
+            feature['Name'] = feature.get('Name') or collparam['Name']
 
     table = Table(url='concept-hierarchy.csv')
     table.tableSchema.columns = [
@@ -544,6 +713,8 @@ def main():
         sys.exit(64)
     elif args[1] == 'xlsx-to-csv':
         xlsx_to_csv()
+    elif args[1] == 'download-collections':
+        download_collections()
     elif args[1] == 'make-csvw':
         make_csvw()
     elif args[1] in {'-h', '--help'}:
