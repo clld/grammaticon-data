@@ -359,6 +359,8 @@ def get_collection_parameters_from_zip(path):
                             value_parameter_col = colspec['name']
                         elif colspec.get('propertyUrl') == PROP_LANGUAGE_ID:
                             value_language_col = colspec['name']
+            assert value_parameter_col
+            assert value_language_col
             if parameter_table_name is None:
                 continue
 
@@ -366,7 +368,7 @@ def get_collection_parameters_from_zip(path):
 
             languages_per_parameter_id = defaultdict(set)
             if value_table_name:
-                vf = stack.enter_context(zf.open(str(cldf_path / parameter_table_name)))
+                vf = stack.enter_context(zf.open(str(cldf_path / value_table_name)))
                 vf_unicode = io.TextIOWrapper(vf, encoding='utf-8')
                 for row in read_csv(vf_unicode):
                     parameter_id = row.get(value_parameter_col)
@@ -640,15 +642,23 @@ def make_csvw():
                 if citation]
 
     # add the data from the cldf datasets
+    collection_names = {
+        coll['ID']: coll['Name'] for coll in table_data['collections.csv']}
     for feature in table_data['features.csv']:
         collection_id = feature.get('Collection_ID')
         id_in_collection = feature.get('ID_in_Collection')
         if collection_id and id_in_collection:
             collparams = collection_parameters[collection_id]
-            collparam = collparams.get(id_in_collection) or {}
-            # FIXME: count is always 0
-            feature['Language_Count'] = collparam.get('Language_Count') or 0
-            feature['Name'] = feature.get('Name') or collparam['Name']
+            if (collparam := collparams.get(id_in_collection)):
+                if (language_count := collparam.get('Language_Count')):
+                    feature['Language_Count'] = language_count
+                feature['Name'] = feature.get('Name') or collparam['Name']
+            else:
+                msg = 'feature {}: id {} not found in collection {}'.format(
+                    feature['ID'],
+                    id_in_collection,
+                    collection_names[collection_id])
+                print(msg, file=sys.stderr)
 
     table = Table(url='concept-hierarchy.csv')
     table.tableSchema.columns = [
