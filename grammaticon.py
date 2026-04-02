@@ -629,12 +629,15 @@ def make_csvw():
             {k: v for k, v in zip(header, row) if v}
             for row in reader]
 
-    sources = parse_file(RAW_DIR / 'sources.bib')
+    sources = parse_file(RAW_DIR / 'Sources.bib')
 
     # split the references
     for concept in table_data['concepts.csv']:
         if (source := concept.get('Source')):
-            concept['Source'] = re.split(r'\s*;\s*', source)
+            concept['Source'] = [
+                citation
+                for citation in re.split(r'\s*;\s*', source)
+                if citation]
 
     # add the data from the cldf datasets
     for feature in table_data['features.csv']:
@@ -643,6 +646,7 @@ def make_csvw():
         if collection_id and id_in_collection:
             collparams = collection_parameters[collection_id]
             collparam = collparams.get(id_in_collection) or {}
+            # FIXME: count is always 0
             feature['Language_Count'] = collparam.get('Language_Count') or 0
             feature['Name'] = feature.get('Name') or collparam['Name']
 
@@ -659,6 +663,10 @@ def make_csvw():
     for row in table_data['concepts.csv']:
         if (refs := row.get('Source')):
             row['Source'] = [BIBKEY_FIXES.get(key) or key for key in refs]
+
+    for row in table_data['concepts.csv']:
+        for citation in row.get('Source') or ():
+            assert re.fullmatch(r'([^[]+)(?:\[[^\]]*\])?', citation), row
 
     bibkeys = {
         re.fullmatch(r'([^[]+)(?:\[[^\]]*\])?', citation).group(1).lower()
