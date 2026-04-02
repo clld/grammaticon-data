@@ -13,7 +13,7 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "fdca79f"
+            "dc:created": "43473a9"
         }
     ],
     "prov:wasGeneratedBy": [
