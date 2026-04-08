@@ -108,7 +108,7 @@ def read_csv(f):
 
 
 def get_zenodo_no(doi):
-    if (m := re.fullmatch(r'10\.5281/zenodo\.(\d+)', doi)):
+    if (m := re.fullmatch(r'(?:https://doi.org/)?10\.5281/zenodo\.(\d+)', doi)):
         return int(m.group(1))
     else:
         msg = 'doi looks funky: {}'.format(doi)
@@ -120,7 +120,7 @@ def get_zip_path(record_no):
 
 
 def download_collections():
-    with open(RAW_DIR / 'dois.csv', encoding='utf-8') as f:
+    with open(CSV_DIR / 'Feature_lists.csv', encoding='utf-8') as f:
         collections = list(read_csv(f))
     for coll in collections:
         coll['ID'] = get_zenodo_no(coll['DOI'])
@@ -246,6 +246,9 @@ RAW_TO_CSWV_MAP = {
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name'},
             'URL': {
                 'name': 'URL',
+                'datatype': 'string'},
+            'DOI': {
+                'name': 'DOI',
                 'datatype': 'string'},
             'description': {
                 'name': 'Description',
@@ -604,10 +607,10 @@ def make_csvw():
         table_meta_data.tables.append(table)
 
     collection_ids_by_name = {row['Name']: row['ID'] for row in table_data['collections.csv']}
-    with open(RAW_DIR / 'dois.csv') as f:
-        zenodo_ids = {
-            collection_ids_by_name[row['Name']]: get_zenodo_no(row['DOI'])
-            for row in read_csv(f)}
+    zenodo_ids = {
+        collection_ids_by_name[row['Name']]: get_zenodo_no(doi)
+        for row in table_data['collections.csv']
+        if (doi := row.get('DOI'))}
 
     collection_archives = {
         collection_id: get_zip_path(zenodo_no)
