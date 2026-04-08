@@ -13,7 +13,7 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "43473a9"
+            "dc:created": "d11a63d"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -118,6 +118,10 @@
                     {
                         "datatype": "string",
                         "name": "URL"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "DOI"
                     },
                     {
                         "datatype": "string",
