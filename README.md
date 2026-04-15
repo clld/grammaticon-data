@@ -4,6 +4,8 @@ Grammaticon-data
 Data repository for the Grammaticon.  The general structure of the project
 mimics that of a [cldfbench](https://pypi.org/project/cldfbench/).
 
+Find a browsable version of the data on <https://grammaticon.clld.org/>.
+
 ## Usage
 
 Convert the excel sheets to csv:
