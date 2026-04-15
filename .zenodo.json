@@ -1,0 +1,13 @@
+{
+    "title": "Grammaticon",
+    "access_right": "open",
+    "keywords": ["linguistics"],
+    "upload_type": "dataset",
+    "license": {"id": "CC-BY-4.0"},
+    "creators": [
+        {"name": "Martin Haspelmath"}
+    ],
+    "contributors": [
+        {"name": "Johannes Englisch", "type": "Other"}
+    ]
+}
