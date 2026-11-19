@@ -13,13 +13,13 @@
             "dc:title": "Repository",
             "rdf:type": "prov:Entity",
             "rdf:about": "https://github.com/clld/grammaticon-data",
-            "dc:created": "v1.0-7-g1778ba4"
+            "dc:created": "v1.1-1-g82ea838"
         }
     ],
     "prov:wasGeneratedBy": [
         {
             "dc:title": "python",
-            "dc:description": "3.10.20"
+            "dc:description": "3.11.18"
         }
     ],
     "rdf:ID": "grammaticon",
